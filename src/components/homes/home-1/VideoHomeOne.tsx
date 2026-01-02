@@ -22,17 +22,17 @@ export default function VideoHomeOne() {
         <div className="col-xl-6 d-flex align-items-center">
           <div className="azzle-video-wrap" data-aos="fade-up" data-aos-delay="500">
             <div className="azzle-video-content">
-              <h2>AI-powered that streamline tasks</h2>
-              <p>As your business grows or your AI SaaS needs change, you can easily adjust your subscription level to match those needs. This flexibility ensures that AI remains an asset.</p>
+              <h2>Streamlining Your Government Transactions</h2>
+              <p>As the city grows, so do your needs. We continuously adapt to offer the most current and efficient services, ensuring that your official requirements are met with unparalleled professionalism and speed.</p>
               <div className="divider2"></div>
               <div className="azzle-counter-wrap">
                 <div className="azzle-counter-item">
-                  <h2 className="azzle-counter-data" aria-label="92%">92%</h2>
-                  <p>Customer service inquiries</p>
+                  <h2 className="azzle-counter-data" aria-label="98%">98%</h2>
+                  <p>Customer Satisfaction Rate</p>
                 </div>
                 <div className="azzle-counter-item">
-                  <h2 className="azzle-counter-data" aria-label="75%">75%</h2>
-                  <p>Using financial institutions</p>
+                  <h2 className="azzle-counter-data" aria-label="100k+">100k+</h2>
+                  <p>Transactions Processed Annually</p>
                 </div>
               </div>
             </div>

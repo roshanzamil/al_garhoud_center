@@ -14,21 +14,21 @@ interface FaqItem {
 const faq_data: FaqItem[] = [
   {
     id: 1,
-    question: "How do I start AI SaaS?",
+    question: "What services does Al Garhoud Center provide?",
     answer:
-      "Go to our official website and create an account. You'll need to provide some basic information and agree to our terms and conditions.",
+      "We offer a wide range of government services, including visa processing, Emirates ID typing, medical fitness applications, and various approvals from Amer, DET, and DHA.",
   },
   {
     id: 2,
-    question: "Can I customize AI SaaS solutions?",
+    question: "What are your operating hours?",
     answer:
-      "AI SaaS platforms offer customization options to adapt their services to your specific requirements. It's best to inquire with the provider about customization capabilities.",
+      "Our center is open from 7:30 AM to 8:00 PM, Saturday to Thursday, to provide you with flexible and convenient service options for all your needs.",
   },
   {
     id: 3,
-    question: "How can AI benefit my business?",
+    question: "Do I need an appointment to visit the center?",
     answer:
-      "AI SaaS can enhance operational efficiency, automate tasks, improve decision-making with data insights, and provide personalized customer experiences.",
+      "No appointment is necessary for most of our services. You can visit us during our operating hours, and our team will be ready to assist you promptly.",
   },
 ];
 
@@ -62,11 +62,9 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              <h2>Freely ask us for more information</h2>
+              <h2>Have Questions? We Have Answers.</h2>
               <p>
-                Our AI SaaS solutions can be quickly deployed, enabling users to
-                start benefiting from AI capabilities without lengthy setup and
-                development times in fast-paced industries.
+                Our team is ready to provide you with the information you need. Find answers to common questions about our services, processes, and how we can help you navigate government procedures with ease.
               </p>
               <div className="mt-50">
                 <Link
@@ -74,9 +72,9 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
                   data-aos="fade-up"
                   data-aos-delay="700"
                   href="/faq"
-                  data-text="Ask you questions"
+                  data-text="More questions"
                 >
-                  <span className="button-wraper">Ask you questions</span>
+                  <span className="button-wraper">More questions</span>
                 </Link>
               </div>
             </div>

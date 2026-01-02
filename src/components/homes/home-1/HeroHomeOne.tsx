@@ -33,13 +33,13 @@ export default function HeroHomeOne() {
       </div>
       <div className="container">
         <div className="azzle-hero-content1">
-          <h1 data-aos="fade-left" data-aos-delay="500">One Stop government solution</h1>
-          <p data-aos="zoom-in" data-aos-delay="700">Our AI SAAS tool is a cloud-based software delivery model. It helps businesses forecast demand for products and services and optimize inventory management and supply chain operations.</p>
+          <h1 data-aos="fade-left" data-aos-delay="500">Your One-Stop Destination for Government Services</h1>
+          <p data-aos="zoom-in" data-aos-delay="700">Al Garhoud Center is your trusted partner for a seamless government service experience. We provide a comprehensive range of services with efficiency and a focus on customer satisfaction, simplifying all your official needs.</p>
           <div className="azzle-hero-button mt-50">
             <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started for free">
               <span className="button-wraper">Get started for free</span>
             </Link>
-            <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/contact-us" data-text="Learn more">
+            <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/about-us" data-text="Learn more">
               <span className="button-wraper">Learn more</span>
             </Link>
           </div>
@@ -50,7 +50,7 @@ export default function HeroHomeOne() {
         <div className="divider"></div>
         <div className="azzle-brand-slider-wraper">
           <div className="azzle-brand-slider-title" data-aos="fade-up" data-aos-delay=".9s">
-            <p>Companies of all sizes trust us to find AI SaaS critical to their growth and innovation</p>
+            <p>Proudly serving the community by partnering with key government entities in Dubai</p>
           </div>
           <Slider {...settings} className="azzle-brand-slider">
             <div className="azzle-logo-icon-item">

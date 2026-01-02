@@ -4,12 +4,12 @@ import { useEffect, useRef, useState } from "react";
 
 // ✅ CTA slider items (data-driven)
 const ctaItems = [
-  "Start building software",
-  "Boost your productivity",
-  "Grow your business",
-  "Innovate with AI",
-  "Deliver faster",
-  "Stay ahead of trends",
+  "Simplify your visa process",
+  "Boost your business setup",
+  "Grow with expert guidance",
+  "Innovate with seamless services",
+  "Deliver on time, every time",
+  "Stay ahead of regulations",
 ];
 
 export default function FooterOne() {
@@ -85,13 +85,10 @@ export default function FooterOne() {
                   <img src="assets/images/logo/logo-dark.svg" alt="Logo" />
                 </Link>
                 <p>
-                  Our mission is to harness the power of AI to solve complex
-                  business challenges, empower decision-makers with data-driven
-                  insights, and enhance user experiences across digital
-                  platforms.
+                  Al Garhoud Center is dedicated to providing exceptional government services with a commitment to efficiency, transparency, and customer satisfaction, aligning with the vision of Dubai's leadership.
                 </p>
-                <a href="mailto:example@gmail.com">
-                  <span>Website:</span> www.example@gmail.com
+                <a href="mailto:info@algarhoudcenter.ae">
+                  <span>Email:</span> info@algarhoudcenter.ae
                 </a>
               </div>
             </div>
@@ -140,7 +137,7 @@ export default function FooterOne() {
         <div className="azzle-footer-bottom-text">
           <p>
             © Copyright {new Date().getFullYear()}, All Rights Reserved by
-            favdevs
+            Al Garhoud Center
           </p>
         </div>
       </div>

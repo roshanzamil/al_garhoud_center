@@ -33,21 +33,21 @@ export default function AboutHomeOne() {
             </div>
             <div className="col-lg-7 d-flex align-items-center">
               <div className="azzle-default-content pr-110" data-aos="fade-up" data-aos-delay="700">
-                <h2>Providing quick deploy solutions</h2>
-                <p className="mb-0">Our AI SaaS solutions can be quickly deployed, enabling users to start benefiting from AI capabilities without lengthy setup and development times in fast-paced industries.</p>
+                <h2>Efficient, Swift, and Client-Focused Solutions</h2>
+                <p className="mb-0">At Al Garhoud Center, we prioritize your convenience. Our streamlined processes and dedicated team ensure your government transactions are handled quickly and professionally, saving you valuable time.</p>
                 <div className="azzle-listicon-wrap mt-50">
                   <ul>
                     <li>
                       <img src="assets/images/home1/arrow.svg" alt="Icon" />
-                      <h3>Ready-to-use AI capabilities system</h3>
+                      <h3>Comprehensive range of government services</h3>
                     </li>
                     <li>
                       <img src="assets/images/home1/arrow.svg" alt="Icon" />
-                      <h3>Users can quickly integrate AI features</h3>
+                      <h3>Expert guidance from our professional team</h3>
                     </li>
                     <li>
                       <img src="assets/images/home1/arrow.svg" alt="Icon" />
-                      <h3>Time savings translate to cost savings</h3>
+                      <h3>Reduced processing times for all applications</h3>
                     </li>
                   </ul>
                 </div>
