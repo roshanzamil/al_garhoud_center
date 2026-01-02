@@ -194,3 +194,22 @@ body h6 {
   display: flex;
   align-items: center;
 }
+
+/* Custom Nav Breakpoint */
+.main-menu.custom-breakpoint {
+  display: none;
+}
+.azzle-menu-toggle.custom-breakpoint {
+  display: inline-block;
+}
+
+@media (min-width: 1450px) {
+  .main-menu.custom-breakpoint {
+    display: block;
+  }
+  .azzle-menu-toggle.custom-breakpoint {
+    display: none;
+  }
+}
+
+```

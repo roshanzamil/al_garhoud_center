@@ -24,7 +24,7 @@ export default function HeaderOne() {
             </div>
             <div className="col">
               <div className="azzle-main-menu-item">
-                <nav className="main-menu menu-style1 d-none d-xl-block menu-left">
+                <nav className="main-menu menu-style1 custom-breakpoint menu-left">
                   <Navmenu />                   
                 </nav>
               </div>
@@ -46,7 +46,7 @@ export default function HeaderOne() {
                 <nav className="navbar site-navbar justify-content-between">
                   {/* <!-- Brand Logo--> */}
                   {/* <!-- mobile menu trigger --> */}
-                  <button onClick={() => setIsOpen(!isOpen)} className="azzle-menu-toggle d-inline-block d-xl-none">
+                  <button onClick={() => setIsOpen(!isOpen)} className="azzle-menu-toggle custom-breakpoint">
                     <span></span>
                   </button>
                   {/* <!--/.Mobile Menu Hamburger Ends--> */}
