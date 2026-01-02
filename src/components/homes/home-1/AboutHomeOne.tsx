@@ -3,7 +3,7 @@
 export default function AboutHomeOne() {
   return (
     <>
-      <div className="azzle-section-padding pt-0 overflow-hidden">
+      <div className="azzle-section-padding overflow-hidden">
         <div className="container">
           <div className="row">
             <div className="col-lg-5 order-lg-2 azzle-about-thumb-container">
