@@ -33,7 +33,7 @@ export default function HeroHomeOne() {
       </div>
       <div className="container">
         <div className="azzle-hero-content1">
-          <h1 data-aos="fade-left" data-aos-delay="500">Your One-Stop Destination for Government Services</h1>
+          <h1 data-aos="fade-left" data-aos-delay="500">Fast, Reliable Government Services, All in One Place</h1>
           <p data-aos="zoom-in" data-aos-delay="700">Al Garhoud Center is your trusted partner for a seamless government service experience. We provide a comprehensive range of services with efficiency and a focus on customer satisfaction, simplifying all your official needs.</p>
           <div className="azzle-hero-button mt-50">
             <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started for free">
