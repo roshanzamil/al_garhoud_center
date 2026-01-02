@@ -18,7 +18,9 @@ export default function HomeOne() {
 				<div id="smooth-content">
           <HeroHomeOne />
           <FeaturesHomeOne />
-          <PricingHomeOne />
+          <div className="azzle-section-padding-bottom">
+            <PricingHomeOne />
+          </div>
           <AboutHomeOne />
           <VideoHomeOne />
           <QuoteHomeOne />
