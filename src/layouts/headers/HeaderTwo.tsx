@@ -19,7 +19,7 @@ export default function HeaderTwo() {
             <div className="col-8 col-sm-auto ">
               <div className="header-logo">
                 <Link href="/">
-                  <img src="/assets/images/logo-white.svg" alt="logo" />
+                  <img src="/assets/images/logo-white.svg" alt="logo" style={{ width: '250px' }} />
                 </Link>
               </div>
             </div>
