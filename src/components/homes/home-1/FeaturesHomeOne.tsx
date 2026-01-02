@@ -21,6 +21,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
+                  View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -37,6 +38,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
+                  View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -53,6 +55,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
+                  View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -69,22 +72,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-             <div className="azzle-iconbox-wrap">
-              <div className="azzle-iconbox-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-file-badge-2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><circle cx="11.5" cy="15.5" r="2.5"/><path d="M14.5 19.5 10 18"/></svg>
-              </div>
-              <div className="azzle-iconbox-content">
-                <h3>Attestation</h3>
-                <p>MOFA, embassy & notary attestation for personal/ business docs.</p>
-              </div>
-              <div className="azzle-iconbox-button mt-50">
-                <Link href="/service">
+                  View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -101,6 +89,24 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
+                  View Services
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+             <div className="azzle-iconbox-wrap">
+              <div className="azzle-iconbox-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-book-marked"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="m14 6-4-4-4 4"/></svg>
+              </div>
+              <div className="azzle-iconbox-content">
+                <h3>Notary Public</h3>
+                <p>Book legal appointments and get government certified copies at ease.</p>
+              </div>
+              <div className="azzle-iconbox-button mt-50">
+                <Link href="/service">
+                  View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -113,3 +119,5 @@ export default function FeaturesHomeOne() {
     </section>
   )
 }
+
+    
