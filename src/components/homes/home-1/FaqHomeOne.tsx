@@ -1,5 +1,4 @@
 
-
 "use client";
 import { useState } from "react";
 import Link from "next/link"; 
@@ -28,7 +27,7 @@ const faq_data: FaqItem[] = [
     id: 3,
     question: "Do I need an appointment to visit the center?",
     answer:
-      "No appointment is necessary for most of our services. You can visit us during our operating hours, and our team will be ready to assist you promptly.",
+      "No appointment is necessary for most of our services. You can visit us during our operating hours and our team will be ready to assist you promptly.",
   },
 ];
 
