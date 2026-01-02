@@ -16,8 +16,7 @@ export default function PricingHomeOne() {
           data-aos-delay="500"
         >
           <h2>
-            Connecting People to Possibilities through Smart Government
-            Solutions
+            Smart Government Solutions, Connecting People
           </h2>
         </div>
 
