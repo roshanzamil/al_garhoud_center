@@ -21,18 +21,19 @@ export default function MissionVisionHomeOne() {
           </h2>
         </div>
 
-        <div className="row equal-height-cards">
+        <div className="row" style={{ display: 'flex', flexWrap: 'wrap' }}>
           {/* Vision */}
-          <div className="col-xl-4 col-md-6 mb-4">
+          <div className="col-xl-4 col-md-6 mb-4" style={{ display: 'flex' }}>
             <div
               className="azzle-pricing-wrap"
               data-aos="fade-up"
               data-aos-delay="500"
+              style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Vision</h4>
               </div>
-              <div className="azzle-pricing-body">
+              <div className="azzle-pricing-body" style={{ flexGrow: 1 }}>
                 <p>
                   To deliver transparent, efficient and citizen – centric
                   services that uphold the highest standards of integrity,
@@ -43,16 +44,17 @@ export default function MissionVisionHomeOne() {
           </div>
 
           {/* Mission */}
-          <div className="col-xl-4 col-md-6 mb-4">
+          <div className="col-xl-4 col-md-6 mb-4" style={{ display: 'flex' }}>
             <div
               className="azzle-pricing-wrap active"
               data-aos="fade-up"
               data-aos-delay="700"
+               style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Mission</h4>
               </div>
-              <div className="azzle-pricing-body">
+              <div className="azzle-pricing-body" style={{ flexGrow: 1 }}>
                 <p>
                   To be the most unabridged Government service – providing
                   centers in the United Arab Emirates to be aligned with the
@@ -63,16 +65,17 @@ export default function MissionVisionHomeOne() {
           </div>
 
           {/* Values */}
-          <div className="col-xl-4 col-md-6 mb-4">
+          <div className="col-xl-4 col-md-6 mb-4" style={{ display: 'flex' }}>
             <div
               className="azzle-pricing-wrap"
               data-aos="fade-up"
               data-aos-delay="900"
+               style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Values</h4>
               </div>
-              <div className="azzle-pricing-body">
+              <div className="azzle-pricing-body" style={{ flexGrow: 1 }}>
                 <ul>
                   <li>Honest</li>
                   <li>Synergistic</li>
