@@ -13,7 +13,7 @@ export default function AboutHomeOne() {
             </div>
             <div className="col-lg-7 d-flex align-items-center">
               <div className="azzle-default-content pr-110" data-aos="fade-up" data-aos-delay="700">
-                <h2>Efficient, Swift, and Client-Focused Solutions</h2>
+                <h2>Efficient, Swift and Client-Focused Solutions</h2>
                 <p className="mb-0">At Al Garhoud Center, we prioritize your convenience. Our streamlined processes and dedicated team ensure your government transactions are handled quickly and professionally, saving you valuable time.</p>
                 <div className="azzle-listicon-wrap mt-50">
                   <ul>
