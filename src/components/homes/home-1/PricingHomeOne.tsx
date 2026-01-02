@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function PricingHomeOne() {
   return (
-    <div className="azzle-section-padding2 position-r">
+    <div className="position-r pt-0">
       <div className="azzle-pricing-shape">
         <img src="assets/images/home1/pricing-shape.png" alt="bg" />
       </div>
