@@ -18,13 +18,14 @@ export default function MissionVisionHomeOne() {
           <h2>Connecting People to Possibilities through Smart Government Solutions</h2>
         </div>
 
-        <div className="row d-flex align-items-stretch">
+        <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
           {/* Vision */}
-          <div className="col-xl-4 col-md-6 d-flex">
+          <div className="col-xl-4 col-md-6" style={{ display: "flex", flexDirection: "column" }}>
             <div
-              className="azzle-pricing-wrap w-100"
+              className="azzle-pricing-wrap"
               data-aos="fade-up"
               data-aos-delay="500"
+              style={{ flex: "1 1 auto" }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Vision</h4>
@@ -38,11 +39,12 @@ export default function MissionVisionHomeOne() {
           </div>
 
           {/* Mission */}
-          <div className="col-xl-4 col-md-6 d-flex">
+          <div className="col-xl-4 col-md-6" style={{ display: "flex", flexDirection: "column" }}>
             <div
-              className="azzle-pricing-wrap active w-100"
+              className="azzle-pricing-wrap active"
               data-aos="fade-up"
               data-aos-delay="700"
+              style={{ flex: "1 1 auto" }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Mission</h4>
@@ -56,11 +58,12 @@ export default function MissionVisionHomeOne() {
           </div>
 
           {/* Values */}
-          <div className="col-xl-4 col-md-6 d-flex">
+          <div className="col-xl-4 col-md-6" style={{ display: "flex", flexDirection: "column" }}>
             <div
-              className="azzle-pricing-wrap w-100"
+              className="azzle-pricing-wrap"
               data-aos="fade-up"
               data-aos-delay="900"
+              style={{ flex: "1 1 auto" }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Values</h4>
