@@ -21,7 +21,7 @@ export default function TestimonialHomeOne() {
                   <img src="assets/images/home1/author1.png" alt="thumb" />
                 </div>
                 <div className="azzle-iconbox-author-data">
-                  <p>Fatima Al-Sayed</p>
+                  <p>Ahmed Al-Sayed</p>
                   <span>Business Owner</span>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function TestimonialHomeOne() {
                   <img src="assets/images/home1/author5.png" alt="thumb" />
                 </div>
                 <div className="azzle-iconbox-author-data">
-                  <p>Karen Lynn</p>
+                  <p>Kevin Lynn</p>
                   <span>Restaurant Owner</span>
                 </div>
               </div>
