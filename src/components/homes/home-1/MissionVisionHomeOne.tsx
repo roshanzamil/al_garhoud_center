@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function MissionVisionHomeOne() {
-
   return (
     <div className="azzle-section-padding2 position-r">
       <div className="azzle-pricing-shape">
@@ -15,55 +14,59 @@ export default function MissionVisionHomeOne() {
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          <h2>Connecting People to Possibilities through Smart Government Solutions</h2>
+          <h2>
+            Connecting People to Possibilities through Smart Government
+            Solutions
+          </h2>
         </div>
 
-        <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
+        <div className="row d-flex align-items-stretch">
           {/* Vision */}
-          <div className="col-xl-4 col-md-6" style={{ display: "flex", flexDirection: "column" }}>
+          <div className="col-xl-4 col-md-6 mb-4">
             <div
-              className="azzle-pricing-wrap"
+              className="azzle-pricing-wrap h-100"
               data-aos="fade-up"
               data-aos-delay="500"
-              style={{ flex: "1 1 auto" }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Vision</h4>
               </div>
               <div className="azzle-pricing-body">
                 <p>
-                To deliver transparent, efficient and citizen – centric services that uphold the highest standards of integrity, accountability and excellence.
+                  To deliver transparent, efficient and citizen – centric
+                  services that uphold the highest standards of integrity,
+                  accountability and excellence.
                 </p>
               </div>
             </div>
           </div>
 
           {/* Mission */}
-          <div className="col-xl-4 col-md-6" style={{ display: "flex", flexDirection: "column" }}>
+          <div className="col-xl-4 col-md-6 mb-4">
             <div
-              className="azzle-pricing-wrap active"
+              className="azzle-pricing-wrap active h-100"
               data-aos="fade-up"
               data-aos-delay="700"
-              style={{ flex: "1 1 auto" }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Mission</h4>
               </div>
               <div className="azzle-pricing-body">
                 <p>
-                To be the most unabridged Government service – providing centers in the United Arab Emirates to be aligned with the vision of our leadership.
+                  To be the most unabridged Government service – providing
+                  centers in the United Arab Emirates to be aligned with the
+                  vision of our leadership.
                 </p>
               </div>
             </div>
           </div>
 
           {/* Values */}
-          <div className="col-xl-4 col-md-6" style={{ display: "flex", flexDirection: "column" }}>
+          <div className="col-xl-4 col-md-6 mb-4">
             <div
-              className="azzle-pricing-wrap"
+              className="azzle-pricing-wrap h-100"
               data-aos="fade-up"
               data-aos-delay="900"
-              style={{ flex: "1 1 auto" }}
             >
               <div className="azzle-pricing-header">
                 <h4>Our Values</h4>
