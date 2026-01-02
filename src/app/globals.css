@@ -129,7 +129,10 @@ body h6 {
 }
 
 .azzle-iconbox-button a:hover {
-  color: #a57921;
+  color: red;
+}
+.azzle-iconbox-button a:hover svg path {
+  stroke: red;
 }
 
 .azzle-iconbox-button a:hover svg {
