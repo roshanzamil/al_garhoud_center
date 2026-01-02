@@ -82,7 +82,7 @@ export default function FooterOne() {
             <div className="col-xl-4 col-lg-12 col-md-12">
               <div className="azzle-footer-textarea">
                 <Link href="/">
-                  <img src="assets/images/logo/logo-dark.svg" alt="Logo" />
+                  <img src="assets/images/logo/logo-dark.svg" alt="Logo" style={{ width: '200px' }} />
                 </Link>
                 <p>
                   Al Garhoud Center is dedicated to providing exceptional government services with a commitment to efficiency, transparency and customer satisfaction, aligning with the vision of Dubai's leadership.
@@ -136,7 +136,7 @@ export default function FooterOne() {
         {/* Bottom */}
         <div className="azzle-footer-bottom-text">
           <p>
-            © Copyright {new Date().getFullYear()}, All Rights Reserved by
+            © Copyright 2026, All Rights Reserved by
             Al Garhoud Center
           </p>
           <p>
