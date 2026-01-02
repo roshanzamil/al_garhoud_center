@@ -123,3 +123,37 @@ body h6 {
   color: #bd8c2e !important;
 }
 
+.azzle-iconbox-button a {
+  color: #bd8c2e;
+  transition: all 0.3s ease-in-out;
+}
+
+.azzle-iconbox-button a:hover {
+  color: #a57921;
+}
+
+.azzle-iconbox-button a:hover svg {
+  transform: translateX(5px);
+}
+.azzle-iconbox-button a svg {
+  transition: all 0.3s ease-in-out;
+}
+.site-header {
+  background-color: white !important;
+}
+.site-header a {
+  color: initial !important;
+}
+
+.site-header .azzle-default-btn {
+    border: 1px solid #bd8c2e;
+    color: #bd8c2e !important;
+}
+.site-header .azzle-default-btn:hover {
+    background: #bd8c2e;
+    color: white !important;
+}
+
+.site-header .azzle-header-login-button ul li a {
+    color: #bd8c2e !important;
+}
