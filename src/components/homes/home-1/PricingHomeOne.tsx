@@ -1,9 +1,9 @@
+
 "use client";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function PricingHomeOne() { 
-  const [isMonthly, setIsMonthly] = useState(false);
+export default function MissionVisionHomeOne() {
 
   return (
     <div className="azzle-section-padding2 position-r">
@@ -16,24 +16,11 @@ export default function PricingHomeOne() {
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          <h2>Cost-effectively build any software</h2>
-          <div className="azzle-title-pricing-btn mt-50">
-            <label htmlFor="toggle" className="toggle-switch">
-              <input
-                className="toggle-button"
-                id="toggle"
-                type="checkbox"
-                checked={isMonthly}
-                onChange={(e) => setIsMonthly(e.target.checked)}
-              />
-              <span>Monthly</span>
-              <span>Yearly</span>
-            </label>
-          </div>
+          <h2>Connecting People to Possibilities through Smart Government Solutions</h2>
         </div>
 
         <div className="row">
-          {/* Beginner */}
+          {/* Vision */}
           <div className="col-xl-4 col-md-6">
             <div
               className="azzle-pricing-wrap"
@@ -41,38 +28,17 @@ export default function PricingHomeOne() {
               data-aos-delay="500"
             >
               <div className="azzle-pricing-header">
-                <h3>Beginner</h3>
-                <p>Up to 10 members</p>
+                <h3>Our Vision</h3>
               </div>
-              {isMonthly ? (
-                <div className="azzle-pricing-price">
-                  <h2>$50</h2>
-                  <span>/Per Year</span>
-                </div>
-              ) : (
-                <div className="azzle-pricing-price">
-                  <h2>$25</h2>
-                  <span>/Per Month</span>
-                </div>
-              )}
               <div className="azzle-pricing-body">
                 <p>
-                  This is an excellent option for people & small businesses who
-                  are starting out.
+                To deliver transparent, efficient and citizen – centric services that uphold the highest standards of integrity, accountability and excellence.
                 </p>
-              </div>
-              <div className="azzle-pricing-footer mt-50">
-                <Link
-                  className="azzle-default-btn d-block outline-btn"
-                  href="/contact-us"
-                >
-                  Choose the plan
-                </Link>
               </div>
             </div>
           </div>
 
-          {/* Starter */}
+          {/* Mission */}
           <div className="col-xl-4 col-md-6">
             <div
               className="azzle-pricing-wrap active"
@@ -80,38 +46,17 @@ export default function PricingHomeOne() {
               data-aos-delay="700"
             >
               <div className="azzle-pricing-header">
-                <h3>Starter</h3>
-                <p>Up to 50 members</p>
+                <h3>Our Mission</h3>
               </div>
-              {isMonthly ? (
-                <div className="azzle-pricing-price">
-                  <h2>$169</h2>
-                  <span>/Per Year</span>
-                </div>
-              ) : (
-                <div className="azzle-pricing-price">
-                  <h2>$89</h2>
-                  <span>/Per Month</span>
-                </div>
-              )}
               <div className="azzle-pricing-body">
                 <p>
-                  This plan is suitable for e-commerce stores as well as
-                  professional blogs.
+                To be the most unabridged Government service – providing centers in the United Arab Emirates to be aligned with the vision of our leadership.
                 </p>
-              </div>
-              <div className="azzle-pricing-footer mt-50">
-                <Link
-                  className="azzle-default-btn d-block outline-btn btn2"
-                  href="/contact-us"
-                >
-                  Choose the plan
-                </Link>
               </div>
             </div>
           </div>
 
-          {/* Pro */}
+          {/* Values */}
           <div className="col-xl-4 col-md-6">
             <div
               className="azzle-pricing-wrap"
@@ -119,33 +64,17 @@ export default function PricingHomeOne() {
               data-aos-delay="900"
             >
               <div className="azzle-pricing-header">
-                <h3>Pro</h3>
-                <p>Up to 100 members</p>
+                <h3>Our Values</h3>
               </div>
-              {isMonthly ? (
-                <div className="azzle-pricing-price">
-                  <h2>$299</h2>
-                  <span>/Per Year</span>
-                </div>
-              ) : (
-                <div className="azzle-pricing-price">
-                  <h2>$199</h2>
-                  <span>/Per Month</span>
-                </div>
-              )}
               <div className="azzle-pricing-body">
-                <p>
-                  Ideal for handling complicated projects, enterprise-level
-                  projects, and websites.
-                </p>
-              </div>
-              <div className="azzle-pricing-footer mt-50">
-                <Link
-                  className="azzle-default-btn d-block outline-btn"
-                  href="/contact-us"
-                >
-                  Choose the plan
-                </Link>
+                <ul>
+                  <li>Honest</li>
+                  <li>Synergistic</li>
+                  <li>Honorable</li>
+                  <li>Customer-centric</li>
+                  <li>Ethical</li>
+                  <li>Transparent</li>
+                </ul>
               </div>
             </div>
           </div>
