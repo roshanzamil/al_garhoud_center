@@ -27,12 +27,12 @@ export default function VideoHomeOne() {
               <div className="divider2"></div>
               <div className="azzle-counter-wrap">
                 <div className="azzle-counter-item">
-                  <h2 className="azzle-counter-data" aria-label="98%">98%</h2>
-                  <p>Customer Satisfaction Rate</p>
+                  <h2 className="azzle-counter-data" aria-label="18y">18y</h2>
+                  <p>Innovative services</p>
                 </div>
                 <div className="azzle-counter-item">
-                  <h2 className="azzle-counter-data" aria-label="100k+">100k+</h2>
-                  <p>Transactions Processed Annually</p>
+                  <h2 className="azzle-counter-data" aria-label="70+">70+</h2>
+                  <p>Dedicated Workforce</p>
                 </div>
               </div>
             </div>
