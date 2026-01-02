@@ -96,3 +96,30 @@
   }
 }
 
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  color: #bd8c2e;
+}
+
+.azzle-default-content.light-color h2,
+.azzle-section-title.title2 h2,
+.azzle-blog-wrap2 .azzle-blog-content2 a h3,
+.azzle-cta-title3 h1,
+.azzle-footer-menu2 h4,
+.azzle-footer-section2 .azzle-section-title.title2 h2,
+.azzle-default-content.content3 h2,
+.azzle-section-title.font-title h2,
+.azzle-t-wrap .azzle-default-content h3,
+.azzle-faq-item.item2 .azzle-faq-header h3,
+.azzle-blog-wrap .azzle-blog-content a h3 {
+  color: white !important;
+}
+
+.azzle-iconbox-content h3, .azzle-breadcrumb-title, .azzle-team-content h3 {
+  color: #bd8c2e !important;
+}
+
