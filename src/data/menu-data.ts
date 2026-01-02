@@ -14,16 +14,7 @@ interface MenuItem {
 }[];
 
 const menu_data: MenuItem[] = [
-  {
-    title: "Demos",
-    has_submenu: true,
-    path: "#",
-    sub_menus: [
-      { title: "Home 01", path: "/" },
-      { title: "Home 02", path: "/home-2" },
-      { title: "Home 03", path: "/home-3" },
-    ],
-  },
+  { title: "Home", has_submenu: false, path: "/" },
   { title: "About Us", has_submenu: false, path: "/about-us" },
   {
     title: "Pages",
