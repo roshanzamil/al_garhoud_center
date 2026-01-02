@@ -3,7 +3,7 @@ import ModalVideo from "@/modal/modalVideo";
 
 export default function VideoHomeOne() {
   return (
-    <section className="azzle-video-section">
+    <section className="azzle-video-section azzle-section-padding-bottom">
       <div className="row">
         <div className="col-xl-6">
           <div className="azzle-video-thumb">
