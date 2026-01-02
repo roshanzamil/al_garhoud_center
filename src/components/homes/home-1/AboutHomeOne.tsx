@@ -6,7 +6,7 @@ export default function AboutHomeOne() {
       <div className="azzle-section-padding pt-0 overflow-hidden">
         <div className="container">
           <div className="row">
-            <div className="col-lg-5 order-lg-2">
+            <div className="col-lg-5 order-lg-2 azzle-about-thumb-container">
               <div className="azzle-content-thumb" data-aos="zoom-in" data-aos-delay="500">
                 <img src="assets/images/home1/thumb1.png" alt="Thumb" />
               </div>
