@@ -18,3 +18,9 @@
 @import "../../public/assets/css/clashdisplay.css"; 
 @import "../../public/assets/css/main.css"; 
 @import "../../public/assets/css/app.min.css"; 
+
+@media (min-width: 992px) {
+  .azzle-iconbox-column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
