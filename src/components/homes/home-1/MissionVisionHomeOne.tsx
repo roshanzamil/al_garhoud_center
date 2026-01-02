@@ -24,7 +24,7 @@ export default function MissionVisionHomeOne() {
           {/* Vision */}
           <div className="col-xl-4 col-md-6 mb-4 d-flex">
             <div
-              className="azzle-pricing-wrap h-100"
+              className="azzle-pricing-wrap w-100"
               data-aos="fade-up"
               data-aos-delay="500"
             >
@@ -44,7 +44,7 @@ export default function MissionVisionHomeOne() {
           {/* Mission */}
           <div className="col-xl-4 col-md-6 mb-4 d-flex">
             <div
-              className="azzle-pricing-wrap active h-100"
+              className="azzle-pricing-wrap active w-100"
               data-aos="fade-up"
               data-aos-delay="700"
             >
@@ -64,7 +64,7 @@ export default function MissionVisionHomeOne() {
           {/* Values */}
           <div className="col-xl-4 col-md-6 mb-4 d-flex">
             <div
-              className="azzle-pricing-wrap h-100"
+              className="azzle-pricing-wrap w-100"
               data-aos="fade-up"
               data-aos-delay="900"
             >
