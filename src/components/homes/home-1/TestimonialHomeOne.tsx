@@ -14,7 +14,7 @@ export default function TestimonialHomeOne() {
                 <img src="assets/images/home1/start.svg" alt="ratting" />
               </div>
               <div className="azzle-iconbox-content2">
-                <p>“The team at Al Garhoud Center revolutionized how I handle my visa renewals. Fast, professional, and so efficient. A game-changer for any resident.”</p>
+                <p>“The team at Al Garhoud Center revolutionized how I handle my visa renewals. Fast, professional and so efficient. A game-changer for any resident.”</p>
               </div>
               <div className="azzle-iconbox-author-wrap">
                 <div className="azzle-iconbox-author-thumb">
@@ -52,7 +52,7 @@ export default function TestimonialHomeOne() {
                 <img src="assets/images/home1/start.svg" alt="ratting" />
               </div>
               <div className="azzle-iconbox-content2">
-                <p>"Fast, accurate, and professional. The Amer and Taw-Jeeh services here are must-haves for any company operating in Dubai."</p>
+                <p>"Fast, accurate and professional. The Amer and Taw-Jeeh services here are must-haves for any company operating in Dubai."</p>
               </div>
               <div className="azzle-iconbox-author-wrap">
                 <div className="azzle-iconbox-author-thumb">
