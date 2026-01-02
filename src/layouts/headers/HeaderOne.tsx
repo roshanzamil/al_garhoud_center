@@ -33,12 +33,12 @@ export default function HeaderOne() {
                 <div className="azzle-header-login-button">
                   <ul>
                     <li>
-                      <Link href="/sign-in">Login</Link>
+                      <a href="tel:043426666">04 342 6666</a>
                     </li>
                   </ul>
                 </div>
-                <Link className="azzle-default-btn azzle-header-btn" href="/sign-up" data-text="Sign up free">
-                  <span className="button-wraper">Sign up free</span>
+                <Link className="azzle-default-btn azzle-header-btn" href="/contact-us" data-text="Contact us">
+                  <span className="button-wraper">Contact us</span>
                 </Link>
               </div>
               <div className="azzle-header-menu">
