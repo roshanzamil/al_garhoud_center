@@ -20,7 +20,7 @@ export default function MissionVisionHomeOne() {
           </h2>
         </div>
 
-        <div className="row equal-height-row">
+        <div className="row equal-height-cards">
           {/* Vision */}
           <div className="col-xl-4 col-md-6 mb-4">
             <div
