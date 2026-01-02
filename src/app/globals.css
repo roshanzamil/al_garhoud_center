@@ -167,6 +167,10 @@ body h6 {
     color: #bd8c2e !important;
 }
 
+.site-header .azzle-header-login-button ul li a:hover {
+    color: red !important;
+}
+
 .azzle-iconbox-wrap .azzle-iconbox-content h3 {
   color: initial !important;
 }
