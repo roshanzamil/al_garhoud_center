@@ -19,6 +19,19 @@
 @import "../../public/assets/css/main.css"; 
 @import "../../public/assets/css/app.min.css"; 
 
+/* Default for mobile */
+.azzle-iconbox-column {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .azzle-iconbox-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
 @media (min-width: 992px) {
   .azzle-iconbox-column {
     grid-template-columns: repeat(3, 1fr);
