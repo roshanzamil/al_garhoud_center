@@ -150,6 +150,9 @@ body h6 {
 .site-header {
   background-color: white !important;
 }
+.azzle-header-section {
+  padding: 20px 0;
+}
 .site-header a {
   color: initial !important;
 }
