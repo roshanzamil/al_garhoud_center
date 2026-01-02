@@ -8,6 +8,7 @@ import PricingHomeOne from "./PricingHomeOne";
 import FaqHomeOne from "./FaqHomeOne";
 import TestimonialHomeOne from "./TestimonialHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
+import QuoteHomeOne from "./QuoteHomeOne";
 
 export default function HomeOne() {
 	return (
@@ -20,6 +21,7 @@ export default function HomeOne() {
           <PricingHomeOne />
           <AboutHomeOne />
           <VideoHomeOne />
+          <QuoteHomeOne />
           <FaqHomeOne />
           <TestimonialHomeOne />
           <FooterOne />
