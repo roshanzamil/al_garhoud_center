@@ -4,7 +4,7 @@ import HeroHomeOne from "./HeroHomeOne";
 import FeaturesHomeOne from "./FeaturesHomeOne";
 import AboutHomeOne from "./AboutHomeOne";
 import VideoHomeOne from "./VideoHomeOne";
-import MissionVisionHomeOne from "./MissionVisionHomeOne";
+import MissionVisionHomeOne from "./PricingHomeOne";
 import FaqHomeOne from "./FaqHomeOne";
 import TestimonialHomeOne from "./TestimonialHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
