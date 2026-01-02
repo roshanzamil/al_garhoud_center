@@ -30,7 +30,7 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                 <img src="https://picsum.photos/seed/typing/150/150" alt="Typing" data-ai-hint="document logo" style={{ height: '150px' }} />
+                 <img src="assets/images/service/typing-logo.webp" alt="Typing" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Typing Services</h3>
