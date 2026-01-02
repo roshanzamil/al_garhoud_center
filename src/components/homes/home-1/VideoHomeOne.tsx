@@ -1,26 +1,43 @@
+import ModalVideo from "@/modal/modalVideo";
 
-import Link from 'next/link';
 
 export default function VideoHomeOne() {
   return (
-    <section className="azzle-video-section" style={{backgroundImage: 'url(/assets/images/about/image-3.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
-       <div className="container">
-        <div className="row justify-content-center text-center">
-            <div className="col-lg-8">
-                <div className="azzle-default-content w-100 light-color p-5" data-aos="fade-up" data-aos-delay="700" style={{background: 'rgba(0,0,0,0.6)', borderRadius: '15px'}}>
-              <h2>
-                <Link href="/team" style={{color: 'white', textDecoration: 'none'}}>
-                "I believe that positive energy and optimism help us to take up any challenge inlife and to succeed in even the most difficult tasks. I also believe that positive energy is contagious: we can transmit it to others"
-                </Link>
-              </h2>
-              <p>- His Highness Sheikh Mohammed bin Rashid Al Maktoum</p>
+    <section className="azzle-video-section">
+      <div className="row">
+        <div className="col-xl-6">
+          <div className="azzle-video-thumb">
+            <img src="assets/images/home1/thumb3.png" alt="Thumb" />
+            <ModalVideo>
+              <a className="azzle-popup-video video-init" href="https://www.youtube.com/watch?v=zE_WFiHnSlY">
+                <img src="assets/images/home1/play-btn.png" alt="" />
+                <div className="waves wave-1"></div>
+                <div className="waves wave-2"></div>
+                <div className="waves wave-3"></div>
+              </a>
 
-              <div className="mt-4">
-                 <Link href="/team" className="azzle-default-btn">View Team</Link>
+            </ModalVideo>
+          </div>
+        </div>
+        <div className="col-xl-6 d-flex align-items-center">
+          <div className="azzle-video-wrap" data-aos="fade-up" data-aos-delay="500">
+            <div className="azzle-video-content">
+              <h2>AI-powered that streamline tasks</h2>
+              <p>As your business grows or your AI SaaS needs change, you can easily adjust your subscription level to match those needs. This flexibility ensures that AI remains an asset.</p>
+              <div className="divider2"></div>
+              <div className="azzle-counter-wrap">
+                <div className="azzle-counter-item">
+                  <h2 className="azzle-counter-data" aria-label="92%">92%</h2>
+                  <p>Customer service inquiries</p>
+                </div>
+                <div className="azzle-counter-item">
+                  <h2 className="azzle-counter-data" aria-label="75%">75%</h2>
+                  <p>Using financial institutions</p>
+                </div>
               </div>
+            </div>
+          </div>
 
-            </div>
-            </div>
         </div>
       </div>
     </section>

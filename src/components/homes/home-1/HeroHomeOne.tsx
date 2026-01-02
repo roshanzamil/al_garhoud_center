@@ -32,51 +32,25 @@ export default function HeroHomeOne() {
         <img src="assets/images/home1/hero-bg.png" alt="bg" />
       </div>
       <div className="container">
-        <div className="row">
-          <div className="col-lg-6">
-            <div className="azzle-hero-content1" style={{paddingTop: '50px'}}>
-              <h1 data-aos="fade-left" data-aos-delay="500">One-Stop Government Transactions</h1>
-              <p data-aos="zoom-in" data-aos-delay="700">Connecting People to Possibilities through Smart Government Solutions. At Al Garhoud Center, we combine smart technology with trusted expertise to simplify key Dubai services.</p>
-              <div className="azzle-hero-button mt-50">
-                <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Learn More">
-                  <span className="button-wraper">Learn More</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6">
-            <div className="azzle-account-box" style={{marginTop: '50px'}} data-aos="fade-right" data-aos-delay="600">
-              <div className="azzle-account-header text-center">
-                <h4>Seamless Company Formation</h4>
-              </div>
-              <form action="#">
-                <div className="azzle-contact-field mb-3">
-                  <label>Full Name *</label>
-                  <input type="text" placeholder="Your Full Name" />
-                </div>
-                <div className="azzle-contact-field mb-3">
-                  <label>Email Address *</label>
-                  <input type="email" placeholder="your.email@example.com" />
-                </div>
-                <div className="azzle-contact-field mb-4">
-                  <label>Select Nationality</label>
-                  <select className="form-select" aria-label="Default select example">
-                    <option selected>Select Nationality</option>
-                    <option value="1">UAE</option>
-                    <option value="2">India</option>
-                    <option value="3">USA</option>
-                  </select>
-                </div>
-                <button id="azzle-main-submit-btn" className="w-100" type="button">Let's Chat</button>
-              </form>
-            </div>
+        <div className="azzle-hero-content1">
+          <h1 data-aos="fade-left" data-aos-delay="500">One Stop government solution</h1>
+          <p data-aos="zoom-in" data-aos-delay="700">Our AI SAAS tool is a cloud-based software delivery model. It helps businesses forecast demand for products and services and optimize inventory management and supply chain operations.</p>
+          <div className="azzle-hero-button mt-50">
+            <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started for free">
+              <span className="button-wraper">Get started for free</span>
+            </Link>
+            <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/contact-us" data-text="Learn more">
+              <span className="button-wraper">Learn more</span>
+            </Link>
           </div>
         </div>
-
+        <div className="azzle-hero-dashboard" data-aos="fade-up" data-aos-delay=".7s">
+          <img src="assets/images/home1/Dashboard.png" alt="Dashboard" />
+        </div>
         <div className="divider"></div>
         <div className="azzle-brand-slider-wraper">
           <div className="azzle-brand-slider-title" data-aos="fade-up" data-aos-delay=".9s">
-            <p>Client loyalty speaks volumes. Their continued engagement is a clear reflection of the quality and consistency we deliver.</p>
+            <p>Companies of all sizes trust us to find AI SaaS critical to their growth and innovation</p>
           </div>
           <Slider {...settings} className="azzle-brand-slider">
             <div className="azzle-logo-icon-item">
