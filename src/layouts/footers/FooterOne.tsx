@@ -139,6 +139,9 @@ export default function FooterOne() {
             © Copyright {new Date().getFullYear()}, All Rights Reserved by
             Al Garhoud Center
           </p>
+          <p>
+            Designed and Developed by <a href="https://brocrypt.com/" target="_blank" rel="noopener noreferrer">BroCrypt</a>
+          </p>
         </div>
       </div>
     </footer>
