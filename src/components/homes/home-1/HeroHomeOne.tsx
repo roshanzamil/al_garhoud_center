@@ -32,16 +32,18 @@ export default function HeroHomeOne() {
         <img src="assets/images/home1/hero-bg.png" alt="bg" />
       </div>
       <div className="container">
-        <div className="azzle-hero-content1">
-          <h1 data-aos="fade-left" data-aos-delay="500">Your Trusted Partner for All Government Services</h1>
-          <p data-aos="zoom-in" data-aos-delay="700">Al Garhoud Center is your trusted partner for a seamless government service experience. We provide a comprehensive range of services with efficiency and a focus on customer satisfaction, simplifying all your official needs.</p>
-          <div className="azzle-hero-button mt-50">
-            <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started">
-              <span className="button-wraper">Get started</span>
-            </Link>
-            <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/about-us" data-text="Learn more">
-              <span className="button-wraper">Learn more</span>
-            </Link>
+        <div className="flex items-center">
+          <div className="azzle-hero-content1">
+            <h1 data-aos="fade-left" data-aos-delay="500">Your Trusted Partner for All Government Services</h1>
+            <p data-aos="zoom-in" data-aos-delay="700">Al Garhoud Center is your trusted partner for a seamless government service experience. We provide a comprehensive range of services with efficiency and a focus on customer satisfaction, simplifying all your official needs.</p>
+            <div className="azzle-hero-button mt-50">
+              <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started">
+                <span className="button-wraper">Get started</span>
+              </Link>
+              <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/about-us" data-text="Learn more">
+                <span className="button-wraper">Learn more</span>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="azzle-hero-dashboard" data-aos="fade-up" data-aos-delay=".7s">
