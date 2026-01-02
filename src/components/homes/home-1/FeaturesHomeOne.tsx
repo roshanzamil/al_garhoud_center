@@ -13,7 +13,7 @@ export default function FeaturesHomeOne() {
           <div className="azzle-iconbox-column">
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="https://picsum.photos/seed/dha/70/70" alt="DHA" data-ai-hint="health logo" />
+                <img src="assets/images/service/DHA-logo.webp" alt="DHA" />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Dubai Health - DHA</h3>
@@ -47,7 +47,7 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="https://picsum.photos/seed/amer/70/70" alt="Amer" data-ai-hint="government logo" />
+                <img src="assets/images/service/amer-logo.webp" alt="Amer" />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Amer</h3>
@@ -64,7 +64,7 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="https://picsum.photos/seed/det/70/70" alt="DET" data-ai-hint="business logo" />
+                <img src="assets/images/service/det-logo.webp" alt="DET" />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>DET</h3>
@@ -81,7 +81,7 @@ export default function FeaturesHomeOne() {
             </div>
              <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                 <img src="https://picsum.photos/seed/tawjeeh/70/70" alt="Taw-Jeeh" data-ai-hint="ministry logo" />
+                 <img src="assets/images/service/t3-logo.webp" alt="Taw-Jeeh" />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Taw-Jeeh Services</h3>
@@ -98,7 +98,7 @@ export default function FeaturesHomeOne() {
             </div>
              <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="https://picsum.photos/seed/notary/70/70" alt="Notary Public" data-ai-hint="legal logo" />
+                <img src="assets/images/service/dubai-courts-logo.webp" alt="Notary Public" />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Notary Public</h3>
