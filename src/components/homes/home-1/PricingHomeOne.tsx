@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function MissionVisionHomeOne() {
-
+export default function PricingHomeOne() {
   return (
     <div className="azzle-section-padding2 position-r">
       <div className="azzle-pricing-shape">
@@ -16,55 +15,50 @@ export default function MissionVisionHomeOne() {
           data-aos="fade-up"
           data-aos-delay="500"
         >
-          <h2>Connecting People to Possibilities through Smart Government Solutions</h2>
+          <h2>
+            Connecting People to Possibilities through Smart Government
+            Solutions
+          </h2>
         </div>
 
-        <div className="row">
+        <div className="card-grid-container">
           {/* Vision */}
-          <div className="col-xl-4 col-md-6">
-            <div
-              className="azzle-pricing-wrap"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
+          <div className="card-grid-item" data-aos="fade-up" data-aos-delay="500">
+            <div className="azzle-pricing-wrap">
               <div className="azzle-pricing-header">
-                <h3>Our Vision</h3>
+                <h4>Our Vision</h4>
               </div>
               <div className="azzle-pricing-body">
                 <p>
-                To deliver transparent, efficient and citizen – centric services that uphold the highest standards of integrity, accountability and excellence.
+                  To deliver transparent, efficient and citizen – centric
+                  services that uphold the highest standards of integrity,
+                  accountability and excellence.
                 </p>
               </div>
             </div>
           </div>
 
           {/* Mission */}
-          <div className="col-xl-4 col-md-6">
-            <div
-              className="azzle-pricing-wrap active"
-              data-aos="fade-up"
-              data-aos-delay="700"
-            >
+          <div className="card-grid-item" data-aos="fade-up" data-aos-delay="700">
+            <div className="azzle-pricing-wrap active">
               <div className="azzle-pricing-header">
-                <h3>Our Mission</h3>
+                <h4>Our Mission</h4>
               </div>
               <div className="azzle-pricing-body">
                 <p>
-                To be the most unabridged Government service – providing centers in the United Arab Emirates to be aligned with the vision of our leadership.
+                  To be the most unabridged Government service – providing
+                  centers in the United Arab Emirates to be aligned with the
+                  vision of our leadership.
                 </p>
               </div>
             </div>
           </div>
 
           {/* Values */}
-          <div className="col-xl-4 col-md-6">
-            <div
-              className="azzle-pricing-wrap"
-              data-aos="fade-up"
-              data-aos-delay="900"
-            >
+          <div className="card-grid-item" data-aos="fade-up" data-aos-delay="900">
+            <div className="azzle-pricing-wrap">
               <div className="azzle-pricing-header">
-                <h3>Our Values</h3>
+                <h4>Our Values</h4>
               </div>
               <div className="azzle-pricing-body">
                 <ul>

@@ -4,7 +4,7 @@ import HeroHomeOne from "./HeroHomeOne";
 import FeaturesHomeOne from "./FeaturesHomeOne";
 import AboutHomeOne from "./AboutHomeOne";
 import VideoHomeOne from "./VideoHomeOne";
-import MissionVisionHomeOne from "./PricingHomeOne";
+import PricingHomeOne from "./PricingHomeOne";
 import FaqHomeOne from "./FaqHomeOne";
 import TestimonialHomeOne from "./TestimonialHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
@@ -19,7 +19,7 @@ export default function HomeOne() {
           <FeaturesHomeOne />
           <AboutHomeOne />
           <VideoHomeOne />
-          <MissionVisionHomeOne />
+          <PricingHomeOne />
           <FaqHomeOne />
           <TestimonialHomeOne />
           <FooterOne />

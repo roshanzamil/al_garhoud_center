@@ -69,3 +69,24 @@
   flex-grow: 1;
 }
 
+.card-grid-container {
+  display: grid;
+  gap: 1.5rem; /* 24px */
+}
+
+.card-grid-item .azzle-pricing-wrap {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .card-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .card-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
