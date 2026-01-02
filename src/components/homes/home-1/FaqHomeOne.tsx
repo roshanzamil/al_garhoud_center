@@ -16,7 +16,7 @@ const faq_data: FaqItem[] = [
     id: 1,
     question: "What services does Al Garhoud Center provide?",
     answer:
-      "We offer a wide range of government services, including visa processing, Emirates ID typing, medical fitness applications, and various approvals from Amer, DET, and DHA.",
+      "We offer a wide range of government services, including visa processing, Emirates ID typing, medical fitness applications and various approvals from Amer, DET, and DHA.",
   },
   {
     id: 2,
