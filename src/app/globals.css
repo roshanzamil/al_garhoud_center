@@ -37,3 +37,17 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.equal-height-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.equal-height-row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.equal-height-row .azzle-pricing-wrap {
+  height: 100%;
+}
