@@ -13,7 +13,7 @@ export default function FeaturesHomeOne() {
           <div className="azzle-iconbox-column">
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/DHA-logo.webp" alt="DHA" style={{ height: '70px' }} />
+                <img src="assets/images/service/DHA-logo.webp" alt="DHA" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Dubai Health - DHA</h3>
@@ -30,7 +30,7 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                 <img src="https://picsum.photos/seed/typing/70/70" alt="Typing" data-ai-hint="document logo" style={{ height: '70px' }} />
+                 <img src="https://picsum.photos/seed/typing/150/150" alt="Typing" data-ai-hint="document logo" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Typing Services</h3>
@@ -47,7 +47,7 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/amer-logo.webp" alt="Amer" style={{ height: '70px' }} />
+                <img src="assets/images/service/amer-logo.webp" alt="Amer" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Amer</h3>
@@ -64,7 +64,7 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/det-logo.webp" alt="DET" style={{ height: '70px' }} />
+                <img src="assets/images/service/det-logo.webp" alt="DET" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>DET</h3>
@@ -81,7 +81,7 @@ export default function FeaturesHomeOne() {
             </div>
              <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                 <img src="assets/images/service/t3-logo.webp" alt="Taw-Jeeh" style={{ height: '70px' }} />
+                 <img src="assets/images/service/t3-logo.webp" alt="Taw-Jeeh" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Taw-Jeeh Services</h3>
@@ -98,7 +98,7 @@ export default function FeaturesHomeOne() {
             </div>
              <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/dubai-courts-logo.webp" alt="Notary Public" style={{ height: '70px' }} />
+                <img src="assets/images/service/dubai-courts-logo.webp" alt="Notary Public" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Notary Public</h3>
