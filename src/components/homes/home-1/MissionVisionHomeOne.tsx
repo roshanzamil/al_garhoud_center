@@ -22,9 +22,9 @@ export default function MissionVisionHomeOne() {
 
         <div className="row d-flex align-items-stretch">
           {/* Vision */}
-          <div className="col-xl-4 col-md-6 mb-4 d-flex">
+          <div className="col-xl-4 col-md-6 mb-4">
             <div
-              className="azzle-pricing-wrap w-100"
+              className="azzle-pricing-wrap h-100"
               data-aos="fade-up"
               data-aos-delay="500"
             >
@@ -42,9 +42,9 @@ export default function MissionVisionHomeOne() {
           </div>
 
           {/* Mission */}
-          <div className="col-xl-4 col-md-6 mb-4 d-flex">
+          <div className="col-xl-4 col-md-6 mb-4">
             <div
-              className="azzle-pricing-wrap active w-100"
+              className="azzle-pricing-wrap active h-100"
               data-aos="fade-up"
               data-aos-delay="700"
             >
@@ -62,9 +62,9 @@ export default function MissionVisionHomeOne() {
           </div>
 
           {/* Values */}
-          <div className="col-xl-4 col-md-6 mb-4 d-flex">
+          <div className="col-xl-4 col-md-6 mb-4">
             <div
-              className="azzle-pricing-wrap w-100"
+              className="azzle-pricing-wrap h-100"
               data-aos="fade-up"
               data-aos-delay="900"
             >
