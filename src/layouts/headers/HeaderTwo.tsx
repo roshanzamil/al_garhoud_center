@@ -1,3 +1,4 @@
+
 "use client";
 import Link from "next/link";
 import Navmenu from "./Navmenu";
@@ -25,7 +26,7 @@ export default function HeaderTwo() {
             </div>
             <div className="col">
               <div className="azzle-main-menu-item">
-                <nav className="main-menu menu-style1 d-none d-lg-block menu-left text-align-left">
+                <nav className="main-menu menu-style1 d-none d-xl-block menu-left text-align-left">
                   <Navmenu menu_style={true} />
                 </nav>
               </div>
@@ -47,7 +48,7 @@ export default function HeaderTwo() {
                 <nav className="navbar site-navbar justify-content-between">
                   {/* <!-- Brand Logo--> */}
                   {/* <!-- mobile menu trigger --> */}
-                  <button onClick={() => setIsOpen(!isOpen)} className="azzle-menu-toggle toggle2 d-inline-block d-lg-none ">
+                  <button onClick={() => setIsOpen(!isOpen)} className="azzle-menu-toggle toggle2 d-inline-block d-xl-none ">
                     <span></span>
                   </button>
                   {/* <!--/.Mobile Menu Hamburger Ends--> */}
