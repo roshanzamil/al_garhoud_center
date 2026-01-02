@@ -64,7 +64,7 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
             >
               <h2>Have Questions? We Have Answers.</h2>
               <p>
-                Our team is ready to provide you with the information you need. Find answers to common questions about our services, processes, and how we can help you navigate government procedures with ease.
+                Our team is ready to provide you with the information you need. Find answers to common questions about our services, processes and how we can help you navigate government procedures with ease.
               </p>
               <div className="mt-50">
                 <Link
