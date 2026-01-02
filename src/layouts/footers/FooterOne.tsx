@@ -85,7 +85,7 @@ export default function FooterOne() {
                   <img src="assets/images/logo/logo-dark.svg" alt="Logo" />
                 </Link>
                 <p>
-                  Al Garhoud Center is dedicated to providing exceptional government services with a commitment to efficiency, transparency, and customer satisfaction, aligning with the vision of Dubai's leadership.
+                  Al Garhoud Center is dedicated to providing exceptional government services with a commitment to efficiency, transparency and customer satisfaction, aligning with the vision of Dubai's leadership.
                 </p>
                 <a href="mailto:info@algarhoudcenter.ae">
                   <span>Email:</span> info@algarhoudcenter.ae
