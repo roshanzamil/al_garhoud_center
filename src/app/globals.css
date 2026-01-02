@@ -178,3 +178,15 @@ body h6 {
 .azzle-hero-dashboard img {
   border-radius: 12px;
 }
+
+.azzle-iconbox-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.azzle-iconbox-button {
+  margin-top: auto;
+}
+
