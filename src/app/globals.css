@@ -121,6 +121,7 @@ body h6 {
 
 .azzle-iconbox-content h3, .azzle-breadcrumb-title, .azzle-team-content h3 {
   color: #bd8c2e !important;
+  transition: color 0.3s ease-in-out;
 }
 
 .azzle-iconbox-button a {
@@ -128,10 +129,15 @@ body h6 {
   transition: all 0.3s ease-in-out;
 }
 
-.azzle-iconbox-button a:hover {
+.azzle-iconbox-wrap:hover .azzle-iconbox-content h3 {
+  color: red !important;
+}
+
+.azzle-iconbox-wrap:hover .azzle-iconbox-button a {
   color: red;
 }
-.azzle-iconbox-button a:hover svg path {
+
+.azzle-iconbox-wrap:hover .azzle-iconbox-button a svg path {
   stroke: red;
 }
 
