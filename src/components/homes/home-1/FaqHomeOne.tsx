@@ -1,10 +1,45 @@
 "use client";
 import { useState } from "react";
-import { Accordion } from "react-accessible-accordion";
-import AccordionItem from "@/common/AccordionItem";
+
+const faqData = [
+  {
+    uuid: "a",
+    question: "Can I pay for my studies in installments?",
+    answer: "Yes, you can typically arrange to pay your tuition fees in installments.",
+  },
+  {
+    uuid: "b",
+    question: "How do I find out about scholarships?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+  {
+    uuid: "c",
+    question: "How do I apply for a scholarship?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    uuid: "d",
+    question: "What courses are available?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+  {
+    uuid: "e",
+    question: "How do I know if I meet the entry requirements?",
+    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+];
 
 export default function FaqHomeOne() {
-  const [allowMultipleExpanded, setAllowMultipleExpanded] = useState(true);
+  const [openItems, setOpenItems] = useState<string[]>(["a"]);
+
+  const toggleItem = (uuid: string) => {
+    if (openItems.includes(uuid)) {
+      setOpenItems(openItems.filter((item) => item !== uuid));
+    } else {
+      setOpenItems([...openItems, uuid]);
+    }
+  };
+
 
   return (
     <section className="azzle-section-padding">
@@ -12,60 +47,28 @@ export default function FaqHomeOne() {
         <div className="row">
           <div className="col-lg-6">
             <div className="azzle-faq-wraper" data-aos="fade-right" data-aos-delay="500">
-              <Accordion
-                allowMultipleExpanded={allowMultipleExpanded}
-                preExpanded={["a"]}
-              >
-                <AccordionItem
-                  id="a"
-                  title="Can I pay for my studies in installments?"
-                >
-                  Yes, you can typically arrange to pay your tuition fees in
-                  installments.
-                </AccordionItem>
-                <AccordionItem
-                  id="b"
-                  title="How do I find out about scholarships?"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                  nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                  sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </AccordionItem>
-                <AccordionItem
-                  id="c"
-                  title="How do I apply for a scholarship?"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
-                </AccordionItem>
-                <AccordionItem
-                  id="d"
-                  title="What courses are available?"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                  nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                  sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </AccordionItem>
-                <AccordionItem
-                  id="e"
-                  title="How do I know if I meet the entry requirements?"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
-                </AccordionItem>
-              </Accordion>
+              <div className="accordion">
+                {faqData.map((item) => (
+                  <div
+                    key={item.uuid}
+                    className={`accordion-item ${openItems.includes(item.uuid) ? "open" : ""}`}
+                  >
+                    <div
+                      className="accordion-header"
+                      onClick={() => toggleItem(item.uuid)}
+                    >
+                      <button className="accordion-button">
+                        {item.question}
+                      </button>
+                    </div>
+                    {openItems.includes(item.uuid) && (
+                      <div className="accordion-panel">
+                        <p>{item.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="col-lg-6">
