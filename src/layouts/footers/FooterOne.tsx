@@ -96,24 +96,29 @@ export default function FooterOne() {
 
             <div className="col-xl-2 col-lg-4 col-md-4">
               <div className="azzle-footer-menu pl-30">
-                <h4>Primary Pages</h4>
+                <h4>Pages</h4>
                 <ul>
                   <li><Link href="/">Home</Link></li>
                   <li><Link href="/about-us">About Us</Link></li>
                   <li><Link href="/service">Services</Link></li>
-                  <li><Link href="/contact-us">Contact</Link></li>
+                  <li><Link href="/team">Leadership</Link></li>
+                  <li><Link href="/milestones">Milestones</Link></li>
+                  <li><Link href="/gallery">Gallery</Link></li>
+                  <li><Link href="/downloads">Downloads</Link></li>
                 </ul>
               </div>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-4">
               <div className="azzle-footer-menu pl-70">
-                <h4>More Links</h4>
+                <h4>Services</h4>
                 <ul>
-                  <li><Link href="/team">Leadership</Link></li>
-                  <li><Link href="/milestones">Milestones</Link></li>
-                  <li><Link href="/gallery">Gallery</Link></li>
-                  <li><Link href="/downloads">Downloads</Link></li>
+                    <li><Link href="/service?tab=dha">Dubai Health - DHA</Link></li>
+                    <li><Link href="/service?tab=typing">Typing Services</Link></li>
+                    <li><Link href="/service?tab=amer">Amer</Link></li>
+                    <li><Link href="/service?tab=det">DET</Link></li>
+                    <li><Link href="/service?tab=tawjeeh">Taw-Jeeh Services</Link></li>
+                    <li><Link href="/service?tab=notary">Notary Public</Link></li>
                 </ul>
               </div>
             </div>
