@@ -37,9 +37,6 @@ export default function FooterTwo() {
                 <Link href="/service">Services</Link>
               </li>
               <li>
-                <Link href="/pricing">Pricing</Link>
-              </li>
-              <li>
                 <Link href="/contact-us">Contact</Link>
               </li>
             </ul>
@@ -48,28 +45,19 @@ export default function FooterTwo() {
             <h4>Company</h4>
             <ul>
               <li>
-                <Link href="/portfolio">Portfolio</Link>
-              </li>
-              <li>
                 <Link href="/team">Team</Link>
               </li>
               <li>
-                <Link href="/service">Blog</Link>
+                <Link href="/blog">Blog</Link>
               </li>
               <li>
                 <Link href="/single-blog">Blog Details</Link>
-              </li>
-              <li>
-                <Link href="/single-portfolio">portfolio Details </Link>
               </li>
             </ul>
           </div>
           <div className="azzle-footer-menu2">
             <h4>Utility pages</h4>
             <ul>
-              <li>
-                <Link href="/faq">Faq</Link>
-              </li>
               <li>
                 <Link href="/sign-up">Sign Up</Link>
               </li>
@@ -79,9 +67,8 @@ export default function FooterTwo() {
               <li>
                 <Link href="/reset-password">Reset Password</Link>
               </li>
-
               <li>
-                <a href="errors-404">404 Not found</a>
+                <Link href="/not-a-real-page">404 Not found</Link>
               </li>
             </ul>
           </div>

@@ -71,9 +71,6 @@ export default function FooterThree() {
                   <Link href="/service">Services</Link>
                 </li>
                 <li>
-                  <Link href="/pricing">Pricing</Link>
-                </li>
-                <li>
                   <Link href="/contact-us">Contact</Link>
                 </li>
               </ul>
@@ -81,9 +78,6 @@ export default function FooterThree() {
             <div className="azzle-footer-menu2">
               <h4>Utility pages</h4>
               <ul>
-                <li>
-                  <Link href="/faq">Faq</Link>
-                </li>
                 <li>
                   <Link href="/sign-up">Sign Up</Link>
                 </li>
@@ -93,9 +87,8 @@ export default function FooterThree() {
                 <li>
                   <Link href="/reset-password">Reset Password</Link>
                 </li>
-
                 <li>
-                  <Link href="/errors-404">404 Not found</Link>
+                  <Link href="/not-a-real-page">404 Not found</Link>
                 </li>
               </ul>
             </div>

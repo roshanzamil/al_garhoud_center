@@ -1,3 +1,4 @@
+
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -100,7 +101,6 @@ export default function FooterOne() {
                   <li><Link href="/">Home</Link></li>
                   <li><Link href="/about-us">About Us</Link></li>
                   <li><Link href="/service">Services</Link></li>
-                  <li><Link href="/pricing">Pricing</Link></li>
                   <li><Link href="/contact-us">Contact</Link></li>
                 </ul>
               </div>
@@ -110,11 +110,10 @@ export default function FooterOne() {
               <div className="azzle-footer-menu pl-70">
                 <h4>Utility Pages</h4>
                 <ul>
-                  <li><Link href="/faq">Faq</Link></li>
                   <li><Link href="/sign-up">Sign Up</Link></li>
                   <li><Link href="/sign-in">Sign In</Link></li>
                   <li><Link href="/reset-password">Reset Password</Link></li>
-                  <li><Link href="/errors-404">404 Not found</Link></li>
+                  <li><Link href="/not-a-real-page">404 Not found</Link></li>
                 </ul>
               </div>
             </div>
