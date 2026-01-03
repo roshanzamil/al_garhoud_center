@@ -1,3 +1,4 @@
+
 "use client";
 import Slider from "react-slick";
 
@@ -6,37 +7,43 @@ const milestones = [
     year: "2008",
     title: "Foundation of Al Garhoud Center",
     description: "Al Garhoud Center was established with a clear mission to simplify government services for the residents and businesses of Dubai.",
-    image: "https://picsum.photos/seed/1/600/400"
+    image: "https://picsum.photos/seed/1/600/400",
+    hint: "building foundation"
   },
   {
     year: "2012",
     title: "Integration of Amer Services",
     description: "Expanded our service portfolio by becoming an official Amer service center, streamlining visa and residency transactions for our clients.",
-    image: "https://picsum.photos/seed/2/600/400"
+    image: "https://picsum.photos/seed/2/600/400",
+    hint: "government partnership"
   },
   {
     year: "2015",
     title: "Partnership with Dubai Health Authority (DHA)",
     description: "Began offering seamless medical fitness typing and application processing, becoming a trusted partner for DHA-related services.",
-    image: "https://picsum.photos/seed/3/600/400"
+    image: "https://picsum.photos/seed/3/600/400",
+    hint: "health authority"
   },
   {
     year: "2018",
     title: "Official DET Service Provider",
     description: "Became a key partner for the Department of Economy and Tourism (DET), assisting businesses with licenses and regulatory compliance.",
-    image: "https://picsum.photos/seed/4/600/400"
+    image: "https://picsum.photos/seed/4/600/400",
+    hint: "business license"
   },
   {
     year: "2021",
     title: "Launch of Digital Platform",
     description: "Introduced a new digital platform to offer select services online, enhancing accessibility and convenience for our clients.",
-    image: "https://picsum.photos/seed/5/600/400"
+    image: "https://picsum.photos/seed/5/600/400",
+    hint: "digital platform"
   },
   {
     year: "2024",
     title: "Surpassing 1 Million Applications",
     description: "Celebrated a major achievement by successfully processing over one million applications, a testament to our efficiency and client trust.",
-    image: "https://picsum.photos/seed/6/600/400"
+    image: "https://picsum.photos/seed/6/600/400",
+    hint: "achievement celebration"
   }
 ];
 
@@ -66,12 +73,12 @@ function PrevArrow(props: any) {
 export default function MilestonesArea() {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: '60px',
+    centerPadding: '0px',
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -80,13 +87,23 @@ export default function MilestonesArea() {
         settings: {
           slidesToShow: 2,
           centerPadding: '40px',
+           infinite: true,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          centerPadding: '40px',
+           infinite: true,
+        },
+      },
+       {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
           centerPadding: '20px',
+           infinite: true,
         },
       },
     ],
@@ -98,12 +115,13 @@ export default function MilestonesArea() {
         <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
           <h2>Our Journey of Excellence</h2>
         </div>
-        <Slider {...settings} className="milestones-carousel" data-aos="fade-up">
+        <div className="milestones-carousel-wrapper" data-aos="fade-up">
+        <Slider {...settings} className="milestones-carousel">
           {milestones.map((milestone, index) => (
             <div key={index}>
               <div className="milestone-card">
                 <div className="milestone-card-image">
-                  <img src={milestone.image} alt={milestone.title} />
+                  <img src={milestone.image} alt={milestone.title} data-ai-hint={milestone.hint} />
                 </div>
                 <div className="milestone-card-content">
                   <div className="milestone-card-year">{milestone.year}</div>
@@ -114,6 +132,7 @@ export default function MilestonesArea() {
             </div>
           ))}
         </Slider>
+        </div>
       </div>
     </section>
   );

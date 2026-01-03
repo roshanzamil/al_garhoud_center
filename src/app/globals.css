@@ -434,6 +434,10 @@ body h6 {
 }
 
 /* Milestones Carousel */
+.milestones-carousel-wrapper {
+  overflow: hidden;
+}
+
 .milestones-carousel {
   padding-block: 40px;
 }
