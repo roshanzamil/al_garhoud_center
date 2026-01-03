@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 
@@ -6,8 +7,8 @@ export default function ServiceArea() {
   return (
     <section className="azzle-section-padding">
       <div className="container">
-        <div className="azzle-section-title max-width-780" data-aos="fade-left" data-aos-delay="500">
-          <h2>Our Services</h2>
+        <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
+          <h2>A World of Services at Your Fingertips</h2>
         </div>
         <div className="azzle-iconbox-wrapper" data-aos="fade-up" data-aos-delay="700">
           <div className="azzle-iconbox-column">
