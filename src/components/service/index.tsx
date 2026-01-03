@@ -4,6 +4,7 @@ import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
 import FaqHomeOne from "../homes/home-1/FaqHomeOne";
 import ServiceTabs from "./ServiceTabs";
+import AboutCta from "../about-us/AboutCta";
 
 
 
@@ -22,6 +23,7 @@ export default function Service() {
           </section>
           <ServiceTabs />
           <FaqHomeOne />
+          <AboutCta />
           <FooterOne />
         </div>
       </div>
