@@ -121,54 +121,6 @@ export default function TeamArea() {
               </div>
             </div>
           </div>
-
-          <div className="col-xl-4 col-lg-6 col-md-6">
-            <div className="azzle-team-wrap wrap2" data-aos="fade-up" data-aos-delay="500">
-              
-                <div className="azzle-team-thumb">
-                  <img src="assets/images/team/team7.png" alt="Thumb" />
-                </div>
-                <div className="azzle-team-content">
-                  <h3>Joo Bitler</h3>
-                </div>
-              
-              <div className="azzle-team-author-wrap">
-                <div className="azzle-team-author-data">
-                  <p>Cyber Expert</p>
-                </div>
-                 
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-lg-6 col-md-6">
-            <div className="azzle-team-wrap wrap2" data-aos="fade-up" data-aos-delay="700">
-              
-                <div className="azzle-team-thumb">
-                  <img src="assets/images/team/team8.png" alt="Thumb" />
-                </div>
-                <div className="azzle-team-content">
-                  <h3>Homi Corn</h3>
-                </div>
-              
-              <div className="azzle-team-author-wrap">
-                <div className="azzle-team-author-data">
-                  <p>HR Manager</p>
-                </div>
-                 
-              </div>
-            </div>
-          </div>
-          <div className="col-xl-4 col-lg-6 col-md-6">
-            <div className="azzle-team-single" data-aos="fade-up" data-aos-delay="900">
-              <h3>You want to join our amazing team</h3>
-              <p>Specify the job you are applying for and introduce yourself</p>
-              <div className="mt-50 w-100">
-                <Link className="azzle-default-btn d-block" href="/contact-us" data-text="Join our team">
-                  <span className="button-wraper">Join our team</span>
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
