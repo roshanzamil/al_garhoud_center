@@ -5,7 +5,6 @@ import AboutArea from "./AboutArea";
 import AboutCounter from "./AboutCounter";
 import SolutionsArea from "./SolutionsArea";
 import OurWorkArea from "./OurWorkArea";
-import AboutTeam from "./AboutTeam";
 import AboutCta from "./AboutCta";
 import FooterOne from "@/layouts/footers/FooterOne";
 
@@ -22,7 +21,6 @@ export default function Aboutus() {
           <AboutCounter />
           <SolutionsArea />
           <OurWorkArea />
-          <AboutTeam />
           <AboutCta />
           <FooterOne />         
         </div>
