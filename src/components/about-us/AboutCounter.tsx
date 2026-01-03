@@ -10,7 +10,7 @@ const counter_data = [
 
 export default function AboutCounter() {
   return (
-    <div className="section">
+    <div className="section azzle-section-padding-bottom">
       <div className="container">
         <div className="row">
           <div className="azzle-counter-column">
