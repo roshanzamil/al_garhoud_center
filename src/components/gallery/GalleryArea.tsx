@@ -19,11 +19,11 @@ export default function GalleryArea() {
     <>
       <section className="azzle-section-padding">
         <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="gallery-grid-container">
             {gallery_data.map((item, i) => (
               <div
                 key={item.id}
-                className="overflow-hidden rounded-lg cursor-pointer group"
+                className="gallery-grid-item"
                 onClick={() => setIndex(i)}
                 data-aos="fade-up"
                 data-aos-delay={100 + i * 100}
@@ -33,7 +33,7 @@ export default function GalleryArea() {
                   alt={item.alt}
                   width={400}
                   height={300}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="gallery-image"
                 />
               </div>
             ))}
