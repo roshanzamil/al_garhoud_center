@@ -41,26 +41,53 @@ const milestones = [
   }
 ];
 
+function NextArrow(props: any) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} milestone-arrow milestone-next`}
+      style={{ ...style }}
+      onClick={onClick}
+    />
+  );
+}
+
+function PrevArrow(props: any) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} milestone-arrow milestone-prev`}
+      style={{ ...style }}
+      onClick={onClick}
+    />
+  );
+}
+
+
 export default function MilestonesArea() {
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '60px',
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          centerPadding: '40px',
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          centerPadding: '20px',
         },
       },
     ],
@@ -68,25 +95,22 @@ export default function MilestonesArea() {
 
   return (
     <section className="azzle-section-padding">
-      <div className="container">
-        <Slider {...settings} className="milestones-carousel" data-aos="fade-up">
-          {milestones.map((milestone, index) => (
-            <div key={index}>
-              <div className="milestone-card">
-                <div className="milestone-card-image">
-                  <img src={milestone.image} alt={milestone.title} />
-                </div>
-                <div className="milestone-card-content">
-                  <div className="milestone-card-year">{milestone.year}</div>
-                  <h3 className="milestone-card-title">{milestone.title}</h3>
-                  <p className="milestone-card-description">{milestone.description}</p>
-                </div>
+      <Slider {...settings} className="milestones-carousel" data-aos="fade-up">
+        {milestones.map((milestone, index) => (
+          <div key={index}>
+            <div className="milestone-card">
+              <div className="milestone-card-image">
+                <img src={milestone.image} alt={milestone.title} />
+              </div>
+              <div className="milestone-card-content">
+                <div className="milestone-card-year">{milestone.year}</div>
+                <h3 className="milestone-card-title">{milestone.title}</h3>
+                <p className="milestone-card-description">{milestone.description}</p>
               </div>
             </div>
-          ))}
-        </Slider>
-      </div>
+          </div>
+        ))}
+      </Slider>
     </section>
   );
 }
-
