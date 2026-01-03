@@ -9,7 +9,7 @@ export default function Team() {
     <Wrapper>
       <HeaderOne />
       <div id="smooth-wrapper">
-        <div id="smooth-content">
+        <div id="smooth-content" style={{ paddingTop: '150px' }}>
           <TeamArea />           
           <FooterOne />         
         </div>

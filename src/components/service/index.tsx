@@ -14,7 +14,7 @@ export default function Service() {
     <Wrapper>
       <HeaderOne />
       <div id="smooth-wrapper">
-        <div id="smooth-content">
+        <div id="smooth-content" style={{ paddingTop: '150px' }}>
           <section className="azzle-section-padding pb-0">
             <div className="container">
               <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
