@@ -19,7 +19,7 @@ const menu_data: MenuItem[] = [
   { title: "Leadership", has_submenu: false, path: "/team" },
   { title: "Milestones", has_submenu: false, path: "/milestones" },
   { title: "Gallery", has_submenu: false, path: "/gallery" },
-  { title: "Downloads", has_submenu: false, path: "#" },
+  { title: "Downloads", has_submenu: false, path: "/downloads" },
 ];
 
 
