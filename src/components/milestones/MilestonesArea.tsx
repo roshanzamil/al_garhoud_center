@@ -95,22 +95,24 @@ export default function MilestonesArea() {
 
   return (
     <section className="azzle-section-padding">
-      <Slider {...settings} className="milestones-carousel" data-aos="fade-up">
-        {milestones.map((milestone, index) => (
-          <div key={index}>
-            <div className="milestone-card">
-              <div className="milestone-card-image">
-                <img src={milestone.image} alt={milestone.title} />
-              </div>
-              <div className="milestone-card-content">
-                <div className="milestone-card-year">{milestone.year}</div>
-                <h3 className="milestone-card-title">{milestone.title}</h3>
-                <p className="milestone-card-description">{milestone.description}</p>
+      <div className="container">
+        <Slider {...settings} className="milestones-carousel" data-aos="fade-up">
+          {milestones.map((milestone, index) => (
+            <div key={index}>
+              <div className="milestone-card">
+                <div className="milestone-card-image">
+                  <img src={milestone.image} alt={milestone.title} />
+                </div>
+                <div className="milestone-card-content">
+                  <div className="milestone-card-year">{milestone.year}</div>
+                  <h3 className="milestone-card-title">{milestone.title}</h3>
+                  <p className="milestone-card-description">{milestone.description}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </section>
   );
 }
