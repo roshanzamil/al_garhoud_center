@@ -1,16 +1,16 @@
 import Count from "@/common/count";
 
 const counter_data = [
-  { end: 20, suffix: "K+", label: "Successful Implementations" },
-  { end: 95, suffix: "%", label: "Client Satisfaction Rate" },
-  { end: 40, suffix: "+", label: "Awards and Recognitions" },
-  { end: 73, suffix: "%", label: "Growth and Expansion" },
+  { end: 50, suffix: "K+", label: "Applications Processed" },
+  { end: 98, suffix: "%", label: "Client Satisfaction Rate" },
+  { end: 15, suffix: "+", label: "Years of Trusted Service" },
+  { end: 80, suffix: "+", label: "Dedicated Team Members" },
 ];
 
 
 export default function AboutCounter() {
   return (
-    <div className="section azzle-section-padding-bottom">
+    <div className="section">
       <div className="container">
         <div className="row">
           <div className="azzle-counter-column">
