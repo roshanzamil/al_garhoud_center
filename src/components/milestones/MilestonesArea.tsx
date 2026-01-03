@@ -100,7 +100,7 @@ export default function MilestonesArea() {
           <h2>Our Journey of Excellence</h2>
         </div>
         <div className="milestones-carousel-wrapper" data-aos="fade-up">
-        <Slider {...settings} className="milestones-carousel">
+        <Slider {...settings} className="milestones-carousel mobile-single-slide">
           {milestones.map((milestone, index) => (
             <div key={index}>
               <div className="milestone-card">
