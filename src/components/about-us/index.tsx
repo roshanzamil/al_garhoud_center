@@ -7,7 +7,6 @@ import SolutionsArea from "./SolutionsArea";
 import OurWorkArea from "./OurWorkArea";
 import AboutCta from "./AboutCta";
 import FooterOne from "@/layouts/footers/FooterOne";
-import DividerArea from "@/common/DividerArea";
 
  
 
@@ -20,7 +19,6 @@ export default function Aboutus() {
           <Breacrumb title="About Us" page="About Us" />
           <AboutArea />
           <AboutCounter />
-          <DividerArea />
           <OurWorkArea />
           <SolutionsArea />
           <AboutCta />
