@@ -7,7 +7,7 @@ interface BreacrumbProps {
 
 export default function Breacrumb({ title, page  }: BreacrumbProps) {
   return (
-    <div className="azzle-breadcrumb">
+    <div className="azzle-breadcrumb" style={{ paddingTop: '150px' }}>
       <div className="container">
         <div className="azzle-breadcrumb-content">
           <h1 className="azzle-breadcrumb-title" data-aos="fade-up" data-aos-delay="500">{title}</h1>
