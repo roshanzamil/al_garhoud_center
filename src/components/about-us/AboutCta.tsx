@@ -13,7 +13,7 @@ export default function AboutCta() {
           <div className="col-lg-7 d-flex align-items-center">
             <div className="azzle-default-content w-100 light-color pl-30" data-aos="fade-up" data-aos-delay="700">
               <h2>We always want to connect with our clients</h2>
-              <p>Al Garhoud Center makes government services accessible and beneficial for everyone, and we look forward to assisting you in achieving your goals.</p>
+              <p>Al Garhoud Center makes government services accessible and beneficial for everyone and we look forward to assisting you in achieving your goals.</p>
 
               <div className="mt-50">
                 <div className="azzle-contact-info">
