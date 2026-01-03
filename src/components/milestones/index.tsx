@@ -9,7 +9,7 @@ export default function Milestones() {
     <Wrapper>
       <HeaderOne />
       <div id="smooth-wrapper">
-        <div id="smooth-content" style={{ paddingTop: '150px' }}>
+        <div id="smooth-content" style={{ paddingTop: '120px' }}>
           <MilestonesArea />
           <FooterOne />
         </div>

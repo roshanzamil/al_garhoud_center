@@ -9,7 +9,7 @@ export default function Downloads() {
     <Wrapper>
       <HeaderOne />
       <div id="smooth-wrapper">
-        <div id="smooth-content" style={{ paddingTop: '150px' }}>
+        <div id="smooth-content" style={{ paddingTop: '120px' }}>
           <DownloadsArea />
           <FooterOne />
         </div>
