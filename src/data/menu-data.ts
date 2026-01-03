@@ -15,7 +15,19 @@ interface MenuItem {
 
 const menu_data: MenuItem[] = [
   { title: "About Us", has_submenu: false, path: "/about-us" },
-  { title: "Services", has_submenu: false, path: "/service" },
+  { 
+    title: "Services", 
+    path: "/service",
+    has_submenu: true, 
+    sub_menus: [
+      { title: "Dubai Health - DHA", path: "/service?tab=dha" },
+      { title: "Typing Services", path: "/service?tab=typing" },
+      { title: "Amer", path: "/service?tab=amer" },
+      { title: "DET", path: "/service?tab=det" },
+      { title: "Taw-Jeeh Services", path: "/service?tab=tawjeeh" },
+      { title: "Notary Public", path: "/service?tab=notary" },
+    ]
+  },
   { title: "Leadership", has_submenu: false, path: "/team" },
   { title: "Milestones", has_submenu: false, path: "/milestones" },
   { title: "Gallery", has_submenu: false, path: "/gallery" },
