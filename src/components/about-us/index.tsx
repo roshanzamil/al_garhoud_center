@@ -1,3 +1,4 @@
+
 import Breacrumb from "@/common/Breacrumb";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
@@ -20,7 +21,7 @@ export default function Aboutus() {
           <Breacrumb title="About Us" page="About Us" />
           <AboutArea />
           <AboutCounter />
-          <DividerArea className="divider-about-us" />
+          <DividerArea className="divider-about-us" dividerClass="divider2" />
           <OurWorkArea />
           <SolutionsArea />
           <AboutCta />
