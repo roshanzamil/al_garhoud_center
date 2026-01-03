@@ -50,9 +50,6 @@ export default function ServiceTabs() {
   return (
     <section className="azzle-section-padding">
       <div className="container">
-        <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
-          <h2>Explore Our Core Services</h2>
-        </div>
         <div className="service-tabs-container" data-aos="fade-up" data-aos-delay="700">
           <div className="service-tabs-nav">
             {serviceData.map((service) => (
