@@ -83,14 +83,6 @@ export default function MilestonesArea() {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          centerMode: true,
-          centerPadding: '0px',
-        },
-      },
-      {
         breakpoint: 991,
         settings: {
           slidesToShow: 1,
