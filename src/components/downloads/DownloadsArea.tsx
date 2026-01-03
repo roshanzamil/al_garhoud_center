@@ -9,7 +9,6 @@ export default function DownloadsArea() {
       <div className="container">
         <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
           <h2>Downloads</h2>
-          <p>Access our official documents and resources. Download the materials you need to learn more about our services and company profile.</p>
         </div>
         <div className="downloads-grid-container">
           {downloads_data.map((item, i) => (
