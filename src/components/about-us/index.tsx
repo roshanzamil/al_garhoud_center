@@ -1,5 +1,4 @@
 
-import Breacrumb from "@/common/Breacrumb";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
 import AboutArea from "./AboutArea";
@@ -18,7 +17,7 @@ export default function Aboutus() {
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <Breacrumb title="About Us" page="About Us" />
+          
           <AboutArea />
           <AboutCounter />
           <DividerArea className="divider-about-us" dividerClass="divider2" />
