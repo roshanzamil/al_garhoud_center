@@ -13,11 +13,11 @@ export default function ContactArea() {
                 <div className="azzle-contact-info-wrap">
                   <div className="azzle-contact-info-item">
                     <h5>Send us an email:</h5>
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="mailto:info@algarhoudcenter.ae">info@algarhoudcenter.ae</a>
                   </div>
                   <div className="azzle-contact-info-item">
                     <h5>Give us a call:</h5>
-                    <a href="tel:123">(123) 456-7890</a>
+                    <a href="tel:043426666">04 342 6666</a>
                   </div>
                   <div className="azzle-contact-info-item">
                     <h5>Follow us:</h5>
