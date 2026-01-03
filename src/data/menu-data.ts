@@ -18,7 +18,7 @@ const menu_data: MenuItem[] = [
   { title: "Services", has_submenu: false, path: "/service" },
   { title: "Leadership", has_submenu: false, path: "/team" },
   { title: "Milestones", has_submenu: false, path: "/milestones" },
-  { title: "Gallery", has_submenu: false, path: "/portfolio" },
+  { title: "Gallery", has_submenu: false, path: "/gallery" },
   { title: "Downloads", has_submenu: false, path: "#" },
 ];
 

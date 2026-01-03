@@ -435,7 +435,11 @@ body h6 {
 
 /* Milestones Carousel */
 .milestones-carousel {
-  padding: 40px 50px;
+  padding-block: 40px;
+}
+
+.milestones-carousel .slick-list {
+    padding-block: 20px !important;
 }
 
 .milestones-carousel .slick-slide {
