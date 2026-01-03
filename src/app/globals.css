@@ -109,6 +109,10 @@ body h6 {
   color: #bd8c2e !important;
 }
 
+.azzle-counter-item.azzle-counter-item2 .azzle-counter-data {
+  color: #bd8c2e !important;
+}
+
 .azzle-default-content.light-color h2,
 .azzle-section-title.title2 h2,
 .azzle-blog-wrap2 .azzle-blog-content2 a h3,
@@ -322,5 +326,109 @@ body h6 {
 
   .service-content-image {
     align-self: center;
+  }
+}
+
+/* Milestones Timeline */
+.azzle-timeline-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.azzle-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #bd8c2e;
+  transform: translateX(-50%);
+}
+
+.azzle-timeline-item-container {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.azzle-timeline-item-container.left {
+  left: 0;
+  text-align: right;
+}
+
+.azzle-timeline-item-container.right {
+  left: 50%;
+  text-align: left;
+}
+
+.azzle-timeline-item {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.azzle-timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 4px solid #bd8c2e;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.azzle-timeline-item-container.left .azzle-timeline-item::after {
+  right: -51px;
+}
+
+.azzle-timeline-item-container.right .azzle-timeline-item::after {
+  left: -51px;
+}
+
+.azzle-timeline-year {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #bd8c2e;
+  margin-bottom: 10px;
+}
+
+.azzle-timeline-title {
+  font-size: 1.25rem;
+  color: #333 !important;
+  margin-bottom: 10px;
+}
+
+.azzle-timeline-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+  .azzle-timeline-line {
+    left: 20px;
+  }
+  .azzle-timeline-item-container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 0;
+  }
+  .azzle-timeline-item-container.left,
+  .azzle-timeline-item-container.right {
+    left: 0;
+    text-align: left;
+  }
+  
+  .azzle-timeline-item-container.left .azzle-timeline-item::after,
+  .azzle-timeline-item-container.right .azzle-timeline-item::after {
+    left: -11px;
   }
 }
