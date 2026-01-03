@@ -86,11 +86,20 @@ export default function MilestonesArea() {
         breakpoint: 1200,
         settings: {
           slidesToShow: 2,
+          centerMode: true,
           centerPadding: '40px',
         },
       },
       {
         breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+          centerPadding: '0px',
+        },
+      },
+       {
+        breakpoint: 767,
         settings: {
           slidesToShow: 1,
           centerMode: false,
