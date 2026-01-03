@@ -227,3 +227,100 @@ body h6 {
 .divider-about-us .divider2 {
   border-bottom: none;
 }
+
+/* Service Tabs Section */
+.service-tabs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.service-tabs-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-tab-item {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.service-tab-item:hover {
+  background-color: #f0f0f0;
+  border-color: #bd8c2e;
+}
+
+.service-tab-item.active {
+  background-color: #bd8c2e;
+  color: white;
+  border-color: #bd8c2e;
+  box-shadow: 0 4px 12px rgba(189, 140, 46, 0.3);
+}
+
+.service-tabs-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-tabs-content h3 {
+  font-size: 1.75rem;
+  font-family: 'Epilogue', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #bd8c2e;
+}
+
+.service-tabs-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 600px;
+}
+
+.service-content-image {
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styles for Tabs */
+@media (min-width: 992px) {
+  .service-tabs-container {
+    flex-direction: row;
+  }
+
+  .service-tabs-nav {
+    flex-basis: 30%;
+    flex-shrink: 0;
+  }
+
+  .service-tabs-content {
+    flex-basis: 70%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .service-content-image {
+    align-self: center;
+  }
+}
