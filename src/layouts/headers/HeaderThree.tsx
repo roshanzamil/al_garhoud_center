@@ -31,18 +31,6 @@ export default function HeaderThree() {
               </div>
             </div>
             <div className="col-auto d-flex align-items-center">
-              <div className="azzle-header-button-wraper">
-                <div className="azzle-header-login-button button4">
-                  <ul>
-                    <li>
-                      <Link href="/sign-in">Login</Link>
-                    </li>
-                  </ul>
-                </div>
-                <Link className="azzle-default-btn azzle-header-btn btn2" href="/sign-up" data-text="Sign up free">
-                  <span className="button-wraper">Sign up free</span>
-                </Link>
-              </div>
               <div className="azzle-header-menu">
                 <nav className="navbar site-navbar justify-content-between">
                   {/* <!-- Brand Logo--> */}

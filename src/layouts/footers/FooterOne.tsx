@@ -108,12 +108,12 @@ export default function FooterOne() {
 
             <div className="col-xl-3 col-lg-4 col-md-4">
               <div className="azzle-footer-menu pl-70">
-                <h4>Utility Pages</h4>
+                <h4>More Links</h4>
                 <ul>
-                  <li><Link href="/sign-up">Sign Up</Link></li>
-                  <li><Link href="/sign-in">Sign In</Link></li>
-                  <li><Link href="/reset-password">Reset Password</Link></li>
-                  <li><Link href="/not-a-real-page">404 Not found</Link></li>
+                  <li><Link href="/team">Leadership</Link></li>
+                  <li><Link href="/milestones">Milestones</Link></li>
+                  <li><Link href="/gallery">Gallery</Link></li>
+                  <li><Link href="/downloads">Downloads</Link></li>
                 </ul>
               </div>
             </div>

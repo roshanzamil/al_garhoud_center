@@ -76,16 +76,16 @@ export default function FooterThree() {
               </ul>
             </div>
             <div className="azzle-footer-menu2">
-              <h4>Utility pages</h4>
+              <h4>More Links</h4>
               <ul>
                 <li>
-                  <Link href="/sign-up">Sign Up</Link>
+                  <Link href="/team">Leadership</Link>
                 </li>
                 <li>
-                  <Link href="/sign-in">Sign In</Link>
+                  <Link href="/milestones">Milestones</Link>
                 </li>
                 <li>
-                  <Link href="/reset-password">Reset Password</Link>
+                  <Link href="/gallery">Gallery</Link>
                 </li>
                 <li>
                   <Link href="/not-a-real-page">404 Not found</Link>
