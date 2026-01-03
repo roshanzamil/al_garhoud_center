@@ -48,7 +48,7 @@ export default function ServiceTabs() {
   const activeService = serviceData.find((service) => service.id === activeTab);
 
   return (
-    <section className="azzle-section-padding">
+    <section className="azzle-section-padding pt-0">
       <div className="container">
         <div className="service-tabs-container" data-aos="fade-up" data-aos-delay="700">
           <div className="service-tabs-nav">
