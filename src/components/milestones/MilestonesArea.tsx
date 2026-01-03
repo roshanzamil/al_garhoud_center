@@ -1,4 +1,3 @@
-
 "use client";
 import Slider from "react-slick";
 
@@ -96,6 +95,9 @@ export default function MilestonesArea() {
   return (
     <section className="azzle-section-padding">
       <div className="container">
+        <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
+          <h2>Our Journey of Excellence</h2>
+        </div>
         <Slider {...settings} className="milestones-carousel" data-aos="fade-up">
           {milestones.map((milestone, index) => (
             <div key={index}>
