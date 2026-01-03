@@ -1,4 +1,4 @@
-import Breacrumb from "@/common/Breacrumb";
+
 import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
@@ -10,7 +10,13 @@ export default function Milestones() {
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <Breacrumb title="Our Milestones" page="Milestones" />
+          <section className="azzle-section-padding pb-0">
+            <div className="container">
+              <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
+                <h2>Our Journey of Excellence</h2>
+              </div>
+            </div>
+          </section>
           <MilestonesArea />
           <FooterOne />
         </div>
