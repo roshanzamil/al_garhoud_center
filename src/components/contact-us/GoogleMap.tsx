@@ -4,9 +4,6 @@ export default function GoogleMap() {
   return (
     <div className="azzle-contact-map-section">
       <div className="container">
-        <div className="azzle-section-title title2 center max-width-800" data-aos="fade-up" data-aos-delay="500">
-          <h2>We always welcome our clients to our office</h2>
-        </div>
         <div className="azzle-location-map">
           <img src="assets/images/contact/mapbase.png" alt="map" />
           <div className="azzle-location-wrap location-one">
