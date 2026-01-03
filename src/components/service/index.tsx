@@ -3,7 +3,6 @@ import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
 import FaqHomeOne from "../homes/home-1/FaqHomeOne";
-import TestimonialHomeOne from "../homes/home-1/TestimonialHomeOne";
 import ServiceTabs from "./ServiceTabs";
 
 
@@ -23,7 +22,6 @@ export default function Service() {
           </section>
           <ServiceTabs />
           <FaqHomeOne />
-          <TestimonialHomeOne />           
           <FooterOne />
         </div>
       </div>
