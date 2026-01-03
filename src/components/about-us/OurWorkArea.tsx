@@ -2,7 +2,7 @@
 
 export default function OurWorkArea() {
   return (
-      <div className="azzle-core-value-section azzle-section-padding">
+      <div className="azzle-core-value-section azzle-section-padding-top">
         <div className="container">
           <div className="azzle-section-title title2 center max-w-650" data-aos="fade-up" data-aos-delay="500">
             <h2>The core values behind our work</h2>
