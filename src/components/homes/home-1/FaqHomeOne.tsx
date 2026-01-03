@@ -70,10 +70,10 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
                   className="azzle-default-btn"
                   data-aos="fade-up"
                   data-aos-delay="700"
-                  href="/faq"
-                  data-text="More questions"
+                  href="/about-us"
+                  data-text="About Us"
                 >
-                  <span className="button-wraper">More questions</span>
+                  <span className="button-wraper">About Us</span>
                 </Link>
               </div>
             </div>

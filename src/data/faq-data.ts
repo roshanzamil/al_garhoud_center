@@ -1,4 +1,4 @@
- 
+
 interface FaqItem {
   id: number;
   question: string;
