@@ -14,7 +14,7 @@ export default function Service() {
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <Breacrumb title="Our Services" page="Our Services" />
+          
           <ServiceArea />
           <FaqHomeOne />
           <TestimonialHomeOne />           
