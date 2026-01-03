@@ -105,6 +105,10 @@ body h6 {
   color: #bd8c2e;
 }
 
+.azzle-counter-item .azzle-counter-data {
+  color: #bd8c2e !important;
+}
+
 .azzle-default-content.light-color h2,
 .azzle-section-title.title2 h2,
 .azzle-blog-wrap2 .azzle-blog-content2 a h3,
