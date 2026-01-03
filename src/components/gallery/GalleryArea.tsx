@@ -19,6 +19,9 @@ export default function GalleryArea() {
     <>
       <section className="azzle-section-padding">
         <div className="container">
+           <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
+              <h2>Our Gallery</h2>
+            </div>
           <div className="gallery-grid-container">
             {gallery_data.map((item, i) => (
               <div
