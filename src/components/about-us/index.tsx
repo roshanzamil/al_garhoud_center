@@ -19,8 +19,8 @@ export default function Aboutus() {
           <Breacrumb title="About Us" page="About Us" />
           <AboutArea />
           <AboutCounter />
-          <SolutionsArea />
           <OurWorkArea />
+          <SolutionsArea />
           <AboutCta />
           <FooterOne />         
         </div>
