@@ -18,8 +18,8 @@ export default function HomeOne() {
 				<div id="smooth-content">
           <HeroHomeOne />
           <FeaturesHomeOne />
-          <PricingHomeOne />
           <AboutHomeOne />
+          <PricingHomeOne />
           <VideoHomeOne />
           <QuoteHomeOne />
           <FaqHomeOne />
