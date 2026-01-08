@@ -45,8 +45,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=dha">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -62,8 +62,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=typing">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -79,8 +79,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=amer">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -96,8 +96,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=det">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -113,8 +113,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=tawjeeh">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -130,8 +130,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=notary">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -147,8 +147,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -164,8 +164,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -181,8 +181,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
@@ -198,8 +198,8 @@ export default function FeaturesHomeOne() {
               <div className="azzle-iconbox-button">
                 <Link href="/service">
                   View Services
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
-                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
               </div>
