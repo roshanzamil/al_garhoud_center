@@ -138,11 +138,11 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/golden-visa.webp" alt="Golden Visa" style={{ height: '150px' }} />
+                <img src="assets/images/service/salem-logo.webp" alt="Salem" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
-                <h3>Golden Visa</h3>
-                <p>Long-term residency visa applications for investors and talents.</p>
+                <h3>Salem</h3>
+                <p>Occupational health screening and medical fitness services.</p>
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
@@ -155,11 +155,11 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/family-visa.webp" alt="Family Visa" style={{ height: '150px' }} />
+                <img src="assets/images/service/business-setup.webp" alt="Business Setup" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
-                <h3>Family Visa</h3>
-                <p>Sponsor your family members with our streamlined visa services.</p>
+                <h3>Business Setup</h3>
+                <p>Comprehensive assistance for setting up your business in Dubai.</p>
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
@@ -172,11 +172,11 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/tasheel-logo.webp" alt="Tas'heel" style={{ height: '150px' }} />
+                <img src="assets/images/service/tax-consultancy.webp" alt="Tax Consultancy" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
-                <h3>Tas'heel</h3>
-                <p>Comprehensive services for all your Tas'heel needs under one roof.</p>
+                <h3>Tax Consultancy</h3>
+                <p>Expert advice and services for VAT registration and tax compliance.</p>
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
@@ -189,11 +189,11 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/pro-services.webp" alt="PRO Services" style={{ height: '150px' }} />
+                <img src="assets/images/service/accounting-services.webp" alt="Accounting Services" style={{ height: '150px' }} />
               </div>
               <div className="azzle-iconbox-content">
-                <h3>PRO Services</h3>
-                <p>Efficient corporate PRO services to manage all government liaisons.</p>
+                <h3>Accounting Services</h3>
+                <p>Professional bookkeeping and accounting for your business needs.</p>
               </div>
               <div className="azzle-iconbox-button mt-50">
                 <Link href="/service">
@@ -234,3 +234,4 @@ export default function FeaturesHomeOne() {
     </section>
   )
 }
+
