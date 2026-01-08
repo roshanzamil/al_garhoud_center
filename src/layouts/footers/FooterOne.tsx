@@ -140,12 +140,9 @@ export default function FooterOne() {
         {/* Bottom */}
         <div className="azzle-footer-bottom-text">
           <p>
-            © Copyright 2026, All Rights Reserved by
-            Al Garhoud Center
+            © Copyright 2026, All Rights Reserved by <a href="https://maamritat.com/" target="_blank" rel="noopener noreferrer">Maamritat</a>
           </p>
-          <p>
-            Designed and Developed by <a href="https://brocrypt.com/" target="_blank" rel="noopener noreferrer">BroCrypt</a>
-          </p>
+          
         </div>
       </div>
     </footer>
