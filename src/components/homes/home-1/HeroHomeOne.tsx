@@ -68,21 +68,21 @@ const sliderData = [
     id: 1,
     title: "Your Trusted Partner for All Government Services",
     description: "Al Garhoud Center is your trusted partner for a seamless government service experience. We provide a comprehensive range of services with efficiency and a focus on customer satisfaction.",
-    image: "https://picsum.photos/seed/hero1/1920/1080",
+    image: "/assets/images/slider/1.jpg",
     hint: "dubai skyline"
   },
   {
     id: 2,
     title: "Efficient, Swift, and Client-Focused Solutions",
     description: "Our streamlined processes and dedicated team ensure your government transactions are handled quickly and professionally, saving you valuable time and effort.",
-    image: "https://picsum.photos/seed/hero2/1920/1080",
+    image: "/assets/images/slider/2.jpg",
     hint: "customer service"
   },
   {
     id: 3,
     title: "Comprehensive Services Under One Roof",
     description: "From visa processing and Emirates ID to business licensing and notary services, we offer a complete solution for all your official needs in Dubai.",
-    image: "https://picsum.photos/seed/hero3/1920/1080",
+    image: "/assets/images/slider/3.jpg",
     hint: "dubai government"
   }
 ];
