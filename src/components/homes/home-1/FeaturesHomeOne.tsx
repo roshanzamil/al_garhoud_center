@@ -145,7 +145,7 @@ export default function FeaturesHomeOne() {
                 <p>Occupational health screening and all medical fitness services.</p>
               </div>
               <div className="azzle-iconbox-button">
-                <Link href="/service">
+                <Link href="/service?tab=salem">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -162,7 +162,7 @@ export default function FeaturesHomeOne() {
                 <p>Comprehensive assistance for setting up your new business in Dubai.</p>
               </div>
               <div className="azzle-iconbox-button">
-                <Link href="/service">
+                <Link href="/service?tab=business-setup">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -179,7 +179,7 @@ export default function FeaturesHomeOne() {
                 <p>Expert advice and professional services for VAT registration needs.</p>
               </div>
               <div className="azzle-iconbox-button">
-                <Link href="/service">
+                <Link href="/service?tab=tax-consultancy">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -196,7 +196,7 @@ export default function FeaturesHomeOne() {
                 <p>Professional bookkeeping and accounting for all business needs.</p>
               </div>
               <div className="azzle-iconbox-button">
-                <Link href="/service">
+                <Link href="/service?tab=accounting">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 26 22" fill="none">
                     <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
