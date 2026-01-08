@@ -802,8 +802,7 @@ body h6 {
 }
 
 .azzle-hero-section .azzle-brand-slider-wraper {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 
 
@@ -897,4 +896,8 @@ body h6 {
   .hero-arrow.hero-next {
     right: 15px;
   }
+}
+
+.azzle-section-padding-bottom {
+    padding-bottom: 120px;
 }
