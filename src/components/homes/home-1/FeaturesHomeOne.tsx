@@ -140,7 +140,7 @@ export default function FeaturesHomeOne() {
         </div>
       </div>
       <div className="container">
-        <div className="azzle-brand-slider-wraper" style={{ paddingTop: '100px', paddingBottom: '100px' }}>
+        <div className="azzle-brand-slider-wraper" style={{ paddingTop: '100px' }}>
           <div className="azzle-brand-slider-title" data-aos="fade-up" data-aos-delay=".9s">
             <p>Proudly serving the community by partnering with key government entities in Dubai</p>
           </div>
