@@ -138,11 +138,11 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/salem-logo.webp" alt="Salem" style={{ height: '120px' }} />
+                <img src="assets/images/service/salem.jpg" alt="Salem" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Salem</h3>
-                <p>Occupational health screening and all required medical fitness services.</p>
+                <p>Occupational health screening and all medical fitness services.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service">
@@ -155,7 +155,7 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/business-setup.webp" alt="Business Setup" style={{ height: '120px' }} />
+                <img src="assets/images/service/business.jpg" alt="Business Setup" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Business Setup</h3>
@@ -172,7 +172,7 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/tax-consultancy.webp" alt="Tax Consultancy" style={{ height: '120px' }} />
+                <img src="assets/images/service/tax.jpg" alt="Tax Consultancy" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Tax Consultancy</h3>
@@ -189,11 +189,11 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/accounting-services.webp" alt="Accounting Services" style={{ height: '120px' }} />
+                <img src="assets/images/service/accounting.jpg" alt="Accounting Services" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Accounting Services</h3>
-                <p>Professional bookkeeping and accounting for all your business needs.</p>
+                <p>Professional bookkeeping and accounting for all business needs.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service">

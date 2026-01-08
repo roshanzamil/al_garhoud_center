@@ -52,28 +52,28 @@ const serviceData = [
     key: "salem",
     title: "Salem",
     content: "We provide comprehensive occupational health screening and all required medical fitness services through the Salem system, ensuring your workforce complies with all health and safety regulations efficiently.",
-    image: "/assets/images/service/salem-logo.webp",
+    image: "/assets/images/service/salem.jpg",
   },
   {
     id: 8,
     key: "business-setup",
     title: "Business Setup",
     content: "Our team offers end-to-end assistance for setting up your new business in Dubai. From initial approvals to final registration, we guide you through every step of the process for a smooth launch.",
-    image: "/assets/images/service/business-setup.webp",
+    image: "/assets/images/service/business.jpg",
   },
   {
     id: 9,
     key: "tax-consultancy",
     title: "Tax Consultancy",
     content: "Stay compliant with our expert tax consultancy services. We provide professional advice and assistance for VAT registration, filing, and other tax-related obligations to keep your business in good standing.",
-    image: "/assets/images/service/tax-consultancy.webp",
+    image: "/assets/images/service/tax.jpg",
   },
   {
     id: 10,
     key: "accounting",
     title: "Accounting Services",
     content: "Ensure financial accuracy and clarity with our professional accounting and bookkeeping services. We manage your financial records meticulously, allowing you to focus on growing your business.",
-    image: "/assets/images/service/accounting-services.webp",
+    image: "/assets/images/service/accounting.jpg",
   },
 ];
 
