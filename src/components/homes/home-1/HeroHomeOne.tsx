@@ -25,6 +25,29 @@ const settings = {
   }]
 }
 
+function NextArrow(props: any) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} hero-arrow hero-next`}
+      style={{ ...style }}
+      onClick={onClick}
+    />
+  );
+}
+
+function PrevArrow(props: any) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} hero-arrow hero-prev`}
+      style={{ ...style }}
+      onClick={onClick}
+    />
+  );
+}
+
+
 const heroSliderSettings = {
   dots: true,
   infinite: true,
@@ -35,7 +58,9 @@ const heroSliderSettings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 5000,
-  arrows: false,
+  arrows: true,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
 };
 
 const sliderData = [
