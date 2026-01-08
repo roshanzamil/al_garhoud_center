@@ -66,15 +66,17 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
                 Our team is ready to provide you with the information you need. Find answers to common questions about our services, processes and how we can help you navigate government procedures with ease.
               </p>
               <div className="mt-50">
-                <Link
+                <a
                   className="azzle-default-btn"
                   data-aos="fade-up"
                   data-aos-delay="700"
-                  href="/about-us"
-                  data-text="About Us"
+                  href="https://wa.me/971501234567"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-text="Contact us on WhatsApp"
                 >
-                  <span className="button-wraper">About Us</span>
-                </Link>
+                  <span className="button-wraper">Contact us on WhatsApp</span>
+                </a>
               </div>
             </div>
           </div>
