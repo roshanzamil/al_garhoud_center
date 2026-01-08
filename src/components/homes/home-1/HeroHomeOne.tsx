@@ -112,32 +112,6 @@ export default function HeroHomeOne() {
           </div>
         ))}
       </Slider>
-
-      <div className="container">
-        <div className="divider"></div>
-        <div className="azzle-brand-slider-wraper">
-          <div className="azzle-brand-slider-title" data-aos="fade-up" data-aos-delay=".9s">
-            <p>Proudly serving the community by partnering with key government entities in Dubai</p>
-          </div>
-          <Slider {...settings} className="azzle-brand-slider">
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon1.svg" alt="Icon" />
-            </div>
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon2.svg" alt="Icon" />
-            </div>
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon3.svg" alt="Icon" />
-            </div>
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon4.svg" alt="Icon" />
-            </div>
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon5.svg" alt="Icon" />
-            </div>
-          </Slider>
-        </div>
-      </div>
     </div>
   )
 }

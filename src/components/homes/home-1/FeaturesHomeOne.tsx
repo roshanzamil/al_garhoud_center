@@ -1,6 +1,29 @@
+
+"use client";
 import Link from "next/link";
+import Slider from "react-slick";
 
-
+const settings = {
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 5000,
+  arrows: false,
+  pauseOnHover: false,
+  cssEase: "linear",
+  responsive: [{
+    breakpoint: 1199,
+    settings: {
+      slidesToShow: 3
+    }
+  }, {
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1
+    }
+  }]
+}
 
 export default function FeaturesHomeOne() {
   return (
@@ -114,6 +137,31 @@ export default function FeaturesHomeOne() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="divider"></div>
+        <div className="azzle-brand-slider-wraper">
+          <div className="azzle-brand-slider-title" data-aos="fade-up" data-aos-delay=".9s">
+            <p>Proudly serving the community by partnering with key government entities in Dubai</p>
+          </div>
+          <Slider {...settings} className="azzle-brand-slider">
+            <div className="azzle-logo-icon-item">
+              <img src="assets/images/home1/icon1.svg" alt="Icon" />
+            </div>
+            <div className="azzle-logo-icon-item">
+              <img src="assets/images/home1/icon2.svg" alt="Icon" />
+            </div>
+            <div className="azzle-logo-icon-item">
+              <img src="assets/images/home1/icon3.svg" alt="Icon" />
+            </div>
+            <div className="azzle-logo-icon-item">
+              <img src="assets/images/home1/icon4.svg" alt="Icon" />
+            </div>
+            <div className="azzle-logo-icon-item">
+              <img src="assets/images/home1/icon5.svg" alt="Icon" />
+            </div>
+          </Slider>
         </div>
       </div>
     </section>
