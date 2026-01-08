@@ -27,7 +27,7 @@ const settings = {
 
 export default function FeaturesHomeOne() {
   return (
-    <section className="azzle-section-padding">
+    <section className="azzle-section-padding-bottom">
       <div className="container">
         <div className="azzle-section-title max-width-780" data-aos="fade-left" data-aos-delay="500">
           <h2>Our Services</h2>
@@ -208,7 +208,7 @@ export default function FeaturesHomeOne() {
         </div>
       </div>
       <div className="container">
-        <div className="azzle-brand-slider-wraper py-20" data-aos="fade-up" data-aos-delay=".9s">
+        <div className="azzle-brand-slider-wraper py-10" data-aos="fade-up" data-aos-delay=".9s">
           <div className="azzle-brand-slider-title">
             <p>Proudly serving the community by partnering with key government entities in Dubai</p>
           </div>
@@ -234,4 +234,3 @@ export default function FeaturesHomeOne() {
     </section>
   )
 }
-
