@@ -27,8 +27,8 @@ const settings = {
 
 export default function FeaturesHomeOne() {
   return (
-    <section className="azzle-section-padding-bottom">
-      <div className="container">
+    <section>
+      <div className="container azzle-section-padding">
         <div className="azzle-section-title max-width-780" data-aos="fade-left" data-aos-delay="500">
           <h2>Our Services</h2>
         </div>
