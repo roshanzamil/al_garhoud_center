@@ -27,7 +27,7 @@ const settings = {
 
 export default function FeaturesHomeOne() {
   return (
-    <section>
+    <section className="azzle-section-padding-bottom">
       <div className="container azzle-section-padding">
         <div className="azzle-section-title max-width-780" data-aos="fade-left" data-aos-delay="500">
           <h2>Our Services</h2>
@@ -36,13 +36,13 @@ export default function FeaturesHomeOne() {
           <div className="azzle-iconbox-column">
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/DHA-logo.webp" alt="DHA" style={{ height: '150px' }} />
+                <img src="assets/images/service/DHA-logo.webp" alt="DHA" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Dubai Health - DHA</h3>
                 <p>Get your medical fitness typing and approvals seamlessly.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service?tab=dha">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -53,13 +53,13 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                 <img src="assets/images/service/typing-logo.webp" alt="Typing" style={{ height: '150px' }} />
+                 <img src="assets/images/service/typing-logo.webp" alt="Typing" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Typing Services</h3>
                 <p>Accurate typing for visa, labor, legal documents and much more.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service?tab=typing">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -70,13 +70,13 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/amer-logo.webp" alt="Amer" style={{ height: '150px' }} />
+                <img src="assets/images/service/amer-logo.webp" alt="Amer" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Amer</h3>
                 <p>Complete Amer services under one roof. Visa renewal, cancellation & more.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service?tab=amer">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -87,13 +87,13 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/det-logo.webp" alt="DET" style={{ height: '150px' }} />
+                <img src="assets/images/service/det-logo.webp" alt="DET" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>DET</h3>
                 <p>Business license applications, renewals & modifications.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service?tab=det">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -104,13 +104,13 @@ export default function FeaturesHomeOne() {
             </div>
              <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                 <img src="assets/images/service/t3-logo.webp" alt="Taw-Jeeh" style={{ height: '150px' }} />
+                 <img src="assets/images/service/t3-logo.webp" alt="Taw-Jeeh" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Taw-Jeeh Services</h3>
                 <p>All Ministry of Labour services handled professionally.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service?tab=tawjeeh">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -121,13 +121,13 @@ export default function FeaturesHomeOne() {
             </div>
              <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/dubai-courts-logo.webp" alt="Notary Public" style={{ height: '150px' }} />
+                <img src="assets/images/service/dubai-courts-logo.webp" alt="Notary Public" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Notary Public</h3>
                 <p>Book legal appointments and get government certified copies at ease.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service?tab=notary">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -138,13 +138,13 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/salem-logo.webp" alt="Salem" style={{ height: '150px' }} />
+                <img src="assets/images/service/salem-logo.webp" alt="Salem" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Salem</h3>
                 <p>Occupational health screening and medical fitness services.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -155,13 +155,13 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/business-setup.webp" alt="Business Setup" style={{ height: '150px' }} />
+                <img src="assets/images/service/business-setup.webp" alt="Business Setup" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Business Setup</h3>
                 <p>Comprehensive assistance for setting up your business in Dubai.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -172,13 +172,13 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/tax-consultancy.webp" alt="Tax Consultancy" style={{ height: '150px' }} />
+                <img src="assets/images/service/tax-consultancy.webp" alt="Tax Consultancy" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Tax Consultancy</h3>
                 <p>Expert advice and services for VAT registration and tax compliance.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
@@ -189,13 +189,13 @@ export default function FeaturesHomeOne() {
             </div>
             <div className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
-                <img src="assets/images/service/accounting-services.webp" alt="Accounting Services" style={{ height: '150px' }} />
+                <img src="assets/images/service/accounting-services.webp" alt="Accounting Services" style={{ height: '120px' }} />
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Accounting Services</h3>
                 <p>Professional bookkeeping and accounting for your business needs.</p>
               </div>
-              <div className="azzle-iconbox-button mt-50">
+              <div className="azzle-iconbox-button">
                 <Link href="/service">
                   View Services
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">

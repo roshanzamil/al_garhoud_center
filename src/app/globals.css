@@ -912,3 +912,21 @@ body h6 {
 .azzle-pricing-wrap {
   position: relative;
 }
+
+.azzle-iconbox-content h3 {
+  font-size: 1.25rem; /* Reduced from default */
+  margin-bottom: 0.5rem;
+}
+
+.azzle-iconbox-content p {
+  font-size: 0.9rem; /* Reduced from default */
+  line-height: 1.4;
+}
+
+.azzle-iconbox-button a {
+  font-size: 0.9rem; /* Reduced from default */
+}
+
+.azzle-iconbox-button {
+  margin-top: 25px; /* Reduced from 50px */
+}
