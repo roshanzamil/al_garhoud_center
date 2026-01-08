@@ -26,6 +26,10 @@ const menu_data: MenuItem[] = [
       { title: "DET", path: "/service?tab=det" },
       { title: "Taw-Jeeh Services", path: "/service?tab=tawjeeh" },
       { title: "Notary Public", path: "/service?tab=notary" },
+      { title: "Salem", path: "/service?tab=salem" },
+      { title: "Business Setup", path: "/service?tab=business-setup" },
+      { title: "Tax Consultancy", path: "/service?tab=tax-consultancy" },
+      { title: "Accounting Services", path: "/service?tab=accounting" },
     ]
   },
   { title: "Leadership", has_submenu: false, path: "/team" },
