@@ -30,6 +30,7 @@ const menu_data: MenuItem[] = [
       { title: "Business Setup", path: "/service?tab=business-setup" },
       { title: "Tax Consultancy", path: "/service?tab=tax-consultancy" },
       { title: "Accounting Services", path: "/service?tab=accounting" },
+      { title: "Trial - Pricing", path: "/trial-pricing" },
     ]
   },
   { title: "Leadership", has_submenu: false, path: "/team" },

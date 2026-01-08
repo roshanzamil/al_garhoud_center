@@ -930,3 +930,159 @@ body h6 {
 .azzle-iconbox-button {
   margin-top: 25px; /* Reduced from 50px */
 }
+
+/* Trial Pricing Page */
+.trial-pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.trial-pricing-main {
+  flex: 1 1 60%;
+}
+
+.trial-pricing-sidebar {
+  flex: 1 1 35%;
+}
+
+.trial-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.trial-pricing-card {
+  padding: 1.5rem;
+}
+
+.trial-pricing-card h3 {
+  font-size: 1.5rem;
+  color: #0c9c94 !important;
+  margin-bottom: 1.5rem;
+}
+
+.trial-pricing-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.trial-pricing-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.trial-btn {
+  background-color: #0c9c94;
+  color: white !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.trial-btn:hover {
+  background-color: #0a817a;
+}
+
+.trial-btn.enquire {
+  background-color: transparent;
+  border: 1px solid #0c9c94;
+  color: #0c9c94 !important;
+}
+
+.trial-btn.enquire:hover {
+  background-color: #0c9c94;
+  color: white !important;
+}
+
+.trial-booking-form {
+  padding: 2rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.trial-booking-form-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.trial-form-field {
+  margin-bottom: 1.5rem;
+}
+
+.trial-form-field input,
+.trial-form-field select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.trial-form-field input[type="date"] {
+  color: #555;
+}
+
+.trial-submit-btn {
+  background-color: #333;
+  color: white !important;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.trial-additional-info {
+  margin-top: 2rem;
+}
+
+.trial-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.trial-info-item svg {
+  color: #0c9c94;
+}
+
+.trial-faq-section {
+  margin-top: 3rem;
+}
+
+.trial-faq-item {
+  margin-bottom: 1rem;
+}
+
+.trial-faq-question {
+  font-weight: bold;
+  color: #0c9c94 !important;
+  margin-bottom: 0.5rem;
+}
+
+.trial-faq-answer {
+  color: #555;
+}
+
+@media (max-width: 991px) {
+  .trial-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .trial-pricing-main {
+    order: 2;
+  }
+  .trial-pricing-sidebar {
+    order: 1;
+  }
+}
