@@ -8,16 +8,6 @@ export default function PricingHomeOne() {
     <section className="azzle-section-padding-bottom">
       <div className="position-r pt-0">
         <div className="container">
-          <div
-            className="azzle-section-title center"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <h2>
-              Smart Government Solutions, Connecting People
-            </h2>
-          </div>
-
           <div className="card-grid-container">
             {/* Vision */}
             <div className="card-grid-item" data-aos="fade-up" data-aos-delay="500">
