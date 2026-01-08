@@ -136,12 +136,80 @@ export default function FeaturesHomeOne() {
                 </Link>
               </div>
             </div>
+            <div className="azzle-iconbox-wrap">
+              <div className="azzle-iconbox-icon">
+                <img src="assets/images/service/golden-visa.webp" alt="Golden Visa" style={{ height: '150px' }} />
+              </div>
+              <div className="azzle-iconbox-content">
+                <h3>Golden Visa</h3>
+                <p>Long-term residency visa applications for investors and talents.</p>
+              </div>
+              <div className="azzle-iconbox-button mt-50">
+                <Link href="/service">
+                  View Services
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            <div className="azzle-iconbox-wrap">
+              <div className="azzle-iconbox-icon">
+                <img src="assets/images/service/family-visa.webp" alt="Family Visa" style={{ height: '150px' }} />
+              </div>
+              <div className="azzle-iconbox-content">
+                <h3>Family Visa</h3>
+                <p>Sponsor your family members with our streamlined visa services.</p>
+              </div>
+              <div className="azzle-iconbox-button mt-50">
+                <Link href="/service">
+                  View Services
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            <div className="azzle-iconbox-wrap">
+              <div className="azzle-iconbox-icon">
+                <img src="assets/images/service/tasheel-logo.webp" alt="Tas'heel" style={{ height: '150px' }} />
+              </div>
+              <div className="azzle-iconbox-content">
+                <h3>Tas'heel</h3>
+                <p>Comprehensive services for all your Tas'heel needs under one roof.</p>
+              </div>
+              <div className="azzle-iconbox-button mt-50">
+                <Link href="/service">
+                  View Services
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            <div className="azzle-iconbox-wrap">
+              <div className="azzle-iconbox-icon">
+                <img src="assets/images/service/pro-services.webp" alt="PRO Services" style={{ height: '150px' }} />
+              </div>
+              <div className="azzle-iconbox-content">
+                <h3>PRO Services</h3>
+                <p>Efficient corporate PRO services to manage all government liaisons.</p>
+              </div>
+              <div className="azzle-iconbox-button mt-50">
+                <Link href="/service">
+                  View Services
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
+                    <path d="M15.5 2.25L24.25 11M24.25 11L15.5 19.75M24.25 11L1.75 11" stroke="#bd8c2e" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className="container">
-        <div className="azzle-brand-slider-wraper" style={{ paddingTop: '100px' }}>
-          <div className="azzle-brand-slider-title" data-aos="fade-up" data-aos-delay=".9s">
+        <div className="azzle-brand-slider-wraper py-20" data-aos="fade-up" data-aos-delay=".9s">
+          <div className="azzle-brand-slider-title">
             <p>Proudly serving the community by partnering with key government entities in Dubai</p>
           </div>
           <Slider {...settings} className="azzle-brand-slider">
