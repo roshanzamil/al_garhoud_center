@@ -957,8 +957,8 @@ body h6 {
 }
 
 .trial-pricing-card h3 {
-  font-size: 1.5rem;
-  color: #0c9c94 !important;
+  font-size: 1.25rem;
+  color: #bd8c2e !important;
   margin-bottom: 1.5rem;
 }
 
@@ -967,6 +967,7 @@ body h6 {
   justify-content: space-between;
   margin-bottom: 0.5rem;
   color: #555;
+  font-size: 0.9rem;
 }
 
 .trial-pricing-buttons {
@@ -976,26 +977,27 @@ body h6 {
 }
 
 .trial-btn {
-  background-color: #0c9c94;
+  background-color: #bd8c2e;
   color: white !important;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-align: center;
   transition: background-color 0.3s;
+  font-size: 0.9rem;
 }
 
 .trial-btn:hover {
-  background-color: #0a817a;
+  background-color: #a47b27;
 }
 
 .trial-btn.enquire {
   background-color: transparent;
-  border: 1px solid #0c9c94;
-  color: #0c9c94 !important;
+  border: 1px solid #bd8c2e;
+  color: #bd8c2e !important;
 }
 
 .trial-btn.enquire:hover {
-  background-color: #0c9c94;
+  background-color: #bd8c2e;
   color: white !important;
 }
 
@@ -1048,10 +1050,11 @@ body h6 {
   margin-bottom: 0.5rem;
   color: #333;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .trial-info-item svg {
-  color: #0c9c94;
+  color: #bd8c2e;
 }
 
 .trial-faq-section {
@@ -1064,12 +1067,14 @@ body h6 {
 
 .trial-faq-question {
   font-weight: bold;
-  color: #0c9c94 !important;
+  color: #bd8c2e !important;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .trial-faq-answer {
   color: #555;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 991px) {
