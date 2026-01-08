@@ -40,7 +40,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Dubai Health - DHA</h3>
-                <p>Medical fitness typing and all necessary approvals handled seamlessly.</p>
+                <p>Medical fitness typing and all necessary approvals are handled seamlessly.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=dha">
@@ -57,7 +57,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Typing Services</h3>
-                <p>Accurate typing for visa, labor and various legal documents.</p>
+                <p>Accurate typing for visas, labor contracts, and various legal documents.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=typing">
@@ -74,7 +74,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Amer</h3>
-                <p>Complete Amer services for visa renewal, cancellation, and more.</p>
+                <p>Complete Amer services for visa renewal, cancellation, and modifications.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=amer">
@@ -91,7 +91,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-content">
                 <h3>DET</h3>
-                <p>License applications, renewals, and modifications for your business.</p>
+                <p>License applications, renewals, and all modifications for your business.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service?tab=det">
@@ -142,7 +142,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Salem</h3>
-                <p>Occupational health screening and all medical fitness services.</p>
+                <p>Occupational health screening and all required medical fitness services.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service">
@@ -159,7 +159,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Business Setup</h3>
-                <p>Comprehensive assistance for setting up your business in Dubai.</p>
+                <p>Comprehensive assistance for setting up your new business in Dubai.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service">
@@ -176,7 +176,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Tax Consultancy</h3>
-                <p>Expert advice and services for VAT registration and compliance.</p>
+                <p>Expert advice and professional services for VAT registration needs.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service">
@@ -193,7 +193,7 @@ export default function FeaturesHomeOne() {
               </div>
               <div className="azzle-iconbox-content">
                 <h3>Accounting Services</h3>
-                <p>Professional bookkeeping and accounting for your business needs.</p>
+                <p>Professional bookkeeping and accounting for all your business needs.</p>
               </div>
               <div className="azzle-iconbox-button">
                 <Link href="/service">
