@@ -15,7 +15,7 @@ const faq_data: FaqItem[] = [
     id: 1,
     question: "What services does Al Garhoud Center provide?",
     answer:
-      "We offer a wide range of government services, including visa processing, Emirates ID typing, medical fitness applications and various approvals from Amer, DET and DHA.",
+      "We offer a wide range of government services, including visa processing, Emirates ID typing, medical fitness applications, and various approvals from Amer, DET, and DHA. Our services also cover Taw-Jeeh for labor-related processes and Notary Public services for legal documentation.",
   },
   {
     id: 2,
