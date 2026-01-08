@@ -785,16 +785,19 @@ body h6 {
 .hero-slider .azzle-hero-content1 {
   position: relative;
   z-index: 2;
-  padding-top: 0;
 }
 
-.hero-slider .azzle-hero-content1 h1,
+.hero-slider .azzle-hero-content1 h1 {
+  color: white;
+  font-size: 3.5rem;
+}
+
 .hero-slider .azzle-hero-content1 p {
   color: white;
 }
 
 .azzle-hero-section {
-  padding-top: 0;
+  padding-top: 120px;
   padding-bottom: 0;
 }
 
