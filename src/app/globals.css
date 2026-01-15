@@ -749,6 +749,10 @@ body h6 {
 }
 
 /* Hero Slider */
+.hero-slider-wrapper {
+  position: relative;
+}
+
 .hero-slider {
   position: relative;
   height: 75vh;
@@ -766,7 +770,9 @@ body h6 {
   max-height: 800px;
   display: flex !important;
   align-items: center;
-  padding: 0 60px; /* Add padding for content */
+  justify-content: center;
+  text-align: center;
+  padding: 0 60px;
 }
 
 .hero-slide-image {
@@ -790,11 +796,10 @@ body h6 {
   background: rgba(0, 0, 0, 0.5);
 }
 
-
 .hero-slider .azzle-hero-content1 {
   position: relative;
   z-index: 2;
-  max-width: 700px; /* Limit content width */
+  max-width: 700px;
 }
 
 .hero-slider .azzle-hero-content1 h1 {
@@ -815,13 +820,13 @@ body h6 {
   padding-bottom: 40px;
 }
 
-
 /* Slider dots */
 .hero-slider .slick-dots {
   bottom: 30px;
-  left: 30px;
   z-index: 5;
-  text-align: left;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero-slider .slick-dots li {
@@ -850,7 +855,8 @@ body h6 {
 /* Hero Slider Arrows */
 .hero-arrow {
   position: absolute;
-  bottom: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
@@ -875,11 +881,11 @@ body h6 {
 }
 
 .hero-arrow.hero-prev {
-  right: 108px;
+  left: -22px;
 }
 
 .hero-arrow.hero-next {
-  right: 50px;
+  right: -22px;
 }
 
 .hero-arrow::before {
@@ -908,10 +914,10 @@ body h6 {
     padding: 0 30px;
   }
   .hero-arrow.hero-prev {
-    right: 70px;
+    left: 10px;
   }
   .hero-arrow.hero-next {
-    right: 15px;
+    right: 10px;
   }
   .hero-slider .azzle-hero-content1 h1 {
     font-size: 2rem;

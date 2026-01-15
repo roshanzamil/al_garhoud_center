@@ -2,44 +2,7 @@
 "use client";
 import Link from "next/link";
 import Slider from "react-slick";
-
-function NextArrow(props: any) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} hero-arrow hero-next`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-}
-
-function PrevArrow(props: any) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} hero-arrow hero-prev`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-}
-
-
-const heroSliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 5000,
-  arrows: true,
-  nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
-};
+import { useRef } from "react";
 
 const sliderData = [
   {
@@ -65,30 +28,56 @@ const sliderData = [
   }
 ];
 
-
 export default function HeroHomeOne() {
+  const sliderRef = useRef<Slider | null>(null);
+
+  const heroSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false, // We are using custom arrows
+  };
+
+  const next = () => {
+    sliderRef.current?.slickNext();
+  };
+
+  const previous = () => {
+    sliderRef.current?.slickPrev();
+  };
+
   return (
     <div className="azzle-hero-section">
       <div className="container">
-        <Slider {...heroSliderSettings} className="hero-slider">
-          {sliderData.map((slide) => (
-            <div key={slide.id} className="hero-slide-item">
-              <div className="hero-slide-image" style={{ backgroundImage: `url(${slide.image})` }} data-ai-hint={slide.hint}></div>
-              <div className="azzle-hero-content1">
-                  <h1 data-aos="fade-left" data-aos-delay="500">{slide.title}</h1>
-                  <p data-aos="zoom-in" data-aos-delay="700">{slide.description}</p>
-                  <div className="azzle-hero-button mt-50">
-                    <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started">
-                      <span className="button-wraper">Get started</span>
-                    </Link>
-                    <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/about-us" data-text="Learn more">
-                      <span className="button-wraper">Learn more</span>
-                    </Link>
-                  </div>
+        <div className="hero-slider-wrapper">
+          <Slider ref={sliderRef} {...heroSliderSettings} className="hero-slider">
+            {sliderData.map((slide) => (
+              <div key={slide.id} className="hero-slide-item">
+                <div className="hero-slide-image" style={{ backgroundImage: `url(${slide.image})` }} data-ai-hint={slide.hint}></div>
+                <div className="azzle-hero-content1">
+                    <h1 data-aos="fade-left" data-aos-delay="500">{slide.title}</h1>
+                    <p data-aos="zoom-in" data-aos-delay="700">{slide.description}</p>
+                    <div className="azzle-hero-button mt-50">
+                      <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started">
+                        <span className="button-wraper">Get started</span>
+                      </Link>
+                      <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/about-us" data-text="Learn more">
+                        <span className="button-wraper">Learn more</span>
+                      </Link>
+                    </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+          <div className="hero-arrow hero-prev" onClick={previous}></div>
+          <div className="hero-arrow hero-next" onClick={next}></div>
+        </div>
       </div>
     </div>
   )
