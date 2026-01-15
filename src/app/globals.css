@@ -859,21 +859,19 @@ body h6 {
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border: none;
   border-radius: 50%;
   width: 44px;
   height: 44px;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
 
 .hero-arrow:hover {
-  background-color: #bd8c2e;
-  border-color: #bd8c2e;
+  background-color: rgba(189, 140, 46, 0.5);
 }
 
 .hero-arrow:hover::before {
@@ -881,11 +879,11 @@ body h6 {
 }
 
 .hero-arrow.hero-prev {
-  left: -22px;
+  left: 60px;
 }
 
 .hero-arrow.hero-next {
-  right: -22px;
+  right: 60px;
 }
 
 .hero-arrow::before {
