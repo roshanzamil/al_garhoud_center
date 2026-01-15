@@ -152,6 +152,10 @@ body h6 {
   background-color: transparent !important;
 }
 
+.azzle-iconbox-wrap:hover .azzle-iconbox-content p {
+  color: initial;
+}
+
 .azzle-iconbox-wrap:hover .azzle-iconbox-button a {
   color: red;
 }
@@ -821,8 +825,8 @@ body h6 {
 }
 
 .azzle-hero-section .container {
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 
@@ -889,11 +893,11 @@ body h6 {
 }
 
 .hero-arrow.hero-prev {
-  left: 80px;
+  left: 120px;
 }
 
 .hero-arrow.hero-next {
-  right: 80px;
+  right: 120px;
 }
 
 .hero-arrow::before {
