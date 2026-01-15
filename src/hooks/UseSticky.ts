@@ -16,18 +16,12 @@ const UseSticky = (): StickyState => {
   const stickyHeader = (): void => {
     const currentScroll = window.scrollY;
 
-    if (currentScroll <= 200) {
-      // At the top area → reset both
-      setSticky(false);
-      setHidden(false);
-    } else if (currentScroll < lastScroll) {
-      // Scrolling up → show sticky
+    if (currentScroll > 200) {
       setSticky(true);
-      setHidden(false);
+      setHidden(false); // Always show when sticky
     } else {
-      // Scrolling down → hide header
       setSticky(false);
-      setHidden(true);
+      setHidden(false);
     }
 
     setLastScroll(currentScroll);
