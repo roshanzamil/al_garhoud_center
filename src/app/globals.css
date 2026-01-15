@@ -153,7 +153,7 @@ body h6 {
 }
 
 .azzle-iconbox-wrap:hover .azzle-iconbox-content p {
-  color: initial;
+  color: inherit !important;
 }
 
 .azzle-iconbox-wrap:hover .azzle-iconbox-button a {
