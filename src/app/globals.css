@@ -751,20 +751,22 @@ body h6 {
 /* Hero Slider */
 .hero-slider {
   position: relative;
-  width: 100%;
-  height: 90vh;
-  min-height: 600px;
-  max-height: 1080px;
+  height: 75vh;
+  min-height: 500px;
+  max-height: 800px;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .hero-slide-item {
   position: relative;
   width: 100%;
-  height: 90vh;
-  min-height: 600px;
-  max-height: 1080px;
+  height: 75vh;
+  min-height: 500px;
+  max-height: 800px;
   display: flex !important;
   align-items: center;
+  padding: 0 60px; /* Add padding for content */
 }
 
 .hero-slide-image {
@@ -792,11 +794,12 @@ body h6 {
 .hero-slider .azzle-hero-content1 {
   position: relative;
   z-index: 2;
+  max-width: 700px; /* Limit content width */
 }
 
 .hero-slider .azzle-hero-content1 h1 {
   color: white;
-  font-size: 3rem;
+  font-size: 2.75rem;
 }
 
 .hero-slider .azzle-hero-content1 p {
@@ -816,19 +819,22 @@ body h6 {
 /* Slider dots */
 .hero-slider .slick-dots {
   bottom: 30px;
+  left: 30px;
   z-index: 5;
+  text-align: left;
 }
 
 .hero-slider .slick-dots li {
-  margin: 0 8px;
+  margin: 0 6px;
 }
 
 .hero-slider .slick-dots li button {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
+  padding: 0;
 }
 
 .hero-slider .slick-dots li button::before {
@@ -837,21 +843,21 @@ body h6 {
 
 .hero-slider .slick-dots li.slick-active button {
   background-color: #bd8c2e;
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  border-radius: 5px;
 }
 
 /* Hero Slider Arrows */
 .hero-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 20px;
   z-index: 10;
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   display: flex !important;
   align-items: center;
   justify-content: center;
@@ -861,6 +867,7 @@ body h6 {
 
 .hero-arrow:hover {
   background-color: #bd8c2e;
+  border-color: #bd8c2e;
 }
 
 .hero-arrow:hover::before {
@@ -868,11 +875,11 @@ body h6 {
 }
 
 .hero-arrow.hero-prev {
-  left: 40px;
+  right: 108px;
 }
 
 .hero-arrow.hero-next {
-  right: 40px;
+  right: 50px;
 }
 
 .hero-arrow::before {
@@ -880,28 +887,34 @@ body h6 {
   display: inline-block;
   border-style: solid;
   border-width: 2px 2px 0 0;
-  height: 12px;
-  width: 12px;
+  height: 10px;
+  width: 10px;
   transition: border-color 0.3s ease;
-  border-color: #bd8c2e;
+  border-color: white;
 }
 
 .hero-prev::before {
   transform: rotate(-135deg);
-  margin-left: 5px;
+  margin-left: 4px;
 }
 
 .hero-next::before {
   transform: rotate(45deg);
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
 @media (max-width: 768px) {
+  .hero-slide-item {
+    padding: 0 30px;
+  }
   .hero-arrow.hero-prev {
-    left: 15px;
+    right: 70px;
   }
   .hero-arrow.hero-next {
     right: 15px;
+  }
+  .hero-slider .azzle-hero-content1 h1 {
+    font-size: 2rem;
   }
 }
 
@@ -957,7 +970,7 @@ body h6 {
 }
 
 .trial-pricing-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #bd8c2e !important;
   margin-bottom: 1.5rem;
 }
@@ -967,7 +980,7 @@ body h6 {
   justify-content: space-between;
   margin-bottom: 0.5rem;
   color: #555;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .trial-pricing-buttons {
@@ -983,7 +996,7 @@ body h6 {
   border-radius: 4px;
   text-align: center;
   transition: background-color 0.3s;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .trial-btn:hover {
@@ -1050,7 +1063,7 @@ body h6 {
   margin-bottom: 0.5rem;
   color: #333;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .trial-info-item svg {
@@ -1069,12 +1082,12 @@ body h6 {
   font-weight: bold;
   color: #bd8c2e !important;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .trial-faq-answer {
   color: #555;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 @media (max-width: 991px) {

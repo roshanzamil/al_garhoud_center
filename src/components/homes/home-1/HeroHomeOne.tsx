@@ -3,28 +3,6 @@
 import Link from "next/link";
 import Slider from "react-slick";
 
-const settings = {
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 0,
-  speed: 5000,
-  arrows: false,
-  pauseOnHover: false,
-  cssEase: "linear",
-  responsive: [{
-    breakpoint: 1199,
-    settings: {
-      slidesToShow: 3
-    }
-  }, {
-    breakpoint: 767,
-    settings: {
-      slidesToShow: 1
-    }
-  }]
-}
-
 function NextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
@@ -91,27 +69,27 @@ const sliderData = [
 export default function HeroHomeOne() {
   return (
     <div className="azzle-hero-section">
-      <Slider {...heroSliderSettings} className="hero-slider">
-        {sliderData.map((slide) => (
-          <div key={slide.id} className="hero-slide-item">
-            <div className="hero-slide-image" style={{ backgroundImage: `url(${slide.image})` }} data-ai-hint={slide.hint}></div>
-            <div className="container">
+      <div className="container">
+        <Slider {...heroSliderSettings} className="hero-slider">
+          {sliderData.map((slide) => (
+            <div key={slide.id} className="hero-slide-item">
+              <div className="hero-slide-image" style={{ backgroundImage: `url(${slide.image})` }} data-ai-hint={slide.hint}></div>
               <div className="azzle-hero-content1">
-                <h1 data-aos="fade-left" data-aos-delay="500">{slide.title}</h1>
-                <p data-aos="zoom-in" data-aos-delay="700">{slide.description}</p>
-                <div className="azzle-hero-button mt-50">
-                  <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started">
-                    <span className="button-wraper">Get started</span>
-                  </Link>
-                  <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/about-us" data-text="Learn more">
-                    <span className="button-wraper">Learn more</span>
-                  </Link>
-                </div>
+                  <h1 data-aos="fade-left" data-aos-delay="500">{slide.title}</h1>
+                  <p data-aos="zoom-in" data-aos-delay="700">{slide.description}</p>
+                  <div className="azzle-hero-button mt-50">
+                    <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started">
+                      <span className="button-wraper">Get started</span>
+                    </Link>
+                    <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/about-us" data-text="Learn more">
+                      <span className="button-wraper">Learn more</span>
+                    </Link>
+                  </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </div>
   )
 }
