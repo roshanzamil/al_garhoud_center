@@ -814,9 +814,13 @@ body h6 {
 .azzle-hero-section {
   padding-top: 120px;
   padding-bottom: 0;
+}
+
+.azzle-hero-section .container {
   padding-left: 12px;
   padding-right: 12px;
 }
+
 
 .azzle-hero-section .azzle-brand-slider-wraper {
   padding-bottom: 40px;
