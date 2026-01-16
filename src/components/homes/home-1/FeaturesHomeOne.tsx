@@ -210,7 +210,7 @@ export default function FeaturesHomeOne() {
       <div className="container">
         <div className="azzle-brand-slider-wraper py-10" data-aos="fade-up" data-aos-delay=".9s">
           <div className="azzle-brand-slider-title">
-            <p>Proudly serving the community by partnering with key government entities in Dubai</p>
+            <p>Our clientele includes established organizations throughout Dubai</p>
           </div>
           <Slider {...settings} className="azzle-brand-slider">
             <div className="azzle-logo-icon-item">
