@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 export default function FooterTwo() {
@@ -31,7 +32,6 @@ export default function FooterTwo() {
               <li><Link href="/about-us">About Us</Link></li>
               <li><Link href="/service">Services</Link></li>
               <li><Link href="/team">Leadership</Link></li>
-              <li><Link href="/milestones">Milestones</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/downloads">Downloads</Link></li>
             </ul>

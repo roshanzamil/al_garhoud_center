@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 
@@ -80,9 +81,6 @@ export default function FooterThree() {
               <ul>
                 <li>
                   <Link href="/team">Leadership</Link>
-                </li>
-                <li>
-                  <Link href="/milestones">Milestones</Link>
                 </li>
                 <li>
                   <Link href="/gallery">Gallery</Link>
