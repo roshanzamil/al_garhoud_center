@@ -1122,9 +1122,11 @@ body h6 {
 
 /* Service Icon Box Hover Fix */
 .azzle-iconbox-wrapper .azzle-iconbox-wrap:hover {
-    background-color: transparent !important;
+    background-color: #ffffff !important;
 }
 
 .azzle-iconbox-wrapper .azzle-iconbox-wrap:hover .azzle-iconbox-content p {
     color: inherit !important;
 }
+
+    
