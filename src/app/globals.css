@@ -139,7 +139,7 @@ body h6 {
   transition: color 0.3s ease-in-out;
 }
 
-.azzle-iconbox-button a {
+.azzle-iconbox-button span {
   color: #bd8c2e;
   transition: all 0.3s ease-in-out;
 }
@@ -148,18 +148,18 @@ body h6 {
   color: red !important;
 }
 
-.azzle-iconbox-wrap:hover .azzle-iconbox-button a {
+.azzle-iconbox-wrap:hover .azzle-iconbox-button span {
   color: red;
 }
 
-.azzle-iconbox-wrap:hover .azzle-iconbox-button a svg path {
+.azzle-iconbox-wrap:hover .azzle-iconbox-button span svg path {
   stroke: red;
 }
 
-.azzle-iconbox-button a:hover svg {
+.azzle-iconbox-wrap:hover .azzle-iconbox-button svg {
   transform: translateX(5px);
 }
-.azzle-iconbox-button a svg {
+.azzle-iconbox-button span svg {
   transition: all 0.3s ease-in-out;
 }
 .site-header {
@@ -946,7 +946,7 @@ body h6 {
   line-height: 1.4;
 }
 
-.azzle-iconbox-button a {
+.azzle-iconbox-button span {
   font-size: 0.9rem; /* Reduced from default */
 }
 
