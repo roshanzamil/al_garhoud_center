@@ -644,7 +644,9 @@ body h6 {
 
 @media (min-width: 768px) {
   .downloads-grid-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr); /* Making it single column for the new design */
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 
@@ -652,42 +654,55 @@ body h6 {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
 .download-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   border-color: #bd8c2e;
 }
 
 .download-card-icon {
   color: #bd8c2e;
-  margin-bottom: 1.5rem;
+  background-color: rgba(189, 140, 46, 0.1);
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.download-card-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .download-card-content {
-  flex-grow: 1;
+ flex-grow: 1;
 }
 
 .download-card-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: 'Epilogue', sans-serif;
   color: #333 !important;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .download-card-description {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: #666;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .download-card-button {
@@ -699,11 +714,27 @@ body h6 {
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  margin-top: auto;
+  white-space: nowrap; /* Prevent button text from wrapping */
+  flex-shrink: 0;
 }
 
 .download-card-button:hover {
   background-color: #a47b27;
+}
+
+/* Responsive for download card */
+@media (max-width: 640px) {
+  .download-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .download-card-main {
+    flex-direction: column;
+    text-align: center;
+  }
+  .download-card-button {
+    margin-top: 1rem;
+  }
 }
 
 /* WhatsApp Floating Button */
@@ -1120,8 +1151,8 @@ body h6 {
     padding-right: 24px;
 }
 
-.azzle-iconbox-wrapper .azzle-iconbox-wrap .azzle-iconbox-content p {
-    color: #555;
+.azzle-iconbox-wrapper a.azzle-iconbox-wrap .azzle-iconbox-content p {
+    color: #555 !important;
 }
 
 /* Service Icon Box Hover Fix */
@@ -1129,7 +1160,7 @@ body h6 {
     background-color: #ffffff !important;
 }
 
-.azzle-iconbox-wrapper .azzle-iconbox-wrap:hover .azzle-iconbox-content p {
+.azzle-iconbox-wrapper a.azzle-iconbox-wrap:hover .azzle-iconbox-content p {
     color: #555 !important;
 }
 
