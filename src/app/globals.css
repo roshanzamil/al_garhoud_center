@@ -1130,8 +1130,11 @@ body h6 {
 }
 
 .azzle-iconbox-wrapper .azzle-iconbox-wrap:hover .azzle-iconbox-content p {
-    color: inherit !important;
+    color: #555 !important;
 }
 
     
 
+
+
+    
