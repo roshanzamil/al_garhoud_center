@@ -10,7 +10,7 @@ const downloads_data: DownloadItem[] = [
     id: 1, 
     title: "Company Profile", 
     description: "An overview of our mission, vision, and the full range of services we offer.",
-    url: "/assets/pdfs/company-profile.pdf" 
+    url: "/assets/docs/GARHOUD-CENTRE-BROUCHER.pdf" 
   }
 ];
 
