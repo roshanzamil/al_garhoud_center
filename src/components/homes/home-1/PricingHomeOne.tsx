@@ -41,18 +41,9 @@ export default function PricingHomeOne() {
                   <h4>Values</h4>
                 </div>
                 <div className="azzle-pricing-body">
-                  <div style={{ marginBottom: "1rem" }}>
-                    <h5 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.25rem' }}>Trust First</h5>
-                    <p>We operate with integrity, transparency and accountability in every interaction.</p>
-                  </div>
-                  <div style={{ marginBottom: "1rem" }}>
-                    <h5 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.25rem' }}>Client-Centric Excellence</h5>
-                    <p>Our clients&apos; success defines our performance; we deliver precision, speed and clarity at every step.</p>
-                  </div>
-                  <div>
-                    <h5 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.25rem' }}>Compliance by Design</h5>
-                    <p>Regulatory accuracy is embedded into our processes, ensuring peace of mind and long-term sustainability.</p>
-                  </div>
+                  <h5 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '1rem' }}>Trust First</h5>
+                  <h5 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '1rem' }}>Client-Centric Excellence</h5>
+                  <h5 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0' }}>Compliance by Design</h5>
                 </div>
               </div>
             </div>
