@@ -1115,7 +1115,16 @@ body h6 {
   }
 }
 
-.azzle-iconbox-wrap:hover .azzle-iconbox-content p {
-    color: inherit !important;
+.azzle-hero-section .container {
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
+/* Service Icon Box Hover Fix */
+.azzle-iconbox-wrapper .azzle-iconbox-wrap:hover {
+    background-color: transparent !important;
+}
+
+.azzle-iconbox-wrapper .azzle-iconbox-wrap:hover .azzle-iconbox-content p {
+    color: inherit !important;
+}
