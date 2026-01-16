@@ -25,8 +25,13 @@ export default function DownloadsArea() {
                 <h3 className="download-card-title">{item.title}</h3>
                 <p className="download-card-description">{item.description}</p>
               </div>
-              <a href={item.url} download className="download-card-button">
-                Download PDF
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="download-card-button"
+              >
+                View PDF
               </a>
             </div>
           ))}
