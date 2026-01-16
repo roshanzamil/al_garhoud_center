@@ -148,14 +148,6 @@ body h6 {
   color: red !important;
 }
 
-.azzle-iconbox-wrap:hover {
-  background-color: transparent !important;
-}
-
-.azzle-iconbox-wrap:hover .azzle-iconbox-content p {
-  color: inherit !important;
-}
-
 .azzle-iconbox-wrap:hover .azzle-iconbox-button a {
   color: red;
 }
