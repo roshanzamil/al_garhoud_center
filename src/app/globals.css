@@ -1120,6 +1120,10 @@ body h6 {
     padding-right: 24px;
 }
 
+.azzle-iconbox-wrapper .azzle-iconbox-wrap .azzle-iconbox-content p {
+    color: #555;
+}
+
 /* Service Icon Box Hover Fix */
 .azzle-iconbox-wrapper .azzle-iconbox-wrap:hover {
     background-color: #ffffff !important;
@@ -1130,3 +1134,4 @@ body h6 {
 }
 
     
+
