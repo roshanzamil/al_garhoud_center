@@ -1,5 +1,4 @@
 
-import Breacrumb from "@/common/Breacrumb";
 import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
@@ -10,8 +9,7 @@ export default function Det() {
     <Wrapper>
       <HeaderOne />
       <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <Breacrumb title="DET" page="Services" />
+        <div id="smooth-content" style={{ paddingTop: '120px' }}>
           <DetArea />
           <FooterOne />
         </div>
