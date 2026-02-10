@@ -82,17 +82,6 @@ export default function DhaArea() {
               ))}
             </div>
 
-            <div className="trial-additional-info">
-              <div className="trial-info-item">
-                <Check size={20} />
-                <span>Female Household Domestic Servant Fee 50 dh more</span>
-              </div>
-              <div className="trial-info-item">
-                <Check size={20} />
-                <span>Fast Track Service also available</span>
-              </div>
-            </div>
-
             <div className="trial-faq-section">
               {faqData.map((faq, index) => (
                 <div key={index} className="trial-faq-item">
