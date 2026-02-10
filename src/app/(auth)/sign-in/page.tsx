@@ -69,9 +69,6 @@ export default function FooterThree() {
                   <Link href="/about-us">About Us</Link>
                 </li>
                 <li>
-                  <Link href="/service">Services</Link>
-                </li>
-                <li>
                   <Link href="/contact-us">Contact</Link>
                 </li>
               </ul>

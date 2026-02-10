@@ -34,7 +34,7 @@ export default function FeaturesHomeOne() {
         </div>
         <div className="azzle-iconbox-wrapper" data-aos="fade-up" data-aos-delay="700">
           <div className="azzle-iconbox-column">
-            <Link href="/service?tab=dha" className="azzle-iconbox-wrap">
+            <Link href="/service/dha" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/DHA-logo.webp" alt="DHA" style={{ height: '120px' }} />
               </div>
@@ -51,7 +51,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-            <Link href="/service?tab=typing" className="azzle-iconbox-wrap">
+            <Link href="/service/typing" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                  <img src="assets/images/service/typing-logo.webp" alt="Typing" style={{ height: '120px' }} />
               </div>
@@ -68,7 +68,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-            <Link href="/service?tab=amer" className="azzle-iconbox-wrap">
+            <Link href="/service/amer" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/amer-logo.webp" alt="Amer" style={{ height: '120px' }} />
               </div>
@@ -85,7 +85,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-            <Link href="/service?tab=det" className="azzle-iconbox-wrap">
+            <Link href="/service/det" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/det-logo.webp" alt="DET" style={{ height: '120px' }} />
               </div>
@@ -102,7 +102,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-             <Link href="/service?tab=tawjeeh" className="azzle-iconbox-wrap">
+             <Link href="/service/tawjeeh" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                  <img src="assets/images/service/t3-logo.webp" alt="Taw-Jeeh" style={{ height: '120px' }} />
               </div>
@@ -119,7 +119,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-             <Link href="/service?tab=notary" className="azzle-iconbox-wrap">
+             <Link href="/service/notary" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/dubai-courts-logo.webp" alt="Notary Public" style={{ height: '120px' }} />
               </div>
@@ -136,7 +136,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-            <Link href="/service?tab=salem" className="azzle-iconbox-wrap">
+            <Link href="/service/salem" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/salem.jpg" alt="Salem" style={{ height: '120px' }} />
               </div>
@@ -153,7 +153,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-            <Link href="/service?tab=business-setup" className="azzle-iconbox-wrap">
+            <Link href="/service/business-setup" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/business.jpg" alt="Business Setup" style={{ height: '120px' }} />
               </div>
@@ -170,7 +170,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-            <Link href="/service?tab=tax-consultancy" className="azzle-iconbox-wrap">
+            <Link href="/service/tax-consultancy" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/tax.jpg" alt="Tax Consultancy" style={{ height: '120px' }} />
               </div>
@@ -187,7 +187,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-            <Link href="/service?tab=accounting" className="azzle-iconbox-wrap">
+            <Link href="/service/accounting" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/accounting.jpg" alt="Accounting Services" style={{ height: '120px' }} />
               </div>

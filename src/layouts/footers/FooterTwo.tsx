@@ -30,21 +30,21 @@ export default function FooterTwo() {
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about-us">About Us</Link></li>
-              <li><Link href="/service">Services</Link></li>
               <li><Link href="/team">Leadership</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/downloads">Downloads</Link></li>
+              <li><Link href="/contact-us">Contact Us</Link></li>
             </ul>
           </div>
           <div className="azzle-footer-menu2">
             <h4>Services</h4>
             <ul>
-                <li><Link href="/service?tab=dha">Dubai Health - DHA</Link></li>
-                <li><Link href="/service?tab=typing">Typing Services</Link></li>
-                <li><Link href="/service?tab=amer">Amer</Link></li>
-                <li><Link href="/service?tab=det">DET</Link></li>
-                <li><Link href="/service?tab=tawjeeh">Taw-Jeeh Services</Link></li>
-                <li><Link href="/service?tab=notary">Notary Public</Link></li>
+                <li><Link href="/service/dha">Dubai Health - DHA</Link></li>
+                <li><Link href="/service/typing">Typing Services</Link></li>
+                <li><Link href="/service/amer">Amer</Link></li>
+                <li><Link href="/service/det">DET</Link></li>
+                <li><Link href="/service/tawjeeh">Taw-Jeeh Services</Link></li>
+                <li><Link href="/service/notary">Notary Public</Link></li>
             </ul>
           </div>
           <div className="azzle-footer-menu2">
