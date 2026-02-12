@@ -23,7 +23,7 @@ const menu_data: MenuItem[] = [
       { title: "Dubai Health - DHA", path: "/service/dha" },
       { title: "Typing Services", path: "/service/typing" },
       { title: "Amer", path: "/service/amer" },
-      { title: "DET", path: "/service/det" },
+      { title: "DET", path: "https://eservices.dubaided.gov.ae/pages/anon/gsthme.aspx?dedqs=PM671p6QBb0lV1okx2JABgxoLLKXOgPx" },
       { title: "Taw-Jeeh Services", path: "/service/tawjeeh" },
       { title: "Notary Public", path: "/service/notary" },
       { title: "Salem", path: "/service/salem" },

@@ -1,4 +1,3 @@
-
 "use client";
 import Link from "next/link";
 import Slider from "react-slick";
@@ -85,7 +84,7 @@ export default function FeaturesHomeOne() {
                 </span>
               </div>
             </Link>
-            <Link href="/service/det" className="azzle-iconbox-wrap">
+            <a href="https://eservices.dubaided.gov.ae/pages/anon/gsthme.aspx?dedqs=PM671p6QBb0lV1okx2JABgxoLLKXOgPx" target="_blank" rel="noopener noreferrer" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                 <img src="assets/images/service/det-logo.webp" alt="DET" style={{ height: '120px' }} />
               </div>
@@ -101,7 +100,7 @@ export default function FeaturesHomeOne() {
                   </svg>
                 </span>
               </div>
-            </Link>
+            </a>
              <Link href="/service/tawjeeh" className="azzle-iconbox-wrap">
               <div className="azzle-iconbox-icon">
                  <img src="assets/images/service/t3-logo.webp" alt="Taw-Jeeh" style={{ height: '120px' }} />

@@ -1,4 +1,3 @@
-
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -115,7 +114,7 @@ export default function FooterOne() {
                     <li><Link href="/service/dha">Dubai Health - DHA</Link></li>
                     <li><Link href="/service/typing">Typing Services</Link></li>
                     <li><Link href="/service/amer">Amer</Link></li>
-                    <li><Link href="/service/det">DET</Link></li>
+                    <li><a href="https://eservices.dubaided.gov.ae/pages/anon/gsthme.aspx?dedqs=PM671p6QBb0lV1okx2JABgxoLLKXOgPx" target="_blank" rel="noopener noreferrer">DET</a></li>
                     <li><Link href="/service/tawjeeh">Taw-Jeeh Services</Link></li>
                     <li><Link href="/service/notary">Notary Public</Link></li>
                 </ul>

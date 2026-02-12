@@ -1,4 +1,3 @@
-
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -83,7 +82,7 @@ export default function ServiceTabs() {
 
   useEffect(() => {
     const tabKey = searchParams.get('tab');
-    if (tabKey) {
+    if (tabKey && tabKey !== 'det') {
       const service = serviceData.find(s => s.key === tabKey);
       if (service) {
         setActiveTab(service.id);
@@ -98,15 +97,30 @@ export default function ServiceTabs() {
       <div className="container">
         <div className="service-tabs-container" data-aos="fade-up" data-aos-delay="700">
           <div className="service-tabs-nav">
-            {serviceData.map((service) => (
-              <button
-                key={service.id}
-                className={`service-tab-item ${activeTab === service.id ? "active" : ""}`}
-                onClick={() => setActiveTab(service.id)}
-              >
-                {service.title}
-              </button>
-            ))}
+            {serviceData.map((service) => {
+              if (service.key === 'det') {
+                return (
+                  <a
+                    key={service.id}
+                    href="https://eservices.dubaided.gov.ae/pages/anon/gsthme.aspx?dedqs=PM671p6QBb0lV1okx2JABgxoLLKXOgPx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="service-tab-item"
+                  >
+                    {service.title}
+                  </a>
+                );
+              }
+              return (
+                <button
+                  key={service.id}
+                  className={`service-tab-item ${activeTab === service.id ? "active" : ""}`}
+                  onClick={() => setActiveTab(service.id)}
+                >
+                  {service.title}
+                </button>
+              );
+            })}
           </div>
           <div className="service-tabs-content">
             {activeService && (
