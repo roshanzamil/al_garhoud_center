@@ -65,6 +65,14 @@ export default function SalemArea() {
     }, 100);
   };
   
+  const handleEnquiryClick = (serviceTitle: string) => {
+    setEnquiryService(serviceTitle);
+    setActiveTab('enquiry');
+    setTimeout(() => {
+        formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  };
+
   const handleEnquirySubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!enquiryService) {
@@ -99,7 +107,7 @@ export default function SalemArea() {
                   </div>
                   <div className="trial-pricing-buttons">
                     <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleBookAppointmentClick(item.title); }}>Book appointment</a>
-                    <a href="#" className="trial-btn enquire">Enquire</a>
+                    <a href="#" className="trial-btn enquire" onClick={(e) => { e.preventDefault(); handleEnquiryClick(item.title); }}>Enquire</a>
                   </div>
                 </div>
               ))}
