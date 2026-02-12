@@ -57,7 +57,7 @@ export default function NotaryArea() {
 
   const handleBookAppointmentClick = (serviceTitle: string) => {
     setSelectedService(serviceTitle);
-    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (

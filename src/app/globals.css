@@ -998,6 +998,7 @@ body h6 {
 
 .trial-pricing-sidebar {
   flex: 1 1 35%;
+  scroll-margin-top: 140px;
 }
 
 .trial-pricing-grid {
@@ -1169,6 +1170,7 @@ body h6 {
 
 
     
+
 
 
 
