@@ -1079,7 +1079,7 @@ body h6 {
   border-radius: 4px;
 }
 
-.trial-form-field input[type="date"] {
+.trial-form-field input[type="date"], .trial-form-field select {
   color: #555;
 }
 
@@ -1169,5 +1169,6 @@ body h6 {
 
 
     
+
 
 
