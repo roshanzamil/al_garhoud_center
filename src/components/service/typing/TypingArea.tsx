@@ -53,11 +53,27 @@ const faqData = [
 
 export default function TypingArea() {
   const [selectedService, setSelectedService] = useState("");
+  const [activeTab, setActiveTab] = useState('appointment'); // 'appointment' or 'enquiry'
+  const [enquiryService, setEnquiryService] = useState('');
   const formRef = useRef<HTMLDivElement>(null);
 
   const handleBookAppointmentClick = (serviceTitle: string) => {
     setSelectedService(serviceTitle);
-    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setActiveTab('appointment');
+    setTimeout(() => {
+        formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  };
+  
+  const handleEnquirySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!enquiryService) {
+        alert("Please select a service to enquire about.");
+        return;
+    }
+    const message = encodeURIComponent(`I would like to enquire about the ${enquiryService} service.`);
+    const whatsappUrl = `https://wa.me/971501234567?text=${message}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -102,32 +118,64 @@ export default function TypingArea() {
           <div className="trial-pricing-sidebar" ref={formRef}>
             <div className="trial-booking-form">
               <div className="trial-booking-form-header">
-                <a href="#" className="trial-btn" style={{ flex: 1 }}>Book appointment</a>
-                <a href="#" className="trial-btn enquire" style={{ flex: 1 }}>Enquire</a>
+                 <a 
+                  href="#" 
+                  className={`trial-btn ${activeTab === 'appointment' ? '' : 'enquire'}`} 
+                  style={{ flex: 1 }}
+                  onClick={(e) => { e.preventDefault(); setActiveTab('appointment'); }}
+                >
+                  Book appointment
+                </a>
+                <a 
+                  href="#" 
+                  className={`trial-btn ${activeTab === 'enquiry' ? '' : 'enquire'}`} 
+                  style={{ flex: 1 }}
+                  onClick={(e) => { e.preventDefault(); setActiveTab('enquiry'); }}
+                >
+                  Enquire
+                </a>
               </div>
-              <form>
-                <div className="trial-form-field">
-                  <input type="text" placeholder="Full Name *" required />
-                </div>
-                <div className="trial-form-field">
-                  <input type="tel" placeholder="Phone Number" />
-                </div>
-                <div className="trial-form-field">
-                  <input type="email" placeholder="Email Address *" required />
-                </div>
-                <div className="trial-form-field">
-                  <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
-                    <option value="">-Please Choose An Option-</option>
-                     {pricingData.map((p) => (
-                      <option key={p.title} value={p.title}>{p.title}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="trial-form-field">
-                  <input type="date" placeholder="dd/mm/yyyy" />
-                </div>
-                <button type="submit" className="trial-submit-btn">Submit</button>
-              </form>
+
+               {activeTab === 'appointment' && (
+                <form>
+                  <div className="trial-form-field">
+                    <input type="text" placeholder="Full Name *" required />
+                  </div>
+                  <div className="trial-form-field">
+                    <input type="tel" placeholder="Phone Number" />
+                  </div>
+                  <div className="trial-form-field">
+                    <input type="email" placeholder="Email Address *" required />
+                  </div>
+                  <div className="trial-form-field">
+                    <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
+                      <option value="">-Please Choose An Option-</option>
+                      {pricingData.map((p) => (
+                        <option key={p.title} value={p.title}>{p.title}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="trial-form-field">
+                    <input type="date" placeholder="dd/mm/yyyy" />
+                  </div>
+                  <button type="submit" className="trial-submit-btn">Submit</button>
+                </form>
+              )}
+
+              {activeTab === 'enquiry' && (
+                <form onSubmit={handleEnquirySubmit}>
+                  <div className="trial-form-field">
+                    <select value={enquiryService} onChange={(e) => setEnquiryService(e.target.value)} required>
+                      <option value="">-Please Choose An Option-</option>
+                      {pricingData.map((p) => (
+                        <option key={p.title} value={p.title}>{p.title}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <button type="submit" className="trial-submit-btn">Enquire</button>
+                </form>
+              )}
+
             </div>
           </div>
         </div>
