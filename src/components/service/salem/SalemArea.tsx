@@ -60,17 +60,21 @@ export default function SalemArea() {
   const handleBookAppointmentClick = (serviceTitle: string) => {
     setSelectedService(serviceTitle);
     setActiveTab('appointment');
-    setTimeout(() => {
-        formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    if (formRef.current) {
+      const yOffset = -140; // Accounts for sticky header
+      const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   };
   
   const handleEnquiryClick = (serviceTitle: string) => {
     setEnquiryService(serviceTitle);
     setActiveTab('enquiry');
-    setTimeout(() => {
-        formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    if (formRef.current) {
+      const yOffset = -140; // Accounts for sticky header
+      const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   };
 
   const handleEnquirySubmit = (e: React.FormEvent) => {
