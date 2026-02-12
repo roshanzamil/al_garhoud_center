@@ -1,91 +1,124 @@
-"use client";
-import { useState, useRef } from "react";
 
-const pricingData = [
+"use client";
+import React from "react";
+
+const processSteps = [
   {
-    title: "Normal (24 HR)",
-    govFee: 270,
-    typingFee: 52.5,
-    total: 322.5,
+    step: "01",
+    title: "Register for Tawjeeh",
+    description: "We schedule your Tawjeeh session on your behalf.",
   },
   {
-    title: "Express (6 HR)",
-    govFee: 700,
-    typingFee: 52.5,
-    total: 752.5,
+    step: "02",
+    title: "Document Submission",
+    description:
+      "Passport copy, Visa copy, Emirates ID (if available), Labor contract or offer letter etc.",
   },
   {
-    title: "VIP (2 HR)",
-    govFee: 1020,
-    typingFee: 52.5,
-    total: 1072.5,
+    step: "03",
+    title: "Select Language",
+    description:
+      "Customer chooses preferred session language (Arabic / English / Urdu etc.).",
   },
   {
-    title: "Tawajood",
-    govFee: 1020,
-    typingFee: 52.5,
-    total: 1072.5,
+    step: "04",
+    title: "Attend the Seminar",
+    description:
+      "Customer attends Tawjeeh class at the selected center. Duration: approximately 45–60 minutes.",
+  },
+  {
+    step: "05",
+    title: "Receive Completion Certificate",
+    description:
+      "Completion is updated in the MOHRE (Ministry of Human Resources & Emiratisation) system automatically.",
   },
 ];
 
 const faqData = [
   {
-    question: "What is the DHA medical test?",
-    answer: "It is a mandatory medical fitness test required for residency, employment, or visa renewal in Dubai. It checks for infectious diseases that may affect public health.",
+    question: "What is Tawjeeh?",
+    answer:
+      "Tawjeeh is a MOHRE-approved service center that provides awareness and orientation services to employees and employers about UAE labor laws, employment rights, and responsibilities.",
   },
   {
-    question: "Who needs to take the DHA medical test?",
-    answer: "Anyone applying for a new residence visa or renewing an existing one in Dubai, including domestic workers, professionals, and dependents.",
+    question: "What services does Tawjeeh provide?",
+    answer:
+      "Tawjeeh centers offer:\n\nEmployment contract guidance\nOffer letter issuance and signing\nLabor complaints registration\nLegal consultation regarding labor rights\nPre-employment orientation sessions\nAttestation of job offers and employment contracts",
   },
   {
-    question: "What does the DHA medical test include?",
-    answer: "Blood test (to check for infectious diseases like HIV, Hepatitis B & C) and Chest X-ray (to check for tuberculosis - TB).",
+    question: "Who should visit a Tawjeeh center?",
+    answer:
+      "New employees (for mandatory orientation before signing a labor contract)\nEmployers and PROs (for processing labor contracts and related services)\nEmployees facing labor disputes or needing legal guidance",
   },
   {
-    question: "Is fasting required before the test?",
-    answer: "No, fasting is not required for the DHA medical test.",
+    question: "Is visiting Tawjeeh mandatory for all new employees?",
+    answer:
+      "Yes. For private sector jobs under MOHRE, all new expatriate employees must attend a mandatory awareness session before contract finalization.",
   },
   {
-    question: "How do I book an appointment for the DHA medical test?",
-    answer: "You can book online via our booking form on this page or contact us for assistance.",
+    question: "Can I get my labor contract from Tawjeeh?",
+    answer:
+      "Yes. You can collect, review, and even sign your labor contract at Tawjeeh centers after attending the orientation.",
+  },
+  {
+    question: "Can Tawjeeh help resolve labor complaints?",
+    answer:
+      "Yes. Tawjeeh can register complaints and forward them to MOHRE. They also offer initial legal guidance and may help resolve disputes amicably before legal escalation.",
+  },
+  {
+    question: "Is Tawjeeh the same as Tasheel?",
+    answer:
+      "No.\n\nTawjeeh focuses on education, awareness, and legal advice.\nTasheel handles processing and typing of labor documents like work permits, contract modifications, etc.",
+  },
+  {
+    question: "What documents are needed for Tawjeeh services?",
+    answer:
+      "Generally:\n\nValid Emirates ID\nPassport copy\nVisa copy\nMOHRE offer letter or contract (if applicable)",
+  },
+  {
+    question: "What are the working hours of Karama Business Center?",
+    answer: "Our center operate from 8:00 AM to 8:00 PM, Monday to Saturday.",
+  },
+  {
+    question: "Do I need an appointment for Tawjeeh services?",
+    answer:
+      "Usually, yes — especially for orientation sessions. You can book through the above submission form or Call/WhatsApp: 04-3426666",
+  },
+  {
+    question: "Are Tawjeeh services free?",
+    answer:
+      "Most orientation services are free for employees. However, employers may be charged for contract attestations or other processing depending on the service.",
+  },
+  {
+    question: "What languages are Tawjeeh services offered in?",
+    answer:
+      "Tawjeeh centers provide services in multiple languages including Arabic, English, Hindi, Urdu, and Tagalog, to ensure clear communication with workers.",
   },
 ];
 
+const TawjeehProcessStep = ({
+  step,
+  title,
+  description,
+}: {
+  step: string;
+  title: string;
+  description: string;
+}) => (
+  <div className="tawjeeh-process-step">
+    <div className="tawjeeh-process-step-number">{step}</div>
+    <div className="tawjeeh-process-step-content">
+      <h4>{title}</h4>
+      <p>{description}</p>
+    </div>
+  </div>
+);
+
 export default function TawjeehArea() {
-  const [selectedService, setSelectedService] = useState("");
-  const [activeTab, setActiveTab] = useState('appointment'); // 'appointment' or 'enquiry'
-  const [enquiryService, setEnquiryService] = useState('');
-  const formRef = useRef<HTMLDivElement>(null);
-
-  const handleBookAppointmentClick = (serviceTitle: string) => {
-    setSelectedService(serviceTitle);
-    setActiveTab('appointment');
-    if (formRef.current) {
-      const yOffset = -140; // Accounts for sticky header
-      const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-  
-  const handleEnquiryClick = (serviceTitle: string) => {
-    setEnquiryService(serviceTitle);
-    setActiveTab('enquiry');
-    if (formRef.current) {
-      const yOffset = -140; // Accounts for sticky header
-      const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-
-  const handleEnquirySubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!enquiryService) {
-        alert("Please select a service to enquire about.");
-        return;
-    }
-    const message = encodeURIComponent(`I would like to enquire about the ${enquiryService} service.`);
-    const whatsappUrl = `https://wa.me/971501234567?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    // Handle form submission logic here
+    alert("Appointment Submitted!");
   };
 
   return (
@@ -93,101 +126,73 @@ export default function TawjeehArea() {
       <div className="container">
         <div className="trial-pricing-container">
           <div className="trial-pricing-main">
-            <div className="trial-pricing-grid">
-              {pricingData.map((item, index) => (
-                <div key={index} className="trial-pricing-card">
-                  <h3>{item.title}</h3>
-                  <div className="trial-pricing-details">
-                    <span>Government Fee:</span>
-                    <span>{item.govFee.toFixed(1)}</span>
-                  </div>
-                  <div className="trial-pricing-details">
-                    <span>Typing Fee:</span>
-                    <span>{item.typingFee.toFixed(1)}</span>
-                  </div>
-                  <div className="trial-pricing-details">
-                    <strong>Govt Fee (Incl. Typing Fee):</strong>
-                    <strong>{item.total.toFixed(1)}</strong>
-                  </div>
-                  <div className="trial-pricing-buttons">
-                    <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleBookAppointmentClick(item.title); }}>Book appointment</a>
-                    <a href="#" className="trial-btn enquire" onClick={(e) => { e.preventDefault(); handleEnquiryClick(item.title); }}>Enquire</a>
-                  </div>
-                </div>
+            <h3 style={{ marginBottom: "2rem", fontSize: "2rem" }}>
+              Step by step Process
+            </h3>
+            <div className="tawjeeh-process-wrapper">
+              {processSteps.map((item) => (
+                <TawjeehProcessStep key={item.step} {...item} />
               ))}
             </div>
 
-            <div className="trial-faq-section">
+            <div className="trial-faq-section" style={{ marginTop: "4rem" }}>
               {faqData.map((faq, index) => (
                 <div key={index} className="trial-faq-item">
                   <h4 className="trial-faq-question">{faq.question}</h4>
-                  <p className="trial-faq-answer">{faq.answer}</p>
+                  <div className="trial-faq-answer">
+                    {faq.answer.split("\n").map((line, i) => (
+                      <span key={i}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="trial-pricing-sidebar" ref={formRef}>
-            <div className="trial-booking-form">
-              <div className="trial-booking-form-header">
-                 <a 
-                  href="#" 
-                  className={`trial-btn ${activeTab === 'appointment' ? '' : 'enquire'}`} 
-                  style={{ flex: 1 }}
-                  onClick={(e) => { e.preventDefault(); setActiveTab('appointment'); }}
-                >
-                  Book appointment
-                </a>
-                <a 
-                  href="#" 
-                  className={`trial-btn ${activeTab === 'enquiry' ? '' : 'enquire'}`} 
-                  style={{ flex: 1 }}
-                  onClick={(e) => { e.preventDefault(); setActiveTab('enquiry'); }}
-                >
-                  Enquire
-                </a>
-              </div>
-
-               {activeTab === 'appointment' && (
-                <form>
-                  <div className="trial-form-field">
-                    <input type="text" placeholder="Full Name *" required />
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="tel" placeholder="Phone Number" />
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="email" placeholder="Email Address *" required />
-                  </div>
-                  <div className="trial-form-field">
-                    <select required value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
-                      <option value="">-Please Choose An Option-</option>
-                      {pricingData.map((p) => (
-                        <option key={p.title} value={p.title}>{p.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="date" placeholder="dd/mm/yyyy" />
-                  </div>
-                  <button type="submit" className="trial-submit-btn">Submit</button>
-                </form>
-              )}
-
-              {activeTab === 'enquiry' && (
-                <form onSubmit={handleEnquirySubmit}>
-                  <div className="trial-form-field">
-                    <select value={enquiryService} onChange={(e) => setEnquiryService(e.target.value)} required>
-                      <option value="">-Please Choose An Option-</option>
-                      {pricingData.map((p) => (
-                        <option key={p.title} value={p.title}>{p.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <button type="submit" className="trial-submit-btn">Enquire</button>
-                </form>
-              )}
-
+          <div className="trial-pricing-sidebar">
+            <div
+              className="trial-booking-form"
+              style={{ position: "sticky", top: "140px" }}
+            >
+              <h3
+                style={{
+                  textAlign: "center",
+                  marginBottom: "2rem",
+                  fontSize: "1.75rem",
+                }}
+              >
+                Book an Appointment
+              </h3>
+              <form onSubmit={handleFormSubmit}>
+                <div className="trial-form-field">
+                  <input type="text" placeholder="Full Name *" required />
+                </div>
+                <div className="trial-form-field">
+                  <input type="email" placeholder="Email Address *" required />
+                </div>
+                <div className="trial-form-field">
+                  <input type="tel" placeholder="Phone Number *" required />
+                </div>
+                <div className="trial-form-field">
+                  <label
+                    style={{
+                      marginBottom: "8px",
+                      display: "block",
+                      color: "#555",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    Session attending date *
+                  </label>
+                  <input type="date" placeholder="yyyy-mm-dd" required />
+                </div>
+                <button type="submit" className="trial-submit-btn">
+                  Submit Appointment
+                </button>
+              </form>
             </div>
           </div>
         </div>

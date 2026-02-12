@@ -1012,7 +1012,7 @@ body h6 {
 }
 
 .trial-pricing-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: #bd8c2e !important;
   margin-bottom: 1.5rem;
 }
@@ -1073,15 +1073,17 @@ body h6 {
 }
 
 .trial-form-field input,
-.trial-form-field select {
+.trial-form-field select,
+.trial-form-field textarea {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.trial-form-field input[type="date"] {
-  color: #555;
+.trial-form-field input::placeholder,
+.trial-form-field textarea::placeholder {
+  color: #757575;
 }
 
 .trial-form-field select:required:invalid {
@@ -1173,11 +1175,48 @@ body h6 {
     color: #555 !important;
 }
 
+/* Tawjeeh Process Steps */
+.tawjeeh-process-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tawjeeh-process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.tawjeeh-process-step-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #bd8c2e;
+  line-height: 1;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.tawjeeh-process-step-content h4 {
+  font-size: 1.25rem;
+  color: #333 !important;
+  margin-bottom: 0.5rem;
+}
+
+.tawjeeh-process-step-content p {
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* Date input placeholder */
+input[type="date"]:required:invalid {
+  color: #757575;
+}
     
 
 
 
     
+
 
 
 

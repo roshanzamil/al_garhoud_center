@@ -1,8 +1,19 @@
 
-import Tawjeeh from "@/components/service/tawjeeh";
+import FooterOne from "@/layouts/footers/FooterOne";
+import HeaderOne from "@/layouts/headers/HeaderOne";
+import Wrapper from "@/layouts/Wrapper";
+import TawjeehArea from "@/components/service/tawjeeh/TawjeehArea";
 
-export default function index() {
+export default function Tawjeeh() {
   return (
-    <Tawjeeh />
-  )
+    <Wrapper>
+      <HeaderOne />
+      <div id="smooth-wrapper">
+        <div id="smooth-content" style={{ paddingTop: "120px" }}>
+          <TawjeehArea />
+          <FooterOne />
+        </div>
+      </div>
+    </Wrapper>
+  );
 }
