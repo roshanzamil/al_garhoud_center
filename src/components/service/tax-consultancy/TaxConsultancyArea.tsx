@@ -1,6 +1,5 @@
-
 "use client";
-import { Check } from "lucide-react";
+import { useState, useRef } from "react";
 
 const pricingData = [
   {
@@ -53,6 +52,14 @@ const faqData = [
 ];
 
 export default function TaxConsultancyArea() {
+  const [selectedService, setSelectedService] = useState("");
+  const formRef = useRef<HTMLDivElement>(null);
+
+  const handleBookAppointmentClick = (serviceTitle: string) => {
+    setSelectedService(serviceTitle);
+    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   return (
     <section className="azzle-section-padding">
       <div className="container">
@@ -75,7 +82,7 @@ export default function TaxConsultancyArea() {
                     <strong>{item.total.toFixed(1)}</strong>
                   </div>
                   <div className="trial-pricing-buttons">
-                    <a href="#" className="trial-btn">Book appointment</a>
+                    <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleBookAppointmentClick(item.title); }}>Book appointment</a>
                     <a href="#" className="trial-btn enquire">Enquire</a>
                   </div>
                 </div>
@@ -92,7 +99,7 @@ export default function TaxConsultancyArea() {
             </div>
           </div>
 
-          <div className="trial-pricing-sidebar">
+          <div className="trial-pricing-sidebar" ref={formRef}>
             <div className="trial-booking-form">
               <div className="trial-booking-form-header">
                 <a href="#" className="trial-btn" style={{ flex: 1 }}>Book appointment</a>
@@ -109,12 +116,11 @@ export default function TaxConsultancyArea() {
                   <input type="email" placeholder="Email Address *" required />
                 </div>
                 <div className="trial-form-field">
-                  <select>
-                    <option>-Please Choose An Option-</option>
-                    <option>Normal (24 HR)</option>
-                    <option>Express (6 HR)</option>
-                    <option>VIP (2 HR)</option>
-                    <option>Tawajood</option>
+                  <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
+                    <option value="">-Please Choose An Option-</option>
+                     {pricingData.map((p) => (
+                      <option key={p.title} value={p.title}>{p.title}</option>
+                    ))}
                   </select>
                 </div>
                 <div className="trial-form-field">
