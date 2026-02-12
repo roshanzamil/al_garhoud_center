@@ -1,4 +1,3 @@
-
 "use client";
 import menu_data from '@/data/menu-data';
 import Link from 'next/link'
@@ -51,9 +50,13 @@ export default function MobileMenu({ setIsOpen, isOpen }: MobileMenuProps) {
                     <ul className={`sub-menu azzle-submenu ${item.title === navTitle ? 'azzle-open' : ''}`} style={{ display: navTitle === item.title ? "block" : "none", }}>
                       {item.sub_menus?.map((sub_item, index) => (
                         <li key={index} className={`${sub_item.title === navTitle2 ? 'azzle-active' : ''} ${sub_item.has_inner_submenu ? 'menu-item-has-children azzle-item-has-children' : ''}`}>
-                          <Link className="no-border" href={sub_item.path}>{sub_item.title}
-                            {sub_item.has_inner_submenu && <span className="azzle-mean-expand" onClick={() => openMobileMenu2(sub_item.title)}></span>}
-                          </Link>
+                          {sub_item.path.startsWith("http") ? (
+                            <a href={sub_item.path} target="_blank" rel="noopener noreferrer" className="no-border">{sub_item.title}</a>
+                          ) : (
+                            <Link className="no-border" href={sub_item.path}>{sub_item.title}
+                              {sub_item.has_inner_submenu && <span className="azzle-mean-expand" onClick={() => openMobileMenu2(sub_item.title)}></span>}
+                            </Link>
+                          )}
                           {sub_item.has_inner_submenu &&
                             <ul className="sub-menu azzle-submenu" style={{ display: navTitle2 === sub_item.title ? "block" : "none", }}>
                               {sub_item.sub_menus?.map((inner_item, idx) => (
