@@ -1,65 +1,22 @@
 "use client";
 import { useState, useRef } from "react";
 
-const pricingData = [
-  {
-    title: "Normal (24 HR)",
-    govFee: 270,
-    typingFee: 52.5,
-    total: 322.5,
-  },
-  {
-    title: "Express (6 HR)",
-    govFee: 700,
-    typingFee: 52.5,
-    total: 752.5,
-  },
-  {
-    title: "VIP (2 HR)",
-    govFee: 1020,
-    typingFee: 52.5,
-    total: 1072.5,
-  },
-  {
-    title: "Tawajood",
-    govFee: 1020,
-    typingFee: 52.5,
-    total: 1072.5,
-  },
-];
-
-const faqData = [
-  {
-    question: "What is the DHA medical test?",
-    answer: "It is a mandatory medical fitness test required for residency, employment, or visa renewal in Dubai. It checks for infectious diseases that may affect public health.",
-  },
-  {
-    question: "Who needs to take the DHA medical test?",
-    answer: "Anyone applying for a new residence visa or renewing an existing one in Dubai, including domestic workers, professionals, and dependents.",
-  },
-  {
-    question: "What does the DHA medical test include?",
-    answer: "Blood test (to check for infectious diseases like HIV, Hepatitis B & C) and Chest X-ray (to check for tuberculosis - TB).",
-  },
-  {
-    question: "Is fasting required before the test?",
-    answer: "No, fasting is not required for the DHA medical test.",
-  },
-  {
-    question: "How do I book an appointment for the DHA medical test?",
-    answer: "You can book online via our booking form on this page or contact us for assistance.",
-  },
+const typingServices = [
+  { title: "Visa Typing" },
+  { title: "Medical Typing" },
+  { title: "Emirates ID Typing" },
+  { title: "Trade License" },
 ];
 
 export default function TypingArea() {
-  const [selectedService, setSelectedService] = useState("");
-  const [activeTab, setActiveTab] = useState('appointment'); // 'appointment' or 'enquiry'
+  const [selectedDocumentType, setSelectedDocumentType] = useState("");
+  const [activeTab, setActiveTab] = useState('register');
   const [enquiryService, setEnquiryService] = useState('');
   const formRef = useRef<HTMLDivElement>(null);
 
-  const handleBookAppointmentClick = (serviceTitle: string) => {
-    setSelectedService(serviceTitle);
-    setActiveTab('appointment');
+  const handleRegisterClick = (serviceTitle: string) => {
+    setSelectedDocumentType(serviceTitle);
+    setActiveTab('register');
     if (formRef.current) {
       const yOffset = -140; // Accounts for sticky header
       const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
@@ -94,34 +51,13 @@ export default function TypingArea() {
         <div className="trial-pricing-container">
           <div className="trial-pricing-main">
             <div className="trial-pricing-grid">
-              {pricingData.map((item, index) => (
+              {typingServices.map((item, index) => (
                 <div key={index} className="trial-pricing-card">
                   <h3>{item.title}</h3>
-                  <div className="trial-pricing-details">
-                    <span>Government Fee:</span>
-                    <span>{item.govFee.toFixed(1)}</span>
-                  </div>
-                  <div className="trial-pricing-details">
-                    <span>Typing Fee:</span>
-                    <span>{item.typingFee.toFixed(1)}</span>
-                  </div>
-                  <div className="trial-pricing-details">
-                    <strong>Govt Fee (Incl. Typing Fee):</strong>
-                    <strong>{item.total.toFixed(1)}</strong>
-                  </div>
-                  <div className="trial-pricing-buttons">
-                    <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleBookAppointmentClick(item.title); }}>Book appointment</a>
+                  <div className="trial-pricing-buttons" style={{marginTop: '2rem'}}>
+                    <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleRegisterClick(item.title); }}>Register</a>
                     <a href="#" className="trial-btn enquire" onClick={(e) => { e.preventDefault(); handleEnquiryClick(item.title); }}>Enquire</a>
                   </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="trial-faq-section">
-              {faqData.map((faq, index) => (
-                <div key={index} className="trial-faq-item">
-                  <h4 className="trial-faq-question">{faq.question}</h4>
-                  <p className="trial-faq-answer">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -132,11 +68,11 @@ export default function TypingArea() {
               <div className="trial-booking-form-header">
                  <a 
                   href="#" 
-                  className={`trial-btn ${activeTab === 'appointment' ? '' : 'enquire'}`} 
+                  className={`trial-btn ${activeTab === 'register' ? '' : 'enquire'}`} 
                   style={{ flex: 1 }}
-                  onClick={(e) => { e.preventDefault(); setActiveTab('appointment'); }}
+                  onClick={(e) => { e.preventDefault(); setActiveTab('register'); }}
                 >
-                  Book appointment
+                  Register
                 </a>
                 <a 
                   href="#" 
@@ -148,29 +84,33 @@ export default function TypingArea() {
                 </a>
               </div>
 
-               {activeTab === 'appointment' && (
+               {activeTab === 'register' && (
                 <form>
                   <div className="trial-form-field">
                     <input type="text" placeholder="Full Name *" required />
                   </div>
-                  <div className="trial-form-field">
-                    <input type="tel" placeholder="Phone Number" />
-                  </div>
-                  <div className="trial-form-field">
+                   <div className="trial-form-field">
                     <input type="email" placeholder="Email Address *" required />
                   </div>
                   <div className="trial-form-field">
-                    <select required value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
-                      <option value="">-Please Choose An Option-</option>
-                      {pricingData.map((p) => (
+                    <input type="tel" placeholder="Phone Number *" required/>
+                  </div>
+                  <div className="trial-form-field">
+                    <select required value={selectedDocumentType} onChange={(e) => setSelectedDocumentType(e.target.value)}>
+                      <option value="">- Document Type * -</option>
+                      {typingServices.map((p) => (
                         <option key={p.title} value={p.title}>{p.title}</option>
                       ))}
                     </select>
                   </div>
                   <div className="trial-form-field">
-                    <input type="date" placeholder="dd/mm/yyyy" />
+                     <label style={{marginBottom: '8px', display: 'block', color: '#555', fontSize: '0.9rem'}}>Upload Document (optional)</label>
+                    <input type="file" />
                   </div>
-                  <button type="submit" className="trial-submit-btn">Submit</button>
+                  <div className="trial-form-field">
+                    <textarea placeholder="Any additional notes (optional)"></textarea>
+                  </div>
+                  <button type="submit" className="trial-submit-btn">Submit Typing Request</button>
                 </form>
               )}
 
@@ -179,7 +119,7 @@ export default function TypingArea() {
                   <div className="trial-form-field">
                     <select value={enquiryService} onChange={(e) => setEnquiryService(e.target.value)} required>
                       <option value="">-Please Choose An Option-</option>
-                      {pricingData.map((p) => (
+                      {typingServices.map((p) => (
                         <option key={p.title} value={p.title}>{p.title}</option>
                       ))}
                     </select>
