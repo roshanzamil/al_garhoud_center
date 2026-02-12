@@ -1080,8 +1080,16 @@ body h6 {
   border-radius: 4px;
 }
 
-.trial-form-field input[type="date"], .trial-form-field select {
+.trial-form-field input[type="date"] {
   color: #555;
+}
+
+.trial-form-field select:required:invalid {
+  color: #757575;
+}
+
+.trial-form-field select option {
+  color: #000;
 }
 
 .trial-submit-btn {
@@ -1170,6 +1178,7 @@ body h6 {
 
 
     
+
 
 
 

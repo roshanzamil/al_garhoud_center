@@ -160,7 +160,7 @@ export default function TaxConsultancyArea() {
                     <input type="email" placeholder="Email Address *" required />
                   </div>
                   <div className="trial-form-field">
-                    <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
+                    <select required value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
                       <option value="">-Please Choose An Option-</option>
                       {pricingData.map((p) => (
                         <option key={p.title} value={p.title}>{p.title}</option>
