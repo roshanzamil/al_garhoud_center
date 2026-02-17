@@ -1,75 +1,92 @@
 "use client";
 import { useState, useRef } from "react";
 
-const pricingData = [
+const serviceData = [
   {
-    title: "Normal (24 HR)",
-    govFee: 270,
-    typingFee: 52.5,
-    total: 322.5,
+    number: "01",
+    title: "Power of Attorney (POA)",
+    description: "Authorize someone to act on your behalf legally, with general or specific powers.",
   },
   {
-    title: "Express (6 HR)",
-    govFee: 700,
-    typingFee: 52.5,
-    total: 752.5,
+    number: "02",
+    title: "Declaration & Affidavits",
+    description: "Submit personal or legal declarations attested by an official notary.",
   },
   {
-    title: "VIP (2 HR)",
-    govFee: 1020,
-    typingFee: 52.5,
-    total: 1072.5,
+    number: "03",
+    title: "Memorandum of Understanding",
+    description: "Document mutual agreements between parties before final contracts.",
   },
   {
-    title: "Tawajood",
-    govFee: 1020,
-    typingFee: 52.5,
-    total: 1072.5,
+    number: "04",
+    title: "Partnership Agreements",
+    description: "Define and notarize business terms between partners in a clear legal format.",
+  },
+  {
+    number: "05",
+    title: "Sale & Purchase Contracts",
+    description: "Legally bind buyer and seller terms for property, goods, or assets.",
+  },
+  {
+    number: "06",
+    title: "Legal Translations",
+    description: "Accurately translate and notarize documents as required by UAE law.",
   },
 ];
 
 const faqData = [
-  {
-    question: "What is the DHA medical test?",
-    answer: "It is a mandatory medical fitness test required for residency, employment, or visa renewal in Dubai. It checks for infectious diseases that may affect public health.",
-  },
-  {
-    question: "Who needs to take the DHA medical test?",
-    answer: "Anyone applying for a new residence visa or renewing an existing one in Dubai, including domestic workers, professionals, and dependents.",
-  },
-  {
-    question: "What does the DHA medical test include?",
-    answer: "Blood test (to check for infectious diseases like HIV, Hepatitis B & C) and Chest X-ray (to check for tuberculosis - TB).",
-  },
-  {
-    question: "Is fasting required before the test?",
-    answer: "No, fasting is not required for the DHA medical test.",
-  },
-  {
-    question: "How do I book an appointment for the DHA medical test?",
-    answer: "You can book online via our booking form on this page or contact us for assistance.",
-  },
+    {
+        question: "What is Dubai Courts?",
+        answer: "Dubai Courts is the official judicial authority in the Emirate of Dubai, handling various legal disputes including civil, criminal, family, commercial, real estate, labor, and inheritance matters."
+    },
+    {
+        question: "What services does Dubai Courts provide?",
+        answer: "Dubai Courts operate across three main levels:\n\nCourt of First Instance\nCourt of Appeal\nCourt of Cassation (Supreme Court level)"
+    },
+    {
+        question: "How can I file a case in Dubai Courts?",
+        answer: "You may personally visit Karama Business Center near Central Post Office Karama or enquire by using the above submission for or WhatsApp: 04-3426666"
+    },
+    {
+        question: "What documents are required to file a case?",
+        answer: "Generally:\n\nEmirates ID and passport copies\nLegal documents (contracts, evidence, etc.)\nPOA (if filing through a lawyer)\nPayment of court fees (varies by case type)"
+    },
+    {
+        question: "Can I track my case online?",
+        answer: "Yes."
+    },
+    {
+        question: "What kinds of cases are handled by Dubai Courts?",
+        answer: "Dubai Courts handle:\n\nCivil cases (contract disputes, debt recovery, property)\nCriminal cases (theft, fraud, assault, etc.)\nFamily cases (divorce, alimony, custody)\nLabor cases (unpaid wages, unfair dismissal)\nCommercial and real estate cases\nInheritance and wills"
+    },
+    {
+        question: "Can I file a labor case directly at Dubai Courts?",
+        answer: "No. Labor disputes must first go through the MOHRE (Ministry of Human Resources and Emiratisation) for mediation. If unresolved, MOHRE refers the case to Dubai Courts."
+    },
+    {
+        question: "How long does a case take in Dubai Courts?",
+        answer: "Timelines vary by case:\n\nCivil/Labor: ~2–6 months\nFamily cases: ~1–3 months\nAppeals or Cassation: Can take longer depending on complexity"
+    },
+    {
+        question: "Can I represent myself in court?",
+        answer: "Yes. In civil and minor cases, individuals can self-represent. However, legal representation is strongly advised for complex or criminal cases."
+    },
+    {
+        question: "What language is used in Dubai Courts?",
+        answer: "All court proceedings are in Arabic. Legal documents must be translated to Arabic by a certified translator."
+    },
+    {
+        question: "Is legal aid available in Dubai Courts?",
+        answer: "Yes. Dubai Courts offers pro bono legal aid for those who qualify (e.g., low-income individuals in specific case types)."
+    }
 ];
 
 export default function NotaryArea() {
   const [selectedService, setSelectedService] = useState("");
-  const [activeTab, setActiveTab] = useState('appointment'); // 'appointment' or 'enquiry'
-  const [enquiryService, setEnquiryService] = useState('');
   const formRef = useRef<HTMLDivElement>(null);
 
   const handleBookAppointmentClick = (serviceTitle: string) => {
     setSelectedService(serviceTitle);
-    setActiveTab('appointment');
-    if (formRef.current) {
-      const yOffset = -140; // Accounts for sticky header
-      const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-  
-  const handleEnquiryClick = (serviceTitle: string) => {
-    setEnquiryService(serviceTitle);
-    setActiveTab('enquiry');
     if (formRef.current) {
       const yOffset = -140; // Accounts for sticky header
       const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
@@ -77,15 +94,9 @@ export default function NotaryArea() {
     }
   };
 
-  const handleEnquirySubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!enquiryService) {
-        alert("Please select a service to enquire about.");
-        return;
-    }
-    const message = encodeURIComponent(`I would like to enquire about the ${enquiryService} service.`);
-    const whatsappUrl = `https://wa.me/971501234567?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    alert("Appointment submitted!");
   };
 
   return (
@@ -93,101 +104,72 @@ export default function NotaryArea() {
       <div className="container">
         <div className="trial-pricing-container">
           <div className="trial-pricing-main">
-            <div className="trial-pricing-grid">
-              {pricingData.map((item, index) => (
-                <div key={index} className="trial-pricing-card">
-                  <h3>{item.title}</h3>
-                  <div className="trial-pricing-details">
-                    <span>Government Fee:</span>
-                    <span>{item.govFee.toFixed(1)}</span>
+            <div className="notary-service-grid">
+              {serviceData.map((item, index) => (
+                <div key={index} className="notary-service-card">
+                  <div className="notary-service-header">
+                    <div className="notary-service-number">{item.number}</div>
+                    <h3 className="notary-service-title">{item.title}</h3>
                   </div>
-                  <div className="trial-pricing-details">
-                    <span>Typing Fee:</span>
-                    <span>{item.typingFee.toFixed(1)}</span>
-                  </div>
-                  <div className="trial-pricing-details">
-                    <strong>Govt Fee (Incl. Typing Fee):</strong>
-                    <strong>{item.total.toFixed(1)}</strong>
-                  </div>
-                  <div className="trial-pricing-buttons">
-                    <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleBookAppointmentClick(item.title); }}>Book appointment</a>
-                    <a href="#" className="trial-btn enquire" onClick={(e) => { e.preventDefault(); handleEnquiryClick(item.title); }}>Enquire</a>
-                  </div>
+                  <p className="notary-service-description">{item.description}</p>
+                  <a
+                    href="#"
+                    className="trial-btn"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleBookAppointmentClick(item.title);
+                    }}
+                  >
+                    Book appointment
+                  </a>
                 </div>
               ))}
             </div>
 
-            <div className="trial-faq-section">
+            <div className="trial-faq-section" style={{ marginTop: "4rem" }}>
               {faqData.map((faq, index) => (
                 <div key={index} className="trial-faq-item">
                   <h4 className="trial-faq-question">{faq.question}</h4>
-                  <p className="trial-faq-answer">{faq.answer}</p>
+                  <p className="trial-faq-answer" style={{ whiteSpace: 'pre-line' }}>{faq.answer}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="trial-pricing-sidebar" ref={formRef}>
-            <div className="trial-booking-form">
-              <div className="trial-booking-form-header">
-                 <a 
-                  href="#" 
-                  className={`trial-btn ${activeTab === 'appointment' ? '' : 'enquire'}`} 
-                  style={{ flex: 1 }}
-                  onClick={(e) => { e.preventDefault(); setActiveTab('appointment'); }}
-                >
-                  Book appointment
-                </a>
-                <a 
-                  href="#" 
-                  className={`trial-btn ${activeTab === 'enquiry' ? '' : 'enquire'}`} 
-                  style={{ flex: 1 }}
-                  onClick={(e) => { e.preventDefault(); setActiveTab('enquiry'); }}
-                >
-                  Enquire
-                </a>
-              </div>
-
-               {activeTab === 'appointment' && (
-                <form>
-                  <div className="trial-form-field">
-                    <input type="text" placeholder="Full Name *" required />
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="tel" placeholder="Phone Number" />
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="email" placeholder="Email Address *" required />
-                  </div>
-                  <div className="trial-form-field">
-                    <select required value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
-                      <option value="">-Please Choose An Option-</option>
-                      {pricingData.map((p) => (
-                        <option key={p.title} value={p.title}>{p.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="date" placeholder="dd/mm/yyyy" />
-                  </div>
-                  <button type="submit" className="trial-submit-btn">Submit</button>
-                </form>
-              )}
-
-              {activeTab === 'enquiry' && (
-                <form onSubmit={handleEnquirySubmit}>
-                  <div className="trial-form-field">
-                    <select value={enquiryService} onChange={(e) => setEnquiryService(e.target.value)} required>
-                      <option value="">-Please Choose An Option-</option>
-                      {pricingData.map((p) => (
-                        <option key={p.title} value={p.title}>{p.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <button type="submit" className="trial-submit-btn">Enquire</button>
-                </form>
-              )}
-
+            <div className="trial-booking-form" style={{ position: 'sticky', top: '140px' }}>
+              <h3 style={{ textAlign: 'center', marginBottom: '2rem' }}>Book an Appointment</h3>
+              <form onSubmit={handleFormSubmit}>
+                <div className="trial-form-field">
+                  <input type="text" placeholder="Full Name *" required />
+                </div>
+                <div className="trial-form-field">
+                  <input type="tel" placeholder="Phone Number *" required />
+                </div>
+                <div className="trial-form-field">
+                  <input type="email" placeholder="Email Address *" required />
+                </div>
+                <div className="trial-form-field">
+                  <select
+                    required
+                    value={selectedService}
+                    onChange={(e) => setSelectedService(e.target.value)}
+                  >
+                    <option value="">—Please choose an option—</option>
+                    {serviceData.map((p) => (
+                      <option key={p.title} value={p.title}>
+                        {p.title}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="trial-form-field">
+                   <input type="date" required />
+                </div>
+                <button type="submit" className="trial-submit-btn">
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
         </div>
