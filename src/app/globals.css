@@ -1012,7 +1012,7 @@ body h6 {
 }
 
 .trial-pricing-card h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #bd8c2e !important;
   margin-bottom: 1.5rem;
 }
@@ -1034,11 +1034,11 @@ body h6 {
 .trial-btn {
   background-color: #bd8c2e;
   color: white !important;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 1rem;
   border-radius: 4px;
   text-align: center;
   transition: background-color 0.3s;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .trial-btn:hover {
@@ -1179,21 +1179,41 @@ body h6 {
 .tawjeeh-process-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .tawjeeh-process-step {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.tawjeeh-process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-color: #bd8c2e;
 }
 
 .tawjeeh-process-step-number {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #bd8c2e;
   line-height: 1;
   font-family: 'Epilogue', sans-serif;
+  background-color: rgba(189, 140, 46, 0.1);
+  border-radius: 50%;
+  min-width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .tawjeeh-process-step-content h4 {
@@ -1205,10 +1225,12 @@ body h6 {
 .tawjeeh-process-step-content p {
   color: #555;
   margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 /* Date input placeholder */
-input[type="date"]:required:invalid {
+input[type="date"]:required:invalid,
+select:required:invalid {
   color: #757575;
 }
     
@@ -1216,6 +1238,7 @@ input[type="date"]:required:invalid {
 
 
     
+
 
 
 
