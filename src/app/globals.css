@@ -1177,8 +1177,8 @@ body h6 {
 
 /* Tawjeeh Process Steps */
 .tawjeeh-process-wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -1228,6 +1228,12 @@ body h6 {
   font-size: 0.9rem;
 }
 
+@media (max-width: 768px) {
+  .tawjeeh-process-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Date input placeholder */
 input[type="date"]:required:invalid,
 select:required:invalid {
@@ -1238,6 +1244,7 @@ select:required:invalid {
 
 
     
+
 
 
 
