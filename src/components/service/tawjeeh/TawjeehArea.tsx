@@ -1,6 +1,5 @@
-
 "use client";
-import React from "react";
+import { useState } from "react";
 
 const processSteps = [
   {
@@ -115,10 +114,21 @@ const TawjeehProcessStep = ({
 );
 
 export default function TawjeehArea() {
+  const [activeTab, setActiveTab] = useState("appointment");
+
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
     alert("Appointment Submitted!");
+  };
+
+  const handleEnquirySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const message = encodeURIComponent(
+      `I would like to enquire about the Taw-Jeeh service.`
+    );
+    const whatsappUrl = `https://wa.me/971501234567?text=${message}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -157,42 +167,83 @@ export default function TawjeehArea() {
               className="trial-booking-form"
               style={{ position: "sticky", top: "140px" }}
             >
-              <h3
-                style={{
-                  textAlign: "center",
-                  marginBottom: "2rem",
-                  fontSize: "1.75rem",
-                }}
-              >
-                Book an Appointment
-              </h3>
-              <form onSubmit={handleFormSubmit}>
-                <div className="trial-form-field">
-                  <input type="text" placeholder="Full Name *" required />
-                </div>
-                <div className="trial-form-field">
-                  <input type="email" placeholder="Email Address *" required />
-                </div>
-                <div className="trial-form-field">
-                  <input type="tel" placeholder="Phone Number *" required />
-                </div>
-                <div className="trial-form-field">
-                  <label
+              <div className="trial-booking-form-header">
+                <a
+                  href="#"
+                  className={`trial-btn ${
+                    activeTab === "appointment" ? "" : "enquire"
+                  }`}
+                  style={{ flex: 1 }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setActiveTab("appointment");
+                  }}
+                >
+                  Book appointment
+                </a>
+                <a
+                  href="#"
+                  className={`trial-btn ${
+                    activeTab === "enquiry" ? "" : "enquire"
+                  }`}
+                  style={{ flex: 1 }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setActiveTab("enquiry");
+                  }}
+                >
+                  Enquire
+                </a>
+              </div>
+
+              {activeTab === "appointment" && (
+                <form onSubmit={handleFormSubmit}>
+                  <div className="trial-form-field">
+                    <input type="text" placeholder="Full Name *" required />
+                  </div>
+                  <div className="trial-form-field">
+                    <input type="email" placeholder="Email Address *" required />
+                  </div>
+                  <div className="trial-form-field">
+                    <input type="tel" placeholder="Phone Number *" required />
+                  </div>
+                  <div className="trial-form-field">
+                    <label
+                      style={{
+                        marginBottom: "8px",
+                        display: "block",
+                        color: "#555",
+                        fontSize: "0.9rem",
+                      }}
+                    >
+                      Session attending date *
+                    </label>
+                    <input type="date" required />
+                  </div>
+                  <button type="submit" className="trial-submit-btn">
+                    Submit Appointment
+                  </button>
+                </form>
+              )}
+              {activeTab === "enquiry" && (
+                <form onSubmit={handleEnquirySubmit}>
+                  <p
                     style={{
-                      marginBottom: "8px",
-                      display: "block",
+                      textAlign: "center",
+                      margin: "2rem 0",
                       color: "#555",
                       fontSize: "0.9rem",
+                      lineHeight: "1.6",
                     }}
                   >
-                    Session attending date *
-                  </label>
-                  <input type="date" placeholder="yyyy-mm-dd" required />
-                </div>
-                <button type="submit" className="trial-submit-btn">
-                  Submit Appointment
-                </button>
-              </form>
+                    Click the button below to send us a WhatsApp message for
+                    your enquiry about our Taw-Jeeh services.
+                  </p>
+                  <button type="submit" className="trial-submit-btn">
+                    Enquire on WhatsApp
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>
