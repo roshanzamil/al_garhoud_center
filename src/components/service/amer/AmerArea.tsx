@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useState, useEffect } from "react";
 
@@ -28,6 +29,7 @@ export default function AmerArea() {
   const [steps, setSteps] = useState<ServiceStep[]>(initialSteps);
   const [totalInside, setTotalInside] = useState(0);
   const [totalOutside, setTotalOutside] = useState(0);
+  const [selectedCountry, setSelectedCountry] = useState("");
 
   useEffect(() => {
     let insideSum = 0;
@@ -110,11 +112,11 @@ export default function AmerArea() {
           </div>
           <div className="cost-calculator-sidebar">
             <div className="cost-totals">
-              <div className="cost-total-item">
+              <div className={`cost-total-item ${selectedCountry && selectedCountry !== 'inside' ? 'dimmed' : ''}`}>
                 <span className="cost-total-amount">{totalInside.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 <span className="cost-total-label">Total - Inside (AED)</span>
               </div>
-              <div className="cost-total-item">
+              <div className={`cost-total-item ${selectedCountry && selectedCountry !== 'outside' ? 'dimmed' : ''}`}>
                 <span className="cost-total-amount">{totalOutside.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 <span className="cost-total-label">Total - Outside (AED)</span>
               </div>
@@ -131,7 +133,7 @@ export default function AmerArea() {
                   <input type="email" placeholder="Email Address *" required />
                 </div>
                 <div className="trial-form-field">
-                  <select required>
+                  <select required value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)}>
                     <option value="">--Please Choose An Option--</option>
                     <option value="inside">Inside Country</option>
                     <option value="outside">Outside Country</option>
