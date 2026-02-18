@@ -4,6 +4,7 @@ import HeaderOne from '@/layouts/headers/HeaderOne'
 import Wrapper from '@/layouts/Wrapper' 
 import LeadershipArea from './TeamArea'
 import Breacrumb from '@/common/Breacrumb'
+import MessageFromLeaders from './MessageFromLeaders'
 
 export default function Leadership() {
   return (
@@ -12,7 +13,8 @@ export default function Leadership() {
       <div id="smooth-wrapper">
         <div id="smooth-content" style={{ paddingTop: '120px' }}>
           <Breacrumb title="Leadership" page="Leadership" />
-          <LeadershipArea />           
+          <LeadershipArea />
+          <MessageFromLeaders />           
           <FooterOne />         
         </div>
       </div>

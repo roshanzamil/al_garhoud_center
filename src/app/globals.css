@@ -1489,8 +1489,87 @@ select:required:invalid {
   }
 }
 
+/* Leadership Messages */
+.leadership-message-section {
+  background-color: #f9f9f9;
+}
 
+.leadership-message-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+.message-title {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 2.25rem;
+  color: #bd8c2e !important;
+  margin-bottom: 2rem;
+}
+
+.message-content {
+  flex-grow: 1;
+}
+
+.message-content p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.message-author-footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.message-author-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.author-image {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.message-author-header .author-image {
+  display: inline-block;
+}
+
+.author-details h4 {
+  font-size: 1.25rem;
+  color: #333 !important;
+  margin-bottom: 0.25rem;
+}
+
+.author-details p {
+  color: #777;
+  margin-bottom: 0;
+}
+
+.message-author-footer-gm {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+@media (max-width: 991px) {
+  .leadership-message-card {
+    margin-bottom: 2rem;
+  }
+  .row.align-items-stretch > .col-lg-6.d-flex {
+    margin-bottom: 2rem;
+  }
+  .row.align-items-stretch > .col-lg-6.d-flex:last-child {
+    margin-bottom: 0;
+  }
+}
     
 
 
