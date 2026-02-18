@@ -1330,8 +1330,6 @@ select:required:invalid {
 
 .cost-calculator-main {
   flex: 2 1 60%;
-  overflow-y: auto;
-  max-height: 550px;
 }
 
 .cost-calculator-sidebar {
@@ -1350,7 +1348,7 @@ select:required:invalid {
 
 .cost-calculator-table th,
 .cost-calculator-table td {
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   text-align: left;
   border-bottom: 1px solid #e5e7eb;
 }
@@ -1364,6 +1362,7 @@ select:required:invalid {
 
 .cost-calculator-table td {
   color: #4b5563;
+  font-size: 0.9rem;
 }
 
 .cost-calculator-table td:nth-child(2),
@@ -1385,6 +1384,7 @@ select:required:invalid {
   user-select: none;
   padding-left: 28px;
   min-height: 20px;
+  font-size: 0.9rem;
 }
 
 .cost-calculator-checkbox input {
@@ -1503,3 +1503,6 @@ select:required:invalid {
 
 
 
+
+
+    
