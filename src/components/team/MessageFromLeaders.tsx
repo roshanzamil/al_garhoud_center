@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MessageFromLeaders() {
   return (
-    <section className="azzle-section-padding-bottom leadership-message-section">
+    <section className="azzle-section-padding leadership-message-section">
       <div className="container">
         <div className="row align-items-stretch">
           
