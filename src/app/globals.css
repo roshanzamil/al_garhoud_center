@@ -994,10 +994,12 @@ body h6 {
 
 .trial-pricing-main {
   flex: 1 1 60%;
+  min-width: 0; /* Prevents flexbox overflow */
 }
 
 .trial-pricing-sidebar {
   flex: 1 1 35%;
+  min-width: 320px; /* Give sidebar a minimum width */
 }
 
 .trial-pricing-grid {
@@ -1318,10 +1320,173 @@ select:required:invalid {
   }
 }
     
+/* Cost Calculator */
+.cost-calculator-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.cost-calculator-main {
+  flex: 2 1 60%;
+  overflow-x: auto;
+}
+
+.cost-calculator-sidebar {
+  flex: 1 1 35%;
+  min-width: 300px;
+}
+
+.cost-calculator-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cost-calculator-table th,
+.cost-calculator-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cost-calculator-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.cost-calculator-table td {
+  color: #4b5563;
+}
+
+.cost-calculator-table td:nth-child(2),
+.cost-calculator-table td:nth-child(3),
+.cost-calculator-table th:nth-child(2),
+.cost-calculator-table th:nth-child(3) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.cost-calculator-checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 28px;
+  min-height: 20px;
+}
+
+.cost-calculator-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.cost-calculator-checkbox .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.cost-calculator-checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.cost-calculator-checkbox input:checked ~ .checkmark {
+  background-color: #c026d3;
+  border-color: #c026d3;
+}
+
+.cost-calculator-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.cost-calculator-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.cost-calculator-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.cost-totals {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cost-total-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cost-total-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.cost-total-label {
+  font-size: 0.9rem;
+  color: #0d9488;
+  font-weight: 500;
+}
+
+.cost-calculator-note {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #ef4444; /* red-500 */
+  line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+  .cost-calculator-container {
+    flex-direction: column;
+  }
+  .cost-calculator-main {
+    order: 2;
+  }
+  .cost-calculator-sidebar {
+    order: 1;
+  }
+}
 
 
 
     
+
 
 
 

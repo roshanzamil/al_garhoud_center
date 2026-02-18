@@ -1,193 +1,147 @@
 "use client";
-import { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
-const pricingData = [
-  {
-    title: "Normal (24 HR)",
-    govFee: 270,
-    typingFee: 52.5,
-    total: 322.5,
-  },
-  {
-    title: "Express (6 HR)",
-    govFee: 700,
-    typingFee: 52.5,
-    total: 752.5,
-  },
-  {
-    title: "VIP (2 HR)",
-    govFee: 1020,
-    typingFee: 52.5,
-    total: 1072.5,
-  },
-  {
-    title: "Tawajood",
-    govFee: 1020,
-    typingFee: 52.5,
-    total: 1072.5,
-  },
-];
+interface ServiceStep {
+  id: string;
+  label: string;
+  inside: number;
+  outside: number;
+  checked: boolean;
+  group?: string;
+}
 
-const faqData = [
-  {
-    question: "What is the DHA medical test?",
-    answer: "It is a mandatory medical fitness test required for residency, employment, or visa renewal in Dubai. It checks for infectious diseases that may affect public health.",
-  },
-  {
-    question: "Who needs to take the DHA medical test?",
-    answer: "Anyone applying for a new residence visa or renewing an existing one in Dubai, including domestic workers, professionals, and dependents.",
-  },
-  {
-    question: "What does the DHA medical test include?",
-    answer: "Blood test (to check for infectious diseases like HIV, Hepatitis B & C) and Chest X-ray (to check for tuberculosis - TB).",
-  },
-  {
-    question: "Is fasting required before the test?",
-    answer: "No, fasting is not required for the DHA medical test.",
-  },
-  {
-    question: "How do I book an appointment for the DHA medical test?",
-    answer: "You can book online via our booking form on this page or contact us for assistance.",
-  },
+const initialSteps: ServiceStep[] = [
+  { id: "offer_letter", label: "Offer Letter, Work Permit, Contract", inside: 279.00, outside: 279.00, checked: true },
+  { id: "insurance", label: "Insurance (+40 AED)", inside: 189.00, outside: 189.00, checked: true },
+  { id: "labor_1", label: "Labor Payment - Category 1", inside: 355.00, outside: 355.00, checked: false, group: "labor" },
+  { id: "labor_2", label: "Labor Payment - Category 2", inside: 1285.00, outside: 1285.00, checked: true, group: "labor" },
+  { id: "labor_3", label: "Labor Payment - Category 3", inside: 3550.77, outside: 3550.77, checked: false, group: "labor" },
+  { id: "entry_permit", label: "Entry Permit", inside: 1125.65, outside: 475.65, checked: true },
+  { id: "change_status", label: "Change Status", inside: 675.65, outside: 0.00, checked: true },
+  { id: "emirates_id", label: "Emirates ID Typing", inside: 386.00, outside: 386.00, checked: true },
+  { id: "medical_test", label: "Medical Test - DHA", inside: 322.50, outside: 322.50, checked: true },
+  { id: "visa_stamping", label: "Visa Stamping", inside: 547.00, outside: 547.00, checked: true },
+  { id: "contract_submission", label: "Contract Submission", inside: 83.00, outside: 83.00, checked: true },
 ];
 
 export default function AmerArea() {
-  const [selectedService, setSelectedService] = useState("");
-  const [activeTab, setActiveTab] = useState('appointment'); // 'appointment' or 'enquiry'
-  const [enquiryService, setEnquiryService] = useState('');
-  const formRef = useRef<HTMLDivElement>(null);
+  const [steps, setSteps] = useState<ServiceStep[]>(initialSteps);
+  const [totalInside, setTotalInside] = useState(0);
+  const [totalOutside, setTotalOutside] = useState(0);
 
-  const handleBookAppointmentClick = (serviceTitle: string) => {
-    setSelectedService(serviceTitle);
-    setActiveTab('appointment');
-    if (formRef.current) {
-      const yOffset = -140; // Accounts for sticky header
-      const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
-  
-  const handleEnquiryClick = (serviceTitle: string) => {
-    setEnquiryService(serviceTitle);
-    setActiveTab('enquiry');
-    if (formRef.current) {
-      const yOffset = -140; // Accounts for sticky header
-      const y = formRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
+  useEffect(() => {
+    let insideSum = 0;
+    let outsideSum = 0;
+    steps.forEach((step) => {
+      if (step.checked) {
+        insideSum += step.inside;
+        outsideSum += step.outside;
+      }
+    });
+    setTotalInside(insideSum);
+    setTotalOutside(outsideSum);
+  }, [steps]);
 
-  const handleEnquirySubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!enquiryService) {
-        alert("Please select a service to enquire about.");
-        return;
-    }
-    const message = encodeURIComponent(`I would like to enquire about the ${enquiryService} service.`);
-    const whatsappUrl = `https://wa.me/971501234567?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+  const handleCheckboxChange = (id: string) => {
+    setSteps((prevSteps) => {
+      const clickedStep = prevSteps.find((step) => step.id === id);
+      if (!clickedStep) return prevSteps;
+
+      // Handle radio-button-like behavior for grouped items
+      if (clickedStep.group) {
+        // If the clicked item is already checked, do nothing (or allow unchecking if desired)
+        if (clickedStep.checked) {
+             return prevSteps.map((step) =>
+                step.id === id ? { ...step, checked: false } : step
+             );
+        }
+        const newSteps = prevSteps.map((step) => {
+          if (step.group === clickedStep.group) {
+            return { ...step, checked: step.id === id };
+          }
+          return step;
+        });
+        return newSteps;
+      } else {
+        // Handle normal checkbox toggle
+        return prevSteps.map((step) =>
+          step.id === id ? { ...step, checked: !step.checked } : step
+        );
+      }
+    });
   };
 
   return (
     <section className="azzle-section-padding">
       <div className="container">
-        <div className="trial-pricing-container">
-          <div className="trial-pricing-main">
-            <div className="trial-pricing-grid">
-              {pricingData.map((item, index) => (
-                <div key={index} className="trial-pricing-card">
-                  <h3>{item.title}</h3>
-                  <div className="trial-pricing-details">
-                    <span>Government Fee:</span>
-                    <span>{item.govFee.toFixed(1)}</span>
-                  </div>
-                  <div className="trial-pricing-details">
-                    <span>Typing Fee:</span>
-                    <span>{item.typingFee.toFixed(1)}</span>
-                  </div>
-                  <div className="trial-pricing-details">
-                    <strong>Govt Fee (Incl. Typing Fee):</strong>
-                    <strong>{item.total.toFixed(1)}</strong>
-                  </div>
-                  <div className="trial-pricing-buttons">
-                    <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleBookAppointmentClick(item.title); }}>Book appointment</a>
-                    <a href="#" className="trial-btn enquire" onClick={(e) => { e.preventDefault(); handleEnquiryClick(item.title); }}>Enquire</a>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="trial-faq-section">
-              {faqData.map((faq, index) => (
-                <div key={index} className="trial-faq-item">
-                  <h4 className="trial-faq-question">{faq.question}</h4>
-                  <p className="trial-faq-answer">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+        <div className="azzle-section-title center max-width-850" data-aos="fade-up">
+            <h2>Amer Services Cost Calculator</h2>
+        </div>
+        <div className="cost-calculator-container" data-aos="fade-up" data-aos-delay="200">
+          <div className="cost-calculator-main">
+            <table className="cost-calculator-table">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Inside (AED)</th>
+                  <th>Outside (AED)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {steps.map((step) => (
+                  <tr key={step.id}>
+                    <td>
+                      <label className="cost-calculator-checkbox">
+                        <input
+                          type="checkbox"
+                          checked={step.checked}
+                          onChange={() => handleCheckboxChange(step.id)}
+                        />
+                        <span className="checkmark"></span>
+                        {step.label}
+                      </label>
+                    </td>
+                    <td>{step.inside.toFixed(2)}</td>
+                    <td>{step.outside.toFixed(2)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-
-          <div className="trial-pricing-sidebar" ref={formRef}>
-            <div className="trial-booking-form">
-              <div className="trial-booking-form-header">
-                 <a 
-                  href="#" 
-                  className={`trial-btn ${activeTab === 'appointment' ? '' : 'enquire'}`} 
-                  style={{ flex: 1 }}
-                  onClick={(e) => { e.preventDefault(); setActiveTab('appointment'); }}
-                >
-                  Book appointment
-                </a>
-                <a 
-                  href="#" 
-                  className={`trial-btn ${activeTab === 'enquiry' ? '' : 'enquire'}`} 
-                  style={{ flex: 1 }}
-                  onClick={(e) => { e.preventDefault(); setActiveTab('enquiry'); }}
-                >
-                  Enquire
-                </a>
+          <div className="cost-calculator-sidebar">
+            <div className="cost-totals">
+              <div className="cost-total-item">
+                <span className="cost-total-amount">{totalInside.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                <span className="cost-total-label">Total - Inside (AED)</span>
               </div>
-
-               {activeTab === 'appointment' && (
-                <form>
-                  <div className="trial-form-field">
-                    <input type="text" placeholder="Full Name *" required />
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="tel" placeholder="Phone Number" />
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="email" placeholder="Email Address *" required />
-                  </div>
-                  <div className="trial-form-field">
-                    <select required value={selectedService} onChange={(e) => setSelectedService(e.target.value)}>
-                      <option value="">-Please Choose An Option-</option>
-                      {pricingData.map((p) => (
-                        <option key={p.title} value={p.title}>{p.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="trial-form-field">
-                    <input type="date" placeholder="dd/mm/yyyy" />
-                  </div>
-                  <button type="submit" className="trial-submit-btn">Submit</button>
-                </form>
-              )}
-
-              {activeTab === 'enquiry' && (
-                <form onSubmit={handleEnquirySubmit}>
-                  <div className="trial-form-field">
-                    <select value={enquiryService} onChange={(e) => setEnquiryService(e.target.value)} required>
-                      <option value="">-Please Choose An Option-</option>
-                      {pricingData.map((p) => (
-                        <option key={p.title} value={p.title}>{p.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <button type="submit" className="trial-submit-btn">Enquire</button>
-                </form>
-              )}
-
+              <div className="cost-total-item">
+                <span className="cost-total-amount">{totalOutside.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                <span className="cost-total-label">Total - Outside (AED)</span>
+              </div>
+            </div>
+            <div className="trial-booking-form" style={{border: 'none', padding: '0'}}>
+              <form>
+                <div className="trial-form-field">
+                  <input type="text" placeholder="Full Name *" required />
+                </div>
+                <div className="trial-form-field">
+                  <input type="tel" placeholder="Phone Number *" required/>
+                </div>
+                <div className="trial-form-field">
+                  <input type="email" placeholder="Email Address *" required />
+                </div>
+                <div className="trial-form-field">
+                  <select required>
+                    <option value="">--Please Choose An Option--</option>
+                    <option value="inside">Inside Country</option>
+                    <option value="outside">Outside Country</option>
+                  </select>
+                </div>
+                <button type="submit" className="trial-submit-btn">Submit</button>
+              </form>
+              <p className="cost-calculator-note">
+                Note: In the event that the labor payment is selected under Category 2, but the actual classification corresponds to Category 1 or Category 3, the applicable charges may be subject to adjustment.
+              </p>
             </div>
           </div>
         </div>
