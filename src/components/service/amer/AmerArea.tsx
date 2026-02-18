@@ -76,9 +76,6 @@ export default function AmerArea() {
   return (
     <section className="azzle-section-padding">
       <div className="container">
-        <div className="azzle-section-title center max-width-850" data-aos="fade-up">
-            <h2>Amer Services Cost Calculator</h2>
-        </div>
         <div className="cost-calculator-container" data-aos="fade-up" data-aos-delay="200">
           <div className="cost-calculator-main">
             <table className="cost-calculator-table">
