@@ -2,12 +2,12 @@ import Link from "next/link";
 
 
 
-export default function TeamArea() {
+export default function LeadershipArea() {
   return (
     <section className="azzle-section-padding6">
       <div className="container">
         <div className="azzle-section-title center max-width-750" data-aos="fade-up" data-aos-delay="500">
-          <h2>Our team consists of a group of talents</h2>
+          <h2>Meet Our Leadership</h2>
         </div>
         <div className="row">
           <div className="col-xl-4 col-lg-6 col-md-6">

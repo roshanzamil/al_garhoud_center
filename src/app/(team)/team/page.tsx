@@ -1,9 +1,9 @@
-import Team from "@/components/team";
+import Leadership from "@/components/team";
 
  
 
 export default function index() {
   return (
-    <Team />
+    <Leadership />
   )
 }

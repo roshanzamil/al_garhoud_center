@@ -2,15 +2,17 @@
 import FooterOne from '@/layouts/footers/FooterOne'
 import HeaderOne from '@/layouts/headers/HeaderOne'
 import Wrapper from '@/layouts/Wrapper' 
-import TeamArea from './TeamArea'
+import LeadershipArea from './TeamArea'
+import Breacrumb from '@/common/Breacrumb'
 
-export default function Team() {
+export default function Leadership() {
   return (
     <Wrapper>
       <HeaderOne />
       <div id="smooth-wrapper">
         <div id="smooth-content" style={{ paddingTop: '120px' }}>
-          <TeamArea />           
+          <Breacrumb title="Leadership" page="Leadership" />
+          <LeadershipArea />           
           <FooterOne />         
         </div>
       </div>

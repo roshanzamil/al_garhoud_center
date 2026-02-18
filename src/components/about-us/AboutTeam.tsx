@@ -9,12 +9,12 @@ export default function AboutTeam() {
         <div className="azzle-section-title two-column" data-aos="fade-right" data-aos-delay="500">
           <div className="row">
             <div className="col-lg-7">
-              <h2>Our team consists of a group of talents</h2>
+              <h2>Our leadership consists of a group of talents</h2>
             </div>
             <div className="col-lg-5 d-flex align-items-center">
               <div className="section-title-button">
-                <Link className="azzle-default-btn" data-aos="fade-right" data-aos-delay="900" href="/team" data-text="Join our team">
-                  <span className="button-wraper">Join our team</span>
+                <Link className="azzle-default-btn" data-aos="fade-right" data-aos-delay="900" href="/team" data-text="Meet Our Leadership">
+                  <span className="button-wraper">Meet Our Leadership</span>
                 </Link>
               </div>
             </div>
