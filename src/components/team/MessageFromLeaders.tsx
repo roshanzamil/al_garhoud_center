@@ -18,7 +18,7 @@ export default function MessageFromLeaders() {
                 <p>As we continue to grow, our focus remains unwavering - strengthening partnerships, enhancing service quality and contributing positively to the business ecosystem of the UAE.</p>
               </div>
               <div className="message-author-footer">
-                <Image src="https://picsum.photos/seed/ceo/150/150" alt="Yasser Abdelmawla Youssef Khedr" width={150} height={150} className="author-image" data-ai-hint="man portrait" />
+                <Image src="/assets/images/home1/yasser.jpeg" alt="Yasser Abdelmawla Youssef Khedr" width={150} height={150} className="author-image" />
                 <div className="author-details">
                   <h4>Yasser Abdelmawla Youssef Khedr</h4>
                   <p>CEO - Al Garhoud Center</p>
@@ -38,7 +38,7 @@ export default function MessageFromLeaders() {
                 <p>Thank you for your continued trust in Al Garhoud Center.</p>
               </div>
               <div className="message-author-footer">
-                <Image src="https://picsum.photos/seed/gm/150/150" alt="Sameer Ali" width={150} height={150} className="author-image" data-ai-hint="man portrait" />
+                 <Image src="/assets/images/home1/sameer.jpeg" alt="Sameer Ali" width={150} height={150} className="author-image" />
                 <div className="author-details">
                   <h4>Sameer Ali</h4>
                   <p>GM - Al Garhoud Center</p>
