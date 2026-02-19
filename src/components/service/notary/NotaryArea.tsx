@@ -45,7 +45,7 @@ const faqData = [
     },
     {
         question: "How can I file a case in Dubai Courts?",
-        answer: "You may personally visit Karama Business Center near Central Post Office Karama or enquire by using the above submission for or WhatsApp: 04-3426666"
+        answer: "You may personally visit Karama Business Center near Central Post Office Karama or enquire by using the above submission for or WhatsApp: 04-3991744"
     },
     {
         question: "What documents are required to file a case?",

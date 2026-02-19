@@ -35,7 +35,7 @@ export default function FooterThree() {
             <div className="azzle-cta-contact-info" data-aos="fade-up" data-aos-delay="700">
               <ul>
                 <li>
-                  <a href="tel:123">+088-3457-9210</a>
+                  <a href="tel:043991744">04 399 1744</a>
                 </li>
               </ul>
             </div>

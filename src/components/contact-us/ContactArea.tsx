@@ -17,7 +17,7 @@ export default function ContactArea() {
                   </div>
                   <div className="azzle-contact-info-item">
                     <h5>Give us a call:</h5>
-                    <a href="tel:043426666">04 342 6666</a>
+                    <a href="tel:043991744">04 399 1744</a>
                   </div>
                   <div className="azzle-contact-info-item">
                     <h5>Follow us:</h5>

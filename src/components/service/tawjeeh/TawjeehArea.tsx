@@ -81,7 +81,7 @@ const faqData = [
   {
     question: "Do I need an appointment for Tawjeeh services?",
     answer:
-      "Usually, yes — especially for orientation sessions. You can book through the above submission form or Call/WhatsApp: 04-3426666",
+      "Usually, yes — especially for orientation sessions. You can book through the above submission form or Call/WhatsApp: 04-3991744",
   },
   {
     question: "Are Tawjeeh services free?",
@@ -127,7 +127,7 @@ export default function TawjeehArea() {
     const message = encodeURIComponent(
       `I would like to enquire about the Taw-Jeeh service.`
     );
-    const whatsappUrl = `https://wa.me/971501234567?text=${message}`;
+    const whatsappUrl = `https://wa.me/97143991744?text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
 

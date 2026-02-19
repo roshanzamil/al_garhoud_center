@@ -20,7 +20,7 @@ export default function AboutCta() {
                   <ul>
                     <li>Website:<a href="">www.algarhoudcenter.ae</a></li>
                     <li>Email:<a href="">info@algarhoudcenter.ae</a></li>
-                    <li>Phone:<a href="">04 342 6666</a></li>
+                    <li>Phone:<a href="tel:043991744">04 399 1744</a></li>
                   </ul>
                 </div>
               </div>
