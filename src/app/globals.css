@@ -1413,8 +1413,8 @@ select:required:invalid {
 }
 
 .cost-calculator-checkbox input:checked ~ .checkmark {
-  background-color: #c026d3;
-  border-color: #c026d3;
+  background-color: #bd8c2e;
+  border-color: #bd8c2e;
 }
 
 .cost-calculator-checkbox .checkmark:after {
@@ -1466,7 +1466,7 @@ select:required:invalid {
 
 .cost-total-label {
   font-size: 0.9rem;
-  color: #0d9488;
+  color: #bd8c2e;
   font-weight: 500;
 }
 
@@ -1491,7 +1491,7 @@ select:required:invalid {
 
 /* Leadership Messages */
 .leadership-message-section {
-  background-color: #f9f9f9;
+  padding-top: 120px;
 }
 
 .leadership-message-card {
@@ -1519,7 +1519,7 @@ select:required:invalid {
   color: #555;
   margin-bottom: 1.5rem;
   line-height: 1.7;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .message-author-footer {
@@ -1537,7 +1537,7 @@ select:required:invalid {
 }
 
 .author-details h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #333 !important;
   margin-bottom: 0.25rem;
 }
@@ -1545,7 +1545,7 @@ select:required:invalid {
 .author-details p {
   color: #777;
   margin-bottom: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 991px) {
@@ -1559,6 +1559,94 @@ select:required:invalid {
     margin-bottom: 0;
   }
 }
+
+/* Consultancy Pages */
+.consultancy-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.consultancy-services {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.consultancy-form {
+  flex: 1 1 40%;
+  min-width: 320px;
+}
+
+.consultancy-title {
+  font-size: 2.5rem;
+  color: #bd8c2e !important;
+  margin-bottom: 2rem;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.consultancy-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.consultancy-service-list li {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+  position: relative;
+  padding-left: 25px;
+}
+
+.consultancy-service-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #bd8c2e;
+  font-weight: bold;
+}
+
+.consultancy-phone-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.consultancy-phone-group span {
+  padding: 0.75rem;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  color: #555;
+}
+
+.consultancy-phone-group input {
+  border: none;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.consultancy-phone-group input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .consultancy-service-list {
+    columns: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .consultancy-services {
+    order: 2;
+  }
+  .consultancy-form {
+    order: 1;
+  }
+}
     
 
 
@@ -1574,5 +1662,6 @@ select:required:invalid {
 
 
     
+
 
 
