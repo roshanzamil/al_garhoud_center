@@ -31,16 +31,14 @@ export default function MessageFromLeaders() {
           <div className="col-lg-6 d-flex" data-aos="fade-left">
             <div className="leadership-message-card">
               <h2 className="message-title">GM's Message</h2>
-              <div className="message-author-header">
-                <Image src="https://picsum.photos/seed/gm/150/150" alt="Sameer Ali" width={150} height={150} className="author-image" data-ai-hint="man portrait" />
-              </div>
               <div className="message-content">
                 <p>With an established presence across the UAE, Oman, Bahrain, Saudi Arabia, and Egypt, we work alongside entrepreneurs, SMEs and corporates as a strategic partner in business formation, expansion and ongoing operations.</p>
                 <p>Our regional expertise and structured approach allow us to deliver consistent, compliant and scalable solutions aligned with our clients' growth objectives.</p>
                 <p>As we look ahead, we remain focused on innovation, service excellence and continuous improvement, ensuring measurable value for our clients and stakeholders. Strengthening long-term relationships built on trust, transparency and performance remains central to our business philosophy.</p>
                 <p>Thank you for your continued trust in Al Garhoud Center.</p>
               </div>
-              <div className="message-author-footer-gm">
+              <div className="message-author-footer">
+                <Image src="https://picsum.photos/seed/gm/150/150" alt="Sameer Ali" width={150} height={150} className="author-image" data-ai-hint="man portrait" />
                 <div className="author-details">
                   <h4>Sameer Ali</h4>
                   <p>GM - Al Garhoud Center</p>

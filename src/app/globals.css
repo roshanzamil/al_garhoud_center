@@ -1528,20 +1528,12 @@ select:required:invalid {
   align-items: center;
   gap: 1.5rem;
 }
-.message-author-header {
-  margin-bottom: 2rem;
-  text-align: center;
-}
 
 .author-image {
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid #fff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.message-author-header .author-image {
-  display: inline-block;
 }
 
 .author-details h4 {
@@ -1554,11 +1546,6 @@ select:required:invalid {
   color: #777;
   margin-bottom: 0;
   font-size: 0.9rem;
-}
-
-.message-author-footer-gm {
-    margin-top: 2rem;
-    text-align: left;
 }
 
 @media (max-width: 991px) {
@@ -1587,4 +1574,5 @@ select:required:invalid {
 
 
     
+
 
