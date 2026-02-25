@@ -105,6 +105,7 @@ body h3,
 body h4,
 body h5,
 body h6 {
+  font-family: "Montserrat Alternates", sans-serif;
   color: #bd8c2e;
 }
 
@@ -1487,7 +1488,7 @@ select:required:invalid {
 
 /* Leadership Messages */
 .leadership-message-section {
-  padding-top: 120px;
+  padding-top: 40px;
 }
 
 .leadership-message-card {
@@ -1766,6 +1767,7 @@ select:required:invalid {
 
 
     
+
 
 
 
