@@ -12,7 +12,7 @@
 @import "../../public/assets/css/app.min.css"; 
 
 body {
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
 }
 
 /* Default for mobile */
@@ -105,7 +105,7 @@ body h3,
 body h4,
 body h5,
 body h6 {
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
   color: #bd8c2e;
 }
 
@@ -260,7 +260,7 @@ body h6 {
   border-radius: 8px;
   background-color: #ffffff;
   color: #333;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
@@ -294,7 +294,7 @@ body h6 {
 
 .service-tabs-content h3 {
   font-size: 1.75rem;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
   margin-top: 1rem;
   margin-bottom: 1rem;
   color: #bd8c2e;
@@ -495,7 +495,7 @@ body h6 {
   font-weight: 700;
   color: #bd8c2e;
   margin-bottom: 10px;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
 }
 
 .milestone-card-title {
@@ -690,7 +690,7 @@ body h6 {
 
 .download-card-title {
   font-size: 1.25rem;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
   color: #333 !important;
   margin-bottom: 0.25rem;
 }
@@ -1209,7 +1209,7 @@ body h6 {
   font-weight: 700;
   color: #bd8c2e;
   line-height: 1;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
   background-color: rgba(189, 140, 46, 0.1);
   border-radius: 50%;
   min-width: 70px;
@@ -1274,7 +1274,7 @@ select:required:invalid {
   font-weight: 700;
   color: #bd8c2e;
   line-height: 1;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
   background-color: rgba(189, 140, 46, 0.1);
   border-radius: 50%;
   min-width: 40px;
@@ -1354,7 +1354,7 @@ select:required:invalid {
   background-color: #f3f4f6;
   font-weight: 600;
   color: #374151;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
 }
 
 .cost-calculator-table td {
@@ -1458,7 +1458,7 @@ select:required:invalid {
   font-size: 2.5rem;
   font-weight: 700;
   color: #111827;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
 }
 
 .cost-total-label {
@@ -1502,7 +1502,7 @@ select:required:invalid {
 }
 
 .message-title {
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
   font-size: 2.25rem;
   color: #bd8c2e !important;
   margin-bottom: 2rem;
@@ -1578,7 +1578,7 @@ select:required:invalid {
   font-size: 2.5rem;
   color: #bd8c2e !important;
   margin-bottom: 2rem;
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Baloo Thambi 2", system-ui;
 }
 
 .consultancy-service-list {
@@ -1645,130 +1645,3 @@ select:required:invalid {
   }
 }
     
-.montserrat-alternates-thin {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.montserrat-alternates-extralight {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.montserrat-alternates-light {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.montserrat-alternates-regular {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.montserrat-alternates-medium {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.montserrat-alternates-semibold {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.montserrat-alternates-bold {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.montserrat-alternates-extrabold {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.montserrat-alternates-black {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.montserrat-alternates-thin-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.montserrat-alternates-extralight-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.montserrat-alternates-light-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.montserrat-alternates-regular-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.montserrat-alternates-medium-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.montserrat-alternates-semibold-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.montserrat-alternates-bold-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.montserrat-alternates-extrabold-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.montserrat-alternates-black-italic {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
