@@ -41,7 +41,7 @@ export default function TypingArea() {
         return;
     }
     const message = encodeURIComponent(`I would like to enquire about the ${enquiryService} service.`);
-    const whatsappUrl = `https://wa.me/97143991744?text=${message}`;
+    const whatsappUrl = `https://wa.me/9710557093431?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 

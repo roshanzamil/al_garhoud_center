@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const WhatsAppButton = () => {
   // Replace with your actual WhatsApp number in international format without '+' or '00'
-  const phoneNumber = "97143991744"; 
+  const phoneNumber = "9710557093431"; 
   const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}`;
 
   return (
