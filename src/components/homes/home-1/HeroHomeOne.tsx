@@ -1,4 +1,3 @@
-
 "use client";
 import Link from "next/link";
 import Slider from "react-slick";
@@ -62,7 +61,7 @@ export default function HeroHomeOne() {
                 <div className="hero-slide-image" style={{ backgroundImage: `url(${slide.image})` }} data-ai-hint={slide.hint}></div>
                 <div className="azzle-hero-content1">
                     <h1 data-aos="fade-left" data-aos-delay="500">{slide.title}</h1>
-                    <p data-aos="zoom-in" data-aos-delay="700">{slide.description}</p>
+                    <p data-aos="zoom-in" data-aos-delay="700" style={{ fontWeight: 100 }}>{slide.description}</p>
                     <div className="azzle-hero-button mt-50">
                       <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started">
                         <span className="button-wraper">Get started</span>
