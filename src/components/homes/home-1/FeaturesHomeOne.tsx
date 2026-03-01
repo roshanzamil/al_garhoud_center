@@ -250,6 +250,7 @@ export default function FeaturesHomeOne() {
                   width={150}
                   height={80}
                   style={{ objectFit: 'contain' }}
+                  unoptimized={true}
                 />
               </div>
             ))}
