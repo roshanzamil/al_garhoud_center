@@ -90,6 +90,9 @@ export default function FooterOne() {
                 <a href="mailto:info@algarhoudcenter.ae">
                   <span>Email:</span> info@algarhoudcenter.ae
                 </a>
+                <a href="tel:043991744">
+                  <span>Phone:</span> 04 399 1744
+                </a>
               </div>
             </div>
 
