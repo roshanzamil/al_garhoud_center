@@ -1644,4 +1644,9 @@ select:required:invalid {
     order: 1;
   }
 }
+
+.azzle-footer-textarea a[href^="mailto:"],
+.azzle-footer-textarea a[href^="tel:"] {
+  display: block;
+}
     
