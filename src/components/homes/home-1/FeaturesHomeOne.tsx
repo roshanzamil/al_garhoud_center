@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Slider from "react-slick";
+import Image from "next/image";
 
 const settings = {
   slidesToShow: 7,
@@ -242,8 +243,14 @@ export default function FeaturesHomeOne() {
           </div>
           <Slider {...settings} className="azzle-brand-slider">
             {brand_logos.map((logo, i) => (
-              <div key={i} className="azzle-logo-icon-item">
-                <img src={logo.src} alt={logo.alt} />
+              <div key={i} className="azzle-logo-icon-item" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={150}
+                  height={80}
+                  style={{ objectFit: 'contain' }}
+                />
               </div>
             ))}
           </Slider>
