@@ -3,7 +3,6 @@ import Wrapper from "@/layouts/Wrapper";
 import HeroHomeOne from "./HeroHomeOne";
 import FeaturesHomeOne from "./FeaturesHomeOne";
 import AboutHomeOne from "./AboutHomeOne";
-import VideoHomeOne from "./VideoHomeOne";
 import PricingHomeOne from "./PricingHomeOne";
 import FaqHomeOne from "./FaqHomeOne";
 import TestimonialHomeOne from "./TestimonialHomeOne";
@@ -20,7 +19,6 @@ export default function HomeOne() {
           <FeaturesHomeOne />
           <AboutHomeOne />
           <PricingHomeOne />
-          <VideoHomeOne />
           <QuoteHomeOne />
           <FaqHomeOne />
           <TestimonialHomeOne />
