@@ -3,26 +3,55 @@ import Link from "next/link";
 import Slider from "react-slick";
 
 const settings = {
-  slidesToShow: 4,
+  slidesToShow: 7,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 0,
-  speed: 5000,
+  speed: 8000,
   arrows: false,
-  pauseOnHover: false,
+  pauseOnHover: true,
   cssEase: "linear",
-  responsive: [{
-    breakpoint: 1199,
-    settings: {
-      slidesToShow: 3
-    }
-  }, {
-    breakpoint: 767,
-    settings: {
-      slidesToShow: 1
-    }
-  }]
-}
+  responsive: [
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 5,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+  ],
+};
+
+const brand_logos = [
+  { src: "assets/images/brands/brand-01.jpg", alt: "Antar" },
+  { src: "assets/images/brands/brand-02.jpg", alt: "New Punjab Carpentry" },
+  { src: "assets/images/brands/brand-03.jpg", alt: "VIP Plus Real Estate" },
+  { src: "assets/images/brands/brand-04.jpg", alt: "Atlas" },
+  { src: "assets/images/brands/brand-05.jpg", alt: "Emirates Auction" },
+  { src: "assets/images/brands/brand-06.jpg", alt: "Uber" },
+  { src: "assets/images/brands/brand-07.jpg", alt: "Noon" },
+  { src: "assets/images/brands/brand-08.jpg", alt: "Jumbo" },
+  { src: "assets/images/brands/brand-09.jpg", alt: "Innovations Group" },
+  { src: "assets/images/brands/brand-10.jpg", alt: "Dulsco" },
+  { src: "assets/images/brands/brand-11.jpg", alt: "Nesto" },
+];
 
 export default function FeaturesHomeOne() {
   return (
@@ -212,21 +241,11 @@ export default function FeaturesHomeOne() {
             <p>Our clientele includes established organizations throughout Dubai</p>
           </div>
           <Slider {...settings} className="azzle-brand-slider">
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon1.svg" alt="Icon" />
-            </div>
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon2.svg" alt="Icon" />
-            </div>
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon3.svg" alt="Icon" />
-            </div>
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon4.svg" alt="Icon" />
-            </div>
-            <div className="azzle-logo-icon-item">
-              <img src="assets/images/home1/icon5.svg" alt="Icon" />
-            </div>
+            {brand_logos.map((logo, i) => (
+              <div key={i} className="azzle-logo-icon-item">
+                <img src={logo.src} alt={logo.alt} />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
