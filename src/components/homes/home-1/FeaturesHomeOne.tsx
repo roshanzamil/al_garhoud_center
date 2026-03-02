@@ -41,17 +41,17 @@ const settings = {
 };
 
 const brand_logos = [
-  { src: "/assets/images/brands/brand-01.jpg", alt: "Antar" },
-  { src: "/assets/images/brands/brand-02.jpg", alt: "New Punjab Carpentry" },
-  { src: "/assets/images/brands/brand-03.jpg", alt: "VIP Plus Real Estate" },
-  { src: "/assets/images/brands/brand-04.jpg", alt: "Atlas" },
-  { src: "/assets/images/brands/brand-05.jpg", alt: "Emirates Auction" },
-  { src: "/assets/images/brands/brand-06.jpg", alt: "Uber" },
-  { src: "/assets/images/brands/brand-07.jpg", alt: "Noon" },
-  { src: "/assets/images/brands/brand-08.jpg", alt: "Jumbo" },
-  { src: "/assets/images/brands/brand-09.jpg", alt: "Innovations Group" },
-  { src: "/assets/images/brands/brand-10.jpg", alt: "Dulsco" },
-  { src: "/assets/images/brands/brand-11.jpg", alt: "Nesto" },
+  { src: "/assets/images/home1/brand-01.jpg", alt: "Antar" },
+  { src: "/assets/images/home1/brand-02.jpg", alt: "New Punjab Carpentry" },
+  { src: "/assets/images/home1/brand-03.jpg", alt: "VIP Plus Real Estate" },
+  { src: "/assets/images/home1/brand-04.jpg", alt: "Atlas" },
+  { src: "/assets/images/home1/brand-05.jpg", alt: "Emirates Auction" },
+  { src: "/assets/images/home1/brand-06.jpg", alt: "Uber" },
+  { src: "/assets/images/home1/brand-07.jpg", alt: "Noon" },
+  { src: "/assets/images/home1/brand-08.jpg", alt: "Jumbo" },
+  { src: "/assets/images/home1/brand-09.jpg", alt: "Innovations Group" },
+  { src: "/assets/images/home1/brand-10.jpg", alt: "Dulsco" },
+  { src: "/assets/images/home1/brand-11.jpg", alt: "Nesto" },
 ];
 
 export default function FeaturesHomeOne() {
