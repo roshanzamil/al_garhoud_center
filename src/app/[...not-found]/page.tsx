@@ -1,6 +1,6 @@
 import ErrorPage from "@/components/error";
 
 
-export default function index() {
+export default async function index() {
   return <ErrorPage />
 }

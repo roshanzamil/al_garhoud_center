@@ -2,18 +2,23 @@ import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
 import Link from "next/link";
+import { getDictionary } from "@/lib/get-dictionary";
+import { i18n } from "@/i18n-config";
 
 
-export default function ErrorPage() {
+export default async function ErrorPage() {
+  const lang = i18n.defaultLocale;
+  const dictionary = await getDictionary(lang);
+
   return (
     <Wrapper>
-      <HeaderOne />
+      <HeaderOne dictionary={dictionary} lang={lang} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <div className="azzle-404-section">
             <div className="container">
               <div className="azzle-404-content">
-                <img data-aos="fade-up" data-aos-delay="500" src="assets/images/blog/error404.png" alt="404" />
+                <img data-aos="fade-up" data-aos-delay="500" src="/assets/images/blog/error404.png" alt="404" />
                 <h2 data-aos="fade-up" data-aos-delay="700">The page you are looking for cannot be found</h2>
                 <div className="mt-50">
                   <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/" data-text="Go to homepage">

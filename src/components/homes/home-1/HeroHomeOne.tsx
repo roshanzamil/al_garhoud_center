@@ -29,19 +29,20 @@ const sliderData = [
 
 export default function HeroHomeOne({ dictionary, lang }: { dictionary: any, lang: string }) {
   const sliderRef = useRef<Slider | null>(null);
+  const isRtl = lang === 'ar';
 
   const heroSliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    fade: true,
+    fade: !isRtl,
     cssEase: 'linear',
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
     arrows: false,
-    rtl: lang === 'ar'
+    rtl: isRtl
   };
 
   const next = () => {
