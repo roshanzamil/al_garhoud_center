@@ -1,9 +1,5 @@
-import SingleBlog from "@/components/single-blog";
 
- 
-
+// This page has been moved to /app/[lang]/single-blog/page.tsx to support i18n.
 export default function index() {
-  return (
-    <SingleBlog />
-  )
+  return null;
 }

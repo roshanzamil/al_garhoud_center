@@ -1,8 +1,5 @@
-import Contactus from "@/components/contact-us";
 
- 
-export default function index() {
-  return (
-    <Contactus />
-  )
+// This page has been moved to /app/[lang]/contact-us/page.tsx to support i18n.
+export default function Contactus() {
+  return null;
 }

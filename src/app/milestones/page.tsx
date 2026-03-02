@@ -1,7 +1,5 @@
-import Milestones from "@/components/milestones";
 
-export default function index() {
-  return (
-    <Milestones />
-  )
+// This page has been moved to /app/[lang]/milestones/page.tsx to support i18n.
+export default function Milestones() {
+  return null;
 }

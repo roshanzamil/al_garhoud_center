@@ -1,3 +1,4 @@
+
 "use client";
 import { useState } from "react";
 
@@ -144,11 +145,10 @@ export default function BusinessSetupArea() {
   };
 
   return (
-    <section className="azzle-section-padding">
+    <section className="azzle-section-padding" style={{ paddingTop: '60px' }}>
       <div className="container">
         <div className="consultancy-container">
           <div className="consultancy-services">
-            <h2 className="consultancy-title">Business Setup Services</h2>
             <p style={{marginBottom: '2rem'}}>We specialize in setting up business mainland and Freezones in UAE, Bahrain, Qatar, KSA and EGYPT by providing following services:</p>
             <div className="consultancy-service-list">
               {businessServices.map((category, index) => (
@@ -169,7 +169,7 @@ export default function BusinessSetupArea() {
               <h3 style={{ textAlign: 'center', marginBottom: '2rem' }}>Free Consultation</h3>
               <form onSubmit={handleSubmit}>
                 <div className="trial-form-field">
-                   <label htmlFor="name" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Name *</label>
+                    <label htmlFor="name" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Name *</label>
                   <input id="name" type="text" required />
                 </div>
                 <div className="trial-form-field">
@@ -180,7 +180,7 @@ export default function BusinessSetupArea() {
                   </div>
                 </div>
                 <div className="trial-form-field">
-                   <label htmlFor="email" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Email *</label>
+                    <label htmlFor="email" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Email *</label>
                   <input id="email" type="email" required />
                 </div>
                 <div className="trial-form-field">
@@ -192,7 +192,7 @@ export default function BusinessSetupArea() {
                 <div className="trial-form-field">
                   <select required defaultValue="">
                     <option value="" disabled>What is your company’s annual turnover? *</option>
-                     {turnoverOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                      {turnoverOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
                   </select>
                 </div>
                 <div className="trial-form-field">

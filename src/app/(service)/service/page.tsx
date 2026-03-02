@@ -1,8 +1,5 @@
-import Service from "@/components/service";
 
- 
-export default function index() {
-  return (
-    <Service />
-  )
+// This page has been moved to /app/[lang]/service/page.tsx to support i18n.
+export default function Service() {
+  return null;
 }

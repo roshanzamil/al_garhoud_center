@@ -1,9 +1,5 @@
-import Signup from "@/components/sign-up"; 
 
- 
-
+// This page has been moved to /app/[lang]/sign-up/page.tsx to support i18n.
 export default function index() {
-  return (
-    <Signup />
-  )
+  return null;
 }

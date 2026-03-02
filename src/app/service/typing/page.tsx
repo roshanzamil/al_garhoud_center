@@ -1,28 +1,5 @@
 
-import FooterOne from "@/layouts/footers/FooterOne";
-import HeaderOne from "@/layouts/headers/HeaderOne";
-import Wrapper from "@/layouts/Wrapper";
-import TypingArea from "@/components/service/typing/TypingArea";
-import ServicePageHeader from "@/components/service/ServicePageHeader";
-import OtherServicesCarousel from "@/components/service/OtherServicesCarousel";
-
+// This page has been moved to /app/[lang]/service/typing/page.tsx to support i18n.
 export default function Typing() {
-  return (
-    <Wrapper>
-      <HeaderOne />
-      <div id="smooth-wrapper">
-        <div id="smooth-content" style={{ paddingTop: '120px' }}>
-          <ServicePageHeader
-            logoSrc="/assets/images/service/typing-logo.webp"
-            logoAlt="Typing"
-            title="Typing Services"
-            subtitle="Accurate typing for visas, labor contracts, and various legal documents."
-          />
-          <TypingArea />
-          <OtherServicesCarousel />
-          <FooterOne />
-        </div>
-      </div>
-    </Wrapper>
-  )
+  return null;
 }

@@ -1,8 +1,5 @@
-import SingleService from "@/components/single-service";
 
- 
-export default function index() {
-  return (
-    <SingleService />
-  )
+// This page has been moved to /app/[lang]/single-service/page.tsx to support i18n.
+export default function SingleService() {
+  return null;
 }

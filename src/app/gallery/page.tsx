@@ -1,7 +1,5 @@
-import Gallery from "@/components/gallery";
 
-export default function index() {
-  return (
-    <Gallery />
-  )
+// This page has been moved to /app/[lang]/gallery/page.tsx to support i18n.
+export default function Gallery() {
+  return null;
 }

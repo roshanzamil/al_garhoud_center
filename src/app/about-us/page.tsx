@@ -1,8 +1,5 @@
-import Aboutus from "@/components/about-us";
 
- 
-export default function index() {
-  return (
-    <Aboutus />
-  )
+// This page has been moved to /app/[lang]/about-us/page.tsx to support i18n.
+export default function Aboutus() {
+  return null;
 }

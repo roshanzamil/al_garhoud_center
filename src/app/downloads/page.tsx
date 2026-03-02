@@ -1,7 +1,5 @@
-import Downloads from "@/components/downloads";
 
-export default function index() {
-  return (
-    <Downloads />
-  )
+// This page has been moved to /app/[lang]/downloads/page.tsx to support i18n.
+export default function Downloads() {
+  return null;
 }
