@@ -8,9 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.5.4",
     "aos": "^2.3.4",
     "gsap": "^3.13.0",
     "lucide-react": "^0.417.0",
+    "negotiator": "^0.6.3",
     "next": "15.5.9",
     "react": "19.1.0",
     "react-countup": "^6.5.3",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@types/aos": "^3.0.7",
     "@types/gsap": "^3.0.0",
+    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
