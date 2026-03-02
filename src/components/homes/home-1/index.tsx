@@ -9,13 +9,13 @@ import TestimonialHomeOne from "./TestimonialHomeOne";
 import FooterOne from "@/layouts/footers/FooterOne";
 import QuoteHomeOne from "./QuoteHomeOne";
 
-export default function HomeOne() {
+export default function HomeOne({ dictionary, lang }: { dictionary: any, lang: string }) {
 	return (
 		<Wrapper>
-			<HeaderOne />
+			<HeaderOne dictionary={dictionary} lang={lang} />
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
-          <HeroHomeOne />
+          <HeroHomeOne dictionary={dictionary.hero} lang={lang} />
           <FeaturesHomeOne />
           <AboutHomeOne />
           <PricingHomeOne />
@@ -28,5 +28,3 @@ export default function HomeOne() {
 		</Wrapper>
 	);
 }
-
-    

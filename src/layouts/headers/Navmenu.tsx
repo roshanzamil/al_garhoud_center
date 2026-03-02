@@ -3,15 +3,18 @@ import Link from "next/link";
 
 interface NavmenuProps {
   menu_style?: boolean;
+  dictionary: any;
+  lang: string;
 }
 
-
-export default function Navmenu({ menu_style = false }: NavmenuProps) {
+export default function Navmenu({ menu_style = false, dictionary, lang }: NavmenuProps) {
+  const adjusted_menu_data = menu_data(lang);
+  
   return (
     <ul>
-      {menu_data.map((item, i) => (
+      {adjusted_menu_data.map((item, i) => (
         <li key={i} className={`${item.has_submenu ? "menu-item-has-children" : ""}`}>
-          <Link href={item.path} className={`${menu_style ? "light-color" : ""}`}>{item.title}</Link>
+          <Link href={item.path} className={`${menu_style ? "light-color" : ""}`}>{dictionary[item.key]}</Link>
           {item.has_submenu &&
             <ul className="sub-menu">
               {item.sub_menus?.map((sub_item, index) => (

@@ -2,12 +2,15 @@
 import menu_data from '@/data/menu-data';
 import Link from 'next/link'
 import { useState } from 'react';
+
 interface MobileMenuProps {
   setIsOpen?: Function;
   isOpen?: boolean;
+  dictionary: any;
+  lang: string;
 }
 
-export default function MobileMenu({ setIsOpen, isOpen }: MobileMenuProps) {
+export default function MobileMenu({ setIsOpen, isOpen, dictionary, lang }: MobileMenuProps) {
   const [navTitle, setNavTitle] = useState<string>("");
    const openMobileMenu = (menu: string) => {
     if (navTitle === menu) {
@@ -24,7 +27,8 @@ export default function MobileMenu({ setIsOpen, isOpen }: MobileMenuProps) {
       setNavTitle2(menu);
     }
   };
-
+  
+  const adjusted_menu_data = menu_data(lang);
 
   return (
     <>
@@ -33,8 +37,8 @@ export default function MobileMenu({ setIsOpen, isOpen }: MobileMenuProps) {
         <div className="azzle-menu-area text-center" onClick={(e) => e.stopPropagation()}>
           <div className="azzle-menu-mobile-top">
             <div className="mobile-logo">
-              <Link href="/">
-                <img src="assets/images/logo/logo-dark.svg" alt="logo" />
+              <Link href={`/${lang}`}>
+                <img src="/assets/images/logo/logo-dark.svg" alt="logo" />
               </Link>
             </div>
             <button className="azzle-menu-toggle mobile" onClick={() => setIsOpen && setIsOpen(false)}>
@@ -43,9 +47,9 @@ export default function MobileMenu({ setIsOpen, isOpen }: MobileMenuProps) {
           </div>
           <div className="azzle-mobile-menu">
             <ul>
-              {menu_data.map((item, i) => (
+              {adjusted_menu_data.map((item, i) => (
                 <li key={i} className={`${item.title === navTitle ? 'azzle-active' : ''} ${item.has_submenu ? 'menu-item-has-children azzle-item-has-children' : ''}`}>
-                  <Link href={item.path}>{item.title}{item.has_submenu && <span className="azzle-mean-expand" onClick={() => openMobileMenu(item.title)}></span>}</Link>
+                  <Link href={item.path}>{dictionary[item.key]}{item.has_submenu && <span className="azzle-mean-expand" onClick={() => openMobileMenu(item.title)}></span>}</Link>
                   {item.has_submenu &&
                     <ul className={`sub-menu azzle-submenu ${item.title === navTitle ? 'azzle-open' : ''}`} style={{ display: navTitle === item.title ? "block" : "none", }}>
                       {item.sub_menus?.map((sub_item, index) => (
@@ -72,10 +76,11 @@ export default function MobileMenu({ setIsOpen, isOpen }: MobileMenuProps) {
                   }
                 </li>
               ))}
+                <li><Link href={`/${lang}/contact-us`}>{dictionary.contact}</Link></li>
             </ul>
           </div>
           <div className="azzle-mobile-menu-btn">
-            <Link className="azzle-default-btn sm-size" href="/contact-us">Contact Us</Link>
+            <Link className="azzle-default-btn sm-size" href={`/${lang}/contact-us`}>{dictionary.contact}</Link>
           </div>
         </div>
       </div>

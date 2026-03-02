@@ -5,9 +5,9 @@ import Navmenu from "./Navmenu";
 import UseSticky from "@/hooks/UseSticky";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu"; 
- 
+import LanguageSwitcher from "@/components/language-switcher";
 
-export default function HeaderOne() {
+export default function HeaderOne({ dictionary, lang }: { dictionary: any, lang: string }) {
   const { sticky, hidden } = UseSticky();
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -15,9 +15,9 @@ export default function HeaderOne() {
       <header className={`site-header azzle-header-section ${sticky ? "sticky-menu" : ""} ${hidden ? "hide-header" : ""}`} id="sticky-menu">
         <div className="container">
           <div className="row gx-3 align-items-center justify-content-between">
-            <div className="col-8 col-sm-auto ">
+            <div className="col-auto">
               <div className="header-logo">
-                <Link href="/">
+                <Link href={`/${lang}`}>
                   <img src="/assets/images/logo-1-dark.svg" alt="logo" style={{ width: '250px' }} />   
                 </Link>
               </div>
@@ -25,7 +25,7 @@ export default function HeaderOne() {
             <div className="col">
               <div className="azzle-main-menu-item">
                 <nav className="main-menu menu-style1 custom-breakpoint menu-left">
-                  <Navmenu />                   
+                  <Navmenu dictionary={dictionary.navigation} lang={lang} />                   
                 </nav>
               </div>
             </div>
@@ -34,17 +34,17 @@ export default function HeaderOne() {
                 <div className="azzle-header-login-button">
                   <ul>
                     <li>
-                      <a href="tel:043991744">04 399 1744</a>
+                      <a href="tel:043991744">{dictionary.header_phone}</a>
                     </li>
                   </ul>
                 </div>
-                <Link className="azzle-default-btn azzle-header-btn" href="/contact-us" data-text="Contact us">
-                  <span className="button-wraper">Contact us</span>
+                <Link className="azzle-default-btn azzle-header-btn" href={`/${lang}/contact-us`} data-text={dictionary.navigation.contact}>
+                  <span className="button-wraper">{dictionary.navigation.contact}</span>
                 </Link>
+                <LanguageSwitcher />
               </div>
               <div className="azzle-header-menu">
                 <nav className="navbar site-navbar justify-content-between">
-                  {/* <!-- Brand Logo--> */}
                   {/* <!-- mobile menu trigger --> */}
                   <button onClick={() => setIsOpen(!isOpen)} className="azzle-menu-toggle custom-breakpoint">
                     <span></span>
@@ -57,7 +57,7 @@ export default function HeaderOne() {
         </div>
 
       </header>
-      <MobileMenu setIsOpen={setIsOpen} isOpen={isOpen} />
+      <MobileMenu setIsOpen={setIsOpen} isOpen={isOpen} dictionary={dictionary.navigation} lang={lang} />
     </>
   )
 }

@@ -6,28 +6,28 @@ import { useRef } from "react";
 const sliderData = [
   {
     id: 1,
-    title: "Your Trusted Partner for All Government Services",
-    description: "Al Garhoud Center is your trusted partner for a seamless government service experience. We provide a comprehensive range of services with efficiency and a focus on customer satisfaction.",
+    titleKey: "slide1_title",
+    descriptionKey: "slide1_desc",
     image: "/assets/images/slider/1.jpg",
     hint: "dubai skyline"
   },
   {
     id: 2,
-    title: "Efficient, Swift, and Client-Focused Solutions",
-    description: "Our streamlined processes and dedicated team ensure your government transactions are handled quickly and professionally, saving you valuable time and effort.",
+    titleKey: "slide2_title",
+    descriptionKey: "slide2_desc",
     image: "/assets/images/slider/2.jpg",
     hint: "customer service"
   },
   {
     id: 3,
-    title: "Comprehensive Services Under One Roof",
-    description: "From visa processing and Emirates ID to business licensing and notary services, we offer a complete solution for all your official needs in Dubai.",
+    titleKey: "slide3_title",
+    descriptionKey: "slide3_desc",
     image: "/assets/images/slider/3.jpg",
     hint: "dubai government"
   }
 ];
 
-export default function HeroHomeOne() {
+export default function HeroHomeOne({ dictionary, lang }: { dictionary: any, lang: string }) {
   const sliderRef = useRef<Slider | null>(null);
 
   const heroSliderSettings = {
@@ -40,7 +40,8 @@ export default function HeroHomeOne() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    arrows: false, // We are using custom arrows
+    arrows: false,
+    rtl: lang === 'ar'
   };
 
   const next = () => {
@@ -60,14 +61,14 @@ export default function HeroHomeOne() {
               <div key={slide.id} className="hero-slide-item">
                 <div className="hero-slide-image" style={{ backgroundImage: `url(${slide.image})` }} data-ai-hint={slide.hint}></div>
                 <div className="azzle-hero-content1">
-                    <h1 data-aos="fade-left" data-aos-delay="500">{slide.title}</h1>
-                    <p data-aos="zoom-in" data-aos-delay="700" style={{ fontWeight: 100 }}>{slide.description}</p>
+                    <h1 data-aos="fade-left" data-aos-delay="500">{dictionary[slide.titleKey]}</h1>
+                    <p data-aos="zoom-in" data-aos-delay="700" style={{ fontWeight: 100 }}>{dictionary[slide.descriptionKey]}</p>
                     <div className="azzle-hero-button mt-50">
-                      <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/contact-us" data-text="Get started">
-                        <span className="button-wraper">Get started</span>
+                      <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href={`/${lang}/contact-us`} data-text={dictionary.get_started}>
+                        <span className="button-wraper">{dictionary.get_started}</span>
                       </Link>
-                      <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href="/about-us" data-text="Learn more">
-                        <span className="button-wraper">Learn more</span>
+                      <Link className="azzle-default-btn outline-btn" data-aos="fade-up" data-aos-delay="1000" href={`/${lang}/about-us`} data-text={dictionary.learn_more}>
+                        <span className="button-wraper">{dictionary.learn_more}</span>
                       </Link>
                     </div>
                 </div>
