@@ -22,11 +22,11 @@ export default async function SalemPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/salem.jpg"
             logoAlt="Salem"
-            title="Salem"
-            subtitle="Occupational health screening and all medical fitness services."
+            title={dictionary.salem_page.header_title}
+            subtitle={dictionary.salem_page.header_subtitle}
           />
-          <SalemArea />
-          <OtherServicesCarousel />
+          <SalemArea dictionary={dictionary.salem_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

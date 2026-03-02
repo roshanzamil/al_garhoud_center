@@ -22,11 +22,11 @@ export default async function DhaPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/DHA-logo.webp"
             logoAlt="DHA"
-            title="Dubai Health (DHA)"
-            subtitle="Medical fitness typing and all necessary approvals handled seamlessly."
+            title={dictionary.dha_page.header_title}
+            subtitle={dictionary.dha_page.header_subtitle}
           />
-          <DhaArea />
-          <OtherServicesCarousel />
+          <DhaArea dictionary={dictionary.dha_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

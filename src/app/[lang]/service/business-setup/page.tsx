@@ -23,11 +23,11 @@ export default async function BusinessSetupPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/business.jpg"
             logoAlt="Business Setup"
-            title="Business Setup"
-            subtitle="Comprehensive assistance for setting up your new business in Dubai."
+            title={dictionary.business_setup_page.header_title}
+            subtitle={dictionary.business_setup_page.header_subtitle}
           />
-          <BusinessSetupArea />
-          <OtherServicesCarousel />
+          <BusinessSetupArea dictionary={dictionary.business_setup_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

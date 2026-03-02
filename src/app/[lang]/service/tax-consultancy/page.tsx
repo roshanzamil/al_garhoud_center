@@ -22,11 +22,11 @@ export default async function TaxConsultancyPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/tax.jpg"
             logoAlt="Tax Consultancy"
-            title="Tax Consultancy"
-            subtitle="Expert advice and professional services for your VAT and corporate tax needs."
+            title={dictionary.tax_consultancy_page.header_title}
+            subtitle={dictionary.tax_consultancy_page.header_subtitle}
           />
-          <TaxConsultancyArea />
-          <OtherServicesCarousel />
+          <TaxConsultancyArea dictionary={dictionary.tax_consultancy_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

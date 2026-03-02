@@ -2,31 +2,27 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-interface ServiceStep {
-  id: string;
-  label: string;
-  inside: number;
-  outside: number;
-  checked: boolean;
-  group?: string;
-}
+const initialCosts: { [key: string]: { inside: number; outside: number, checked: boolean } } = {
+  "offer_letter": { inside: 279.00, outside: 279.00, checked: true },
+  "insurance": { inside: 189.00, outside: 189.00, checked: true },
+  "labor_1": { inside: 355.00, outside: 355.00, checked: false },
+  "labor_2": { inside: 1285.00, outside: 1285.00, checked: true },
+  "labor_3": { inside: 3550.77, outside: 3550.77, checked: false },
+  "entry_permit": { inside: 1125.65, outside: 475.65, checked: true },
+  "change_status": { inside: 675.65, outside: 0.00, checked: true },
+  "emirates_id": { inside: 386.00, outside: 386.00, checked: true },
+  "medical_test": { inside: 322.50, outside: 322.50, checked: true },
+  "visa_stamping": { inside: 547.00, outside: 547.00, checked: true },
+  "contract_submission": { inside: 83.00, outside: 83.00, checked: true },
+};
 
-const initialSteps: ServiceStep[] = [
-  { id: "offer_letter", label: "Offer Letter, Work Permit, Contract", inside: 279.00, outside: 279.00, checked: true },
-  { id: "insurance", label: "Insurance (+40 AED)", inside: 189.00, outside: 189.00, checked: true },
-  { id: "labor_1", label: "Labor Payment - Category 1", inside: 355.00, outside: 355.00, checked: false, group: "labor" },
-  { id: "labor_2", label: "Labor Payment - Category 2", inside: 1285.00, outside: 1285.00, checked: true, group: "labor" },
-  { id: "labor_3", label: "Labor Payment - Category 3", inside: 3550.77, outside: 3550.77, checked: false, group: "labor" },
-  { id: "entry_permit", label: "Entry Permit", inside: 1125.65, outside: 475.65, checked: true },
-  { id: "change_status", label: "Change Status", inside: 675.65, outside: 0.00, checked: true },
-  { id: "emirates_id", label: "Emirates ID Typing", inside: 386.00, outside: 386.00, checked: true },
-  { id: "medical_test", label: "Medical Test - DHA", inside: 322.50, outside: 322.50, checked: true },
-  { id: "visa_stamping", label: "Visa Stamping", inside: 547.00, outside: 547.00, checked: true },
-  { id: "contract_submission", label: "Contract Submission", inside: 83.00, outside: 83.00, checked: true },
-];
-
-export default function AmerArea() {
-  const [steps, setSteps] = useState<ServiceStep[]>(initialSteps);
+export default function AmerArea({ dictionary }: { dictionary: any }) {
+  const [steps, setSteps] = useState(
+    dictionary.steps.map((step: any) => ({
+      ...step,
+      ...initialCosts[step.id],
+    }))
+  );
   const [totalInside, setTotalInside] = useState(0);
   const [totalOutside, setTotalOutside] = useState(0);
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -34,7 +30,7 @@ export default function AmerArea() {
   useEffect(() => {
     let insideSum = 0;
     let outsideSum = 0;
-    steps.forEach((step) => {
+    steps.forEach((step: any) => {
       if (step.checked) {
         insideSum += step.inside;
         outsideSum += step.outside;
@@ -45,28 +41,24 @@ export default function AmerArea() {
   }, [steps]);
 
   const handleCheckboxChange = (id: string) => {
-    setSteps((prevSteps) => {
-      const clickedStep = prevSteps.find((step) => step.id === id);
+    setSteps((prevSteps: any) => {
+      const clickedStep = prevSteps.find((step: any) => step.id === id);
       if (!clickedStep) return prevSteps;
 
-      // Handle radio-button-like behavior for grouped items
       if (clickedStep.group) {
-        // If the clicked item is already checked, do nothing (or allow unchecking if desired)
         if (clickedStep.checked) {
-             return prevSteps.map((step) =>
-                step.id === id ? { ...step, checked: false } : step
-             );
+          return prevSteps.map((step: any) =>
+            step.id === id ? { ...step, checked: false } : step
+          );
         }
-        const newSteps = prevSteps.map((step) => {
+        return prevSteps.map((step: any) => {
           if (step.group === clickedStep.group) {
             return { ...step, checked: step.id === id };
           }
           return step;
         });
-        return newSteps;
       } else {
-        // Handle normal checkbox toggle
-        return prevSteps.map((step) =>
+        return prevSteps.map((step: any) =>
           step.id === id ? { ...step, checked: !step.checked } : step
         );
       }
@@ -81,13 +73,13 @@ export default function AmerArea() {
             <table className="cost-calculator-table">
               <thead>
                 <tr>
-                  <th>Step</th>
-                  <th>Inside (AED)</th>
-                  <th>Outside (AED)</th>
+                  <th>{dictionary.table_headers.step}</th>
+                  <th>{dictionary.table_headers.inside}</th>
+                  <th>{dictionary.table_headers.outside}</th>
                 </tr>
               </thead>
               <tbody>
-                {steps.map((step) => (
+                {steps.map((step: any) => (
                   <tr key={step.id}>
                     <td>
                       <label className="cost-calculator-checkbox">
@@ -111,35 +103,35 @@ export default function AmerArea() {
             <div className="cost-totals">
               <div className={`cost-total-item ${selectedCountry && selectedCountry !== 'inside' ? 'dimmed' : ''}`}>
                 <span className="cost-total-amount">{totalInside.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-                <span className="cost-total-label">Total - Inside (AED)</span>
+                <span className="cost-total-label">{dictionary.totals.inside}</span>
               </div>
               <div className={`cost-total-item ${selectedCountry && selectedCountry !== 'outside' ? 'dimmed' : ''}`}>
                 <span className="cost-total-amount">{totalOutside.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-                <span className="cost-total-label">Total - Outside (AED)</span>
+                <span className="cost-total-label">{dictionary.totals.outside}</span>
               </div>
             </div>
             <div className="trial-booking-form" style={{border: 'none', padding: '0'}}>
               <form>
                 <div className="trial-form-field">
-                  <input type="text" placeholder="Full Name *" required />
+                  <input type="text" placeholder={dictionary.form.name_placeholder} required />
                 </div>
                 <div className="trial-form-field">
-                  <input type="tel" placeholder="Phone Number *" required/>
+                  <input type="tel" placeholder={dictionary.form.phone_placeholder} required/>
                 </div>
                 <div className="trial-form-field">
-                  <input type="email" placeholder="Email Address *" required />
+                  <input type="email" placeholder={dictionary.form.email_placeholder} required />
                 </div>
                 <div className="trial-form-field">
                   <select required value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)}>
-                    <option value="">--Please Choose An Option--</option>
-                    <option value="inside">Inside Country</option>
-                    <option value="outside">Outside Country</option>
+                    <option value="">{dictionary.form.option_placeholder}</option>
+                    <option value="inside">{dictionary.form.option_inside}</option>
+                    <option value="outside">{dictionary.form.option_outside}</option>
                   </select>
                 </div>
-                <button type="submit" className="trial-submit-btn">Submit</button>
+                <button type="submit" className="trial-submit-btn">{dictionary.form.submit_button}</button>
               </form>
               <p className="cost-calculator-note">
-                Note: In the event that the labor payment is selected under Category 2, but the actual classification corresponds to Category 1 or Category 3, the applicable charges may be subject to adjustment.
+                {dictionary.note}
               </p>
             </div>
           </div>

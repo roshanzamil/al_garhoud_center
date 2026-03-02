@@ -22,11 +22,11 @@ export default async function AmerPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/amer-logo.webp"
             logoAlt="Amer"
-            title="Amer Services"
-            subtitle="Complete Amer services for visa renewal, cancellation, and modifications."
+            title={dictionary.amer_page.header_title}
+            subtitle={dictionary.amer_page.header_subtitle}
           />
-          <AmerArea />
-          <OtherServicesCarousel />
+          <AmerArea dictionary={dictionary.amer_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

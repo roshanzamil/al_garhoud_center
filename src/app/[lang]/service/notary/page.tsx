@@ -22,11 +22,11 @@ export default async function NotaryPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/dubai-courts-logo.webp"
             logoAlt="Notary Public"
-            title="Notary Public"
-            subtitle="Book legal appointments and get government certified true copies."
+            title={dictionary.notary_page.header_title}
+            subtitle={dictionary.notary_page.header_subtitle}
           />
-          <NotaryArea />
-          <OtherServicesCarousel />
+          <NotaryArea dictionary={dictionary.notary_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

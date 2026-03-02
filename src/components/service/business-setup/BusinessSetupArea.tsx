@@ -2,141 +2,8 @@
 "use client";
 import { useState } from "react";
 
-const businessServices = [
-  {
-    title: "Company Formation & Structuring",
-    items: [
-      "Mainland company formation (via Dubai Department of Economy and Tourism or respective emirate authority)",
-      "Free Zone company formation (e.g., DMCC, IFZA, Dubai Silicon Oasis Authority)",
-      "Offshore company incorporation",
-      "Sole Establishment formation",
-      "Civil Company setup",
-      "Branch of Local / Foreign Company registration",
-      "Legal structure advisory (LLC, FZE, FZCO, PJSC, etc.)",
-      "Activity selection & approval",
-    ],
-  },
-  {
-    title: "Trade License Services",
-    items: [
-      "Commercial License",
-      "Professional License",
-      "Industrial License",
-      "E-commerce License",
-      "Consultancy License",
-      "Freelance Permit",
-      "License Renewal",
-      "License Amendment (activity change, name change)",
-      "License Upgrade / Downgrade",
-      "License Cancellation",
-    ],
-  },
-  {
-    title: "Name Reservation & Initial Approvals",
-    items: [
-      "Trade Name Reservation",
-      "Initial Approval Certificate",
-      "MOA (Memorandum of Association) drafting",
-      "LSA (Local Service Agent) agreement (if required)",
-      "Notarization & legal documentation",
-    ],
-  },
-  {
-    title: "Visa & Immigration Services",
-    subtitle: "(Handled through authorities like General Directorate of Residency and Foreigners Affairs)",
-    items: [
-      "Establishment Card (Immigration Card)",
-      "Partner/Investor Visa",
-      "Employment Visa",
-      "Family Visa",
-      "Visa Quota Approval",
-      "Entry Permit Processing",
-      "Status Change",
-      "Medical Fitness Coordination",
-      "Emirates ID Processing",
-      "Visa Stamping",
-      "Visa Renewal / Cancellation",
-    ],
-  },
-  {
-    title: "Labour & MOHRE Services",
-    subtitle: "(Through Ministry of Human Resources and Emiratisation)",
-    items: [
-      "Labour Establishment Card",
-      "Employment Contract Preparation",
-      "Offer Letter Submission",
-      "Work Permit Issuance",
-      "Labour Quota Approval",
-      "WPS Registration",
-      "Labour Contract Amendment",
-      "Labour Card Cancellation",
-    ],
-  },
-  {
-    title: "Corporate Banking Assistance",
-    items: [
-      "Bank account opening support",
-      "KYC documentation preparation",
-      "Business plan drafting (if required by bank)",
-      "Compliance documentation support",
-    ],
-  },
-  {
-    title: "Office & Infrastructure Setup",
-    items: [
-      "Ejari Registration (for mainland)",
-      "Virtual Office Solutions",
-      "Flexi-desk arrangements (Free Zones)",
-      "Physical Office Leasing",
-      "Warehouse leasing",
-      "PO Box registration",
-    ],
-  },
-  {
-    title: "Compliance & Post-Setup Services",
-    items: [
-      "VAT Registration (via Federal Tax Authority)",
-      "Corporate Tax Registration",
-      "Accounting & Bookkeeping",
-      "ESR Filing (Economic Substance Regulations)",
-      "UBO Declaration",
-      "Annual Audit Coordination",
-      "Customs Code Registration",
-      "Municipality approvals",
-      "Chamber of Commerce registration",
-    ],
-  },
-  {
-    title: "Value-Added Services",
-    items: [
-      "Trademark Registration",
-      "Document Attestation",
-      "Translation Services",
-      "PRO Services",
-      "Insurance Assistance",
-      "Business Plan Preparation",
-      "Market Entry Advisory",
-    ],
-  },
-];
-
-
-const serviceOptions = [
-  "Business Setup",
-  "Accounting Services",
-  "Tax Consultancy",
-];
-
-const turnoverOptions = [
-  "0-150K AED",
-  "150K-500K AED",
-  "500K-1M AED",
-  "1M-5M AED",
-  "5M+ AED",
-];
-
-export default function BusinessSetupArea() {
-  const [serviceRequired, setServiceRequired] = useState("Business Setup");
+export default function BusinessSetupArea({ dictionary }: { dictionary: any }) {
+  const [serviceRequired, setServiceRequired] = useState(dictionary.form.service_options[0]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -149,14 +16,14 @@ export default function BusinessSetupArea() {
       <div className="container">
         <div className="consultancy-container">
           <div className="consultancy-services">
-            <p style={{marginBottom: '2rem'}}>We specialize in setting up business mainland and Freezones in UAE, Bahrain, Qatar, KSA and EGYPT by providing following services:</p>
+            <p style={{marginBottom: '2rem'}}>{dictionary.intro}</p>
             <div className="consultancy-service-list">
-              {businessServices.map((category, index) => (
+              {dictionary.services.map((category: any, index: number) => (
                 <div key={index} style={{ breakInside: 'avoid', pageBreakInside: 'avoid', marginBottom: '2.5rem' }}>
                   <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#bd8c2e', marginBottom: '1rem', fontFamily: '"Baloo Thambi 2", system-ui' }}>{category.title}</h4>
                   {category.subtitle && <p style={{ fontSize: '0.8rem', color: '#666', marginTop: '-0.75rem', marginBottom: '1rem' }}>{category.subtitle}</p>}
                   <ul>
-                    {category.items.map((service, i) => (
+                    {category.items.map((service: string, i: number) => (
                       <li key={i} style={{marginBottom: '0.5rem'}}>{service}</li>
                     ))}
                   </ul>
@@ -166,40 +33,40 @@ export default function BusinessSetupArea() {
           </div>
           <div className="consultancy-form">
             <div className="trial-booking-form">
-              <h3 style={{ textAlign: 'center', marginBottom: '2rem' }}>Free Consultation</h3>
+              <h3 style={{ textAlign: 'center', marginBottom: '2rem' }}>{dictionary.form.title}</h3>
               <form onSubmit={handleSubmit}>
                 <div className="trial-form-field">
-                    <label htmlFor="name" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Name *</label>
+                    <label htmlFor="name" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>{dictionary.form.name_label}</label>
                   <input id="name" type="text" required />
                 </div>
                 <div className="trial-form-field">
-                  <label htmlFor="phone" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Phone No*</label>
+                  <label htmlFor="phone" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>{dictionary.form.phone_label}</label>
                   <div className="consultancy-phone-group">
                     <span>+971</span>
-                    <input id="phone" type="tel" placeholder="050 123 4567" required />
+                    <input id="phone" type="tel" placeholder={dictionary.form.phone_placeholder} required />
                   </div>
                 </div>
                 <div className="trial-form-field">
-                    <label htmlFor="email" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Email *</label>
+                    <label htmlFor="email" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>{dictionary.form.email_label}</label>
                   <input id="email" type="email" required />
                 </div>
                 <div className="trial-form-field">
                   <select required value={serviceRequired} onChange={(e) => setServiceRequired(e.target.value)}>
-                    <option value="" disabled>Service Required *</option>
-                    {serviceOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                    <option value="" disabled>{dictionary.form.service_label}</option>
+                    {dictionary.form.service_options.map((opt: string) => <option key={opt} value={opt}>{opt}</option>)}
                   </select>
                 </div>
                 <div className="trial-form-field">
                   <select required defaultValue="">
-                    <option value="" disabled>What is your company’s annual turnover? *</option>
-                      {turnoverOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                    <option value="" disabled>{dictionary.form.turnover_label}</option>
+                      {dictionary.form.turnover_options.map((opt: string) => <option key={opt} value={opt}>{opt}</option>)}
                   </select>
                 </div>
                 <div className="trial-form-field">
-                    <label htmlFor="message" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Message *</label>
+                    <label htmlFor="message" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>{dictionary.form.message_label}</label>
                   <textarea id="message" required></textarea>
                 </div>
-                <button type="submit" className="trial-submit-btn">Submit</button>
+                <button type="submit" className="trial-submit-btn">{dictionary.form.submit_button}</button>
               </form>
             </div>
           </div>

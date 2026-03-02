@@ -2,14 +2,7 @@
 "use client";
 import { useState, useRef } from "react";
 
-const typingServices = [
-  { title: "Visa Typing" },
-  { title: "Medical Typing" },
-  { title: "Emirates ID Typing" },
-  { title: "Trade License" },
-];
-
-export default function TypingArea() {
+export default function TypingArea({ dictionary }: { dictionary: any }) {
   const [selectedDocumentType, setSelectedDocumentType] = useState("");
   const [activeTab, setActiveTab] = useState('register');
   const [enquiryService, setEnquiryService] = useState('');
@@ -38,7 +31,7 @@ export default function TypingArea() {
   const handleEnquirySubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!enquiryService) {
-        alert("Please select a service to enquire about.");
+        alert(dictionary.form.enquiry_no_service_alert);
         return;
     }
     const message = encodeURIComponent(`I would like to enquire about the ${enquiryService} service.`);
@@ -52,12 +45,12 @@ export default function TypingArea() {
         <div className="trial-pricing-container">
           <div className="trial-pricing-main">
             <div className="trial-pricing-grid">
-              {typingServices.map((item, index) => (
+              {dictionary.services.map((item: any, index: number) => (
                 <div key={index} className="trial-pricing-card">
                   <h3>{item.title}</h3>
                   <div className="trial-pricing-buttons" style={{marginTop: '2rem'}}>
-                    <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleRegisterClick(item.title); }}>Register</a>
-                    <a href="#" className="trial-btn enquire" onClick={(e) => { e.preventDefault(); handleEnquiryClick(item.title); }}>Enquire</a>
+                    <a href="#" className="trial-btn" onClick={(e) => { e.preventDefault(); handleRegisterClick(item.title); }}>{dictionary.btn_register}</a>
+                    <a href="#" className="trial-btn enquire" onClick={(e) => { e.preventDefault(); handleEnquiryClick(item.title); }}>{dictionary.btn_enquire}</a>
                   </div>
                 </div>
               ))}
@@ -73,7 +66,7 @@ export default function TypingArea() {
                   style={{ flex: 1 }}
                   onClick={(e) => { e.preventDefault(); setActiveTab('register'); }}
                 >
-                  Register
+                  {dictionary.form.tab_register}
                 </a>
                 <a 
                   href="#" 
@@ -81,37 +74,37 @@ export default function TypingArea() {
                   style={{ flex: 1 }}
                   onClick={(e) => { e.preventDefault(); setActiveTab('enquiry'); }}
                 >
-                  Enquire
+                  {dictionary.form.tab_enquire}
                 </a>
               </div>
 
                {activeTab === 'register' && (
                 <form>
                   <div className="trial-form-field">
-                    <input type="text" placeholder="Full Name *" required />
+                    <input type="text" placeholder={dictionary.form.name_placeholder} required />
                   </div>
                    <div className="trial-form-field">
-                    <input type="email" placeholder="Email Address *" required />
+                    <input type="email" placeholder={dictionary.form.email_placeholder} required />
                   </div>
                   <div className="trial-form-field">
-                    <input type="tel" placeholder="Phone Number *" required/>
+                    <input type="tel" placeholder={dictionary.form.phone_placeholder} required/>
                   </div>
                   <div className="trial-form-field">
                     <select required value={selectedDocumentType} onChange={(e) => setSelectedDocumentType(e.target.value)}>
-                      <option value="">- Document Type * -</option>
-                      {typingServices.map((p) => (
+                      <option value="">{dictionary.form.document_type_placeholder}</option>
+                      {dictionary.services.map((p: any) => (
                         <option key={p.title} value={p.title}>{p.title}</option>
                       ))}
                     </select>
                   </div>
                   <div className="trial-form-field">
-                     <label style={{marginBottom: '8px', display: 'block', color: '#555', fontSize: '0.9rem'}}>Upload Document (optional)</label>
+                     <label style={{marginBottom: '8px', display: 'block', color: '#555', fontSize: '0.9rem'}}>{dictionary.form.upload_label}</label>
                     <input type="file" />
                   </div>
                   <div className="trial-form-field">
-                    <textarea placeholder="Any additional notes (optional)"></textarea>
+                    <textarea placeholder={dictionary.form.notes_placeholder}></textarea>
                   </div>
-                  <button type="submit" className="trial-submit-btn">Submit Typing Request</button>
+                  <button type="submit" className="trial-submit-btn">{dictionary.form.submit_button}</button>
                 </form>
               )}
 
@@ -119,13 +112,13 @@ export default function TypingArea() {
                 <form onSubmit={handleEnquirySubmit}>
                   <div className="trial-form-field">
                     <select value={enquiryService} onChange={(e) => setEnquiryService(e.target.value)} required>
-                      <option value="">-Please Choose An Option-</option>
-                      {typingServices.map((p) => (
+                      <option value="">{dictionary.form.enquiry_option_placeholder}</option>
+                      {dictionary.services.map((p: any) => (
                         <option key={p.title} value={p.title}>{p.title}</option>
                       ))}
                     </select>
                   </div>
-                  <button type="submit" className="trial-submit-btn">Enquire</button>
+                  <button type="submit" className="trial-submit-btn">{dictionary.form.enquiry_button}</button>
                 </form>
               )}
 

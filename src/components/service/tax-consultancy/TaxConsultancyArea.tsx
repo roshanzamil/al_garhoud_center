@@ -2,44 +2,8 @@
 "use client";
 import { useState } from "react";
 
-const servicesList = [
-  "UAE Tax Agent Services",
-  "VAT Registration Services in Dubai",
-  "VAT Compliance in UAE",
-  "VAT Return Filing Assistance",
-  "VAT Deregistration in UAE",
-  "Excise Tax Registration – UAE",
-  "Excise Compliance Services",
-  "Excise Advisory Services",
-  "Bookkeeping & Accounting Outsourcing",
-  "Accounting Review Services Dubai, UAE",
-  "MIS Reporting Services in Dubai",
-  "Bookkeeping Services in Saudi Arabia",
-  "Avail Expert VAT Services in UAE",
-  "International Taxation Consultants in Dubai, UAE",
-  "Tax Residency Certification Assistance",
-  "Economic Substance Regulations, UAE",
-  "Payroll Services in Dubai",
-  "Payroll Services in Qatar",
-  "Audit Firms in Sharjah",
-];
-
-const serviceOptions = [
-  "Tax Consultancy",
-  "Accounting Services",
-  "Business Setup",
-];
-
-const turnoverOptions = [
-  "0-150K AED",
-  "150K-500K AED",
-  "500K-1M AED",
-  "1M-5M AED",
-  "5M+ AED",
-];
-
-export default function TaxConsultancyArea() {
-  const [serviceRequired, setServiceRequired] = useState("Tax Consultancy");
+export default function TaxConsultancyArea({ dictionary }: { dictionary: any }) {
+  const [serviceRequired, setServiceRequired] = useState(dictionary.form.service_options[0]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,47 +17,47 @@ export default function TaxConsultancyArea() {
         <div className="consultancy-container">
           <div className="consultancy-services">
             <ul className="consultancy-service-list">
-              {servicesList.map((service, index) => (
+              {dictionary.services.map((service: string, index: number) => (
                 <li key={index}>{service}</li>
               ))}
             </ul>
           </div>
           <div className="consultancy-form">
             <div className="trial-booking-form">
-              <h3 style={{ textAlign: 'center', marginBottom: '2rem' }}>Free Consultation</h3>
+              <h3 style={{ textAlign: 'center', marginBottom: '2rem' }}>{dictionary.form.title}</h3>
               <form onSubmit={handleSubmit}>
                 <div className="trial-form-field">
-                   <label htmlFor="name" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Name *</label>
+                   <label htmlFor="name" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>{dictionary.form.name_label}</label>
                   <input id="name" type="text" required />
                 </div>
                 <div className="trial-form-field">
-                  <label htmlFor="phone" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Phone No*</label>
+                  <label htmlFor="phone" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>{dictionary.form.phone_label}</label>
                   <div className="consultancy-phone-group">
                     <span>+971</span>
-                    <input id="phone" type="tel" placeholder="050 123 4567" required />
+                    <input id="phone" type="tel" placeholder={dictionary.form.phone_placeholder} required />
                   </div>
                 </div>
                 <div className="trial-form-field">
-                   <label htmlFor="email" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Email *</label>
+                   <label htmlFor="email" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>{dictionary.form.email_label}</label>
                   <input id="email" type="email" required />
                 </div>
                 <div className="trial-form-field">
                   <select required value={serviceRequired} onChange={(e) => setServiceRequired(e.target.value)}>
-                    <option value="" disabled>Service Required *</option>
-                    {serviceOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                    <option value="" disabled>{dictionary.form.service_label}</option>
+                    {dictionary.form.service_options.map((opt: string) => <option key={opt} value={opt}>{opt}</option>)}
                   </select>
                 </div>
                 <div className="trial-form-field">
                   <select required defaultValue="">
-                    <option value="" disabled>What is your company’s annual turnover? *</option>
-                     {turnoverOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                    <option value="" disabled>{dictionary.form.turnover_label}</option>
+                     {dictionary.form.turnover_options.map((opt: string) => <option key={opt} value={opt}>{opt}</option>)}
                   </select>
                 </div>
                 <div className="trial-form-field">
-                    <label htmlFor="message" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>Message *</label>
+                    <label htmlFor="message" style={{fontSize: '0.8rem', color: '#757575', marginBottom: '4px', display: 'block'}}>{dictionary.form.message_label}</label>
                   <textarea id="message" required></textarea>
                 </div>
-                <button type="submit" className="trial-submit-btn">Submit</button>
+                <button type="submit" className="trial-submit-btn">{dictionary.form.submit_button}</button>
               </form>
             </div>
           </div>

@@ -22,11 +22,11 @@ export default async function TypingPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/typing-logo.webp"
             logoAlt="Typing"
-            title="Typing Services"
-            subtitle="Accurate typing for visas, labor contracts, and various legal documents."
+            title={dictionary.typing_page.header_title}
+            subtitle={dictionary.typing_page.header_subtitle}
           />
-          <TypingArea />
-          <OtherServicesCarousel />
+          <TypingArea dictionary={dictionary.typing_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

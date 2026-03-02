@@ -22,11 +22,11 @@ export default async function AccountingPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/accounting.jpg"
             logoAlt="Accounting Services"
-            title="Accounting & Assurance"
-            subtitle="Professional bookkeeping, auditing, and financial advisory services."
+            title={dictionary.accounting_page.header_title}
+            subtitle={dictionary.accounting_page.header_subtitle}
           />
-          <AccountingArea />
-          <OtherServicesCarousel />
+          <AccountingArea dictionary={dictionary.accounting_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

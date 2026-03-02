@@ -22,11 +22,11 @@ export default async function TawjeehPage({
           <ServicePageHeader
             logoSrc="/assets/images/service/t3-logo.webp"
             logoAlt="Taw-Jeeh"
-            title="Taw-Jeeh Services"
-            subtitle="All Ministry of Labour and Taw-Jeeh services handled professionally."
+            title={dictionary.tawjeeh_page.header_title}
+            subtitle={dictionary.tawjeeh_page.header_subtitle}
           />
-          <TawjeehArea />
-          <OtherServicesCarousel />
+          <TawjeehArea dictionary={dictionary.tawjeeh_page} />
+          <OtherServicesCarousel dictionary={dictionary} lang={lang} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>
