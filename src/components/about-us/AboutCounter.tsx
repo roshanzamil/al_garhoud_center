@@ -1,22 +1,15 @@
+
 import Count from "@/common/count";
 
-const counter_data = [
-  { end: 50, suffix: "K+", label: "Applications Processed" },
-  { end: 98, suffix: "%", label: "Client Satisfaction Rate" },
-  { end: 15, suffix: "+", label: "Years of Trusted Service" },
-  { end: 80, suffix: "+", label: "Dedicated Team Members" },
-];
-
-
-export default function AboutCounter() {
+export default function AboutCounter({ dictionary }: { dictionary: any }) {
   return (
     <div className="section">
       <div className="container">
         <div className="row">
           <div className="azzle-counter-column">
-            {counter_data.map((item, i) => (
+            {dictionary.counter.map((item: any, i: number) => (
               <div key={i} className="azzle-counter-item azzle-counter-item2">
-                <h2 className="azzle-counter-data azzle-counter-data2" aria-label="2K+">
+                <h2 className="azzle-counter-data azzle-counter-data2">
                   <Count number={item.end} text={item.suffix} />
                 </h2>
                 <p>{item.label}</p>

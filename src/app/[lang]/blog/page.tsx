@@ -10,6 +10,6 @@ export default async function BlogPage({
 }) {
   const dictionary = await getDictionary(lang);
   return (
-    <Blog />
+    <Blog dictionary={dictionary} lang={lang} />
   )
 }

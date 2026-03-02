@@ -1,46 +1,46 @@
 
 
-export default function ContactArea() {
+export default function ContactArea({ dictionary }: { dictionary: any }) {
   return (
     <div className="azzle-section-padding">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
             <div className="azzle-default-content pr70" data-aos="fade-up" data-aos-delay="700">
-              <h2>Get in touch with us directly</h2>
-              <p className="mb-0">We are here to help you! Tell us how we can help & we'll be in touch with an expert within the next 24 hours.</p>
+              <h2>{dictionary.title}</h2>
+              <p className="mb-0">{dictionary.desc}</p>
               <div className="mt-50">
                 <div className="azzle-contact-info-wrap">
                   <div className="azzle-contact-info-item">
-                    <h5>Send us an email:</h5>
+                    <h5>{dictionary.email_label}</h5>
                     <a href="mailto:info@algarhoudcenter.ae">info@algarhoudcenter.ae</a>
                   </div>
                   <div className="azzle-contact-info-item">
-                    <h5>Give us a call:</h5>
+                    <h5>{dictionary.phone_label}</h5>
                     <a href="tel:043991744">04 399 1744</a>
                   </div>
                   <div className="azzle-contact-info-item">
-                    <h5>Follow us:</h5>
+                    <h5>{dictionary.follow_label}</h5>
                     <div className="azzle-social-wrap2 social-hover-orange">
                       <ul>
                         <li>
                           <a href="https://www.facebook.com">
-                            <img src="assets/images/home2/facebook.svg" alt="Icon" />
+                            <img src="/assets/images/home2/facebook.svg" alt="Icon" />
                           </a>
                         </li>
                         <li>
                           <a href="https://www.twitter.com">
-                            <img src="assets/images/home2/twitter.svg" alt="Icon" />
+                            <img src="/assets/images/home2/twitter.svg" alt="Icon" />
                           </a>
                         </li>
                         <li>
                           <a href="https://www.instagram.com">
-                            <img src="assets/images/home2/insta.svg" alt="Icon" />
+                            <img src="/assets/images/home2/insta.svg" alt="Icon" />
                           </a>
                         </li>
                         <li>
                           <a href="https://www.linkedin.com">
-                            <img src="assets/images/home2/in.svg" alt="Icon" />
+                            <img src="/assets/images/home2/in.svg" alt="Icon" />
                           </a>
                         </li>
                       </ul>
@@ -55,29 +55,29 @@ export default function ContactArea() {
               <form action="#">
                 <div className="azzle-contact-column">
                   <div className="azzle-contact-field">
-                    <label>Enter your name</label>
-                    <input type="text" placeholder="Adam Smith" />
+                    <label>{dictionary.form.name_label}</label>
+                    <input type="text" placeholder={dictionary.form.name_placeholder} />
                   </div>
                   <div className="azzle-contact-field">
-                    <label>Email address</label>
-                    <input type="email" placeholder="example@gmail.com" />
+                    <label>{dictionary.form.email_label}</label>
+                    <input type="email" placeholder={dictionary.form.email_placeholder} />
                   </div>
                 </div>
                 <div className="azzle-contact-column">
                   <div className="azzle-contact-field">
-                    <label>Phone number</label>
-                    <input type="number" placeholder="(123) 456 - 7890" />
+                    <label>{dictionary.form.phone_label}</label>
+                    <input type="number" placeholder={dictionary.form.phone_placeholder} />
                   </div>
                   <div className="azzle-contact-field">
-                    <label>Company</label>
-                    <input type="text" placeholder="EX Facebook" />
+                    <label>{dictionary.form.company_label}</label>
+                    <input type="text" placeholder={dictionary.form.company_placeholder} />
                   </div>
                 </div>
                 <div className="azzle-contact-field">
-                  <label>Message</label>
-                  <textarea name="message" placeholder="Write your message here..."></textarea>
+                  <label>{dictionary.form.message_label}</label>
+                  <textarea name="message" placeholder={dictionary.form.message_placeholder}></textarea>
                 </div>
-                <button id="azzle-main-submit-btn" type="button">Send your message</button>
+                <button id="azzle-main-submit-btn" type="button">{dictionary.form.cta}</button>
               </form>
             </div>
           </div>

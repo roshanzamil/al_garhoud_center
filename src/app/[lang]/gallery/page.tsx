@@ -17,7 +17,7 @@ export default async function GalleryPage({
       <HeaderOne dictionary={dictionary} lang={lang} />
       <div id="smooth-wrapper">
         <div id="smooth-content" style={{ paddingTop: '120px' }}>
-          <GalleryArea />
+          <GalleryArea dictionary={dictionary.gallery_page} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

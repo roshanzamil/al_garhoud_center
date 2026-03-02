@@ -17,7 +17,7 @@ export default async function MilestonesPage({
       <HeaderOne dictionary={dictionary} lang={lang} />
       <div id="smooth-wrapper">
         <div id="smooth-content" style={{ paddingTop: '120px' }}>
-          <MilestonesArea />
+          <MilestonesArea dictionary={dictionary.milestones_page} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

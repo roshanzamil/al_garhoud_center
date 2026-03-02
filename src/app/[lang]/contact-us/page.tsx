@@ -17,7 +17,7 @@ export default async function ContactUsPage({
       <HeaderOne dictionary={dictionary} lang={lang} />
       <div id="smooth-wrapper">
         <div id="smooth-content" style={{ paddingTop: '120px' }}>
-          <ContactArea />
+          <ContactArea dictionary={dictionary.contact_us_page} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

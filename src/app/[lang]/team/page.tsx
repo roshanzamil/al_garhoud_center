@@ -17,7 +17,7 @@ export default async function LeadershipPage({
       <HeaderOne dictionary={dictionary} lang={lang} />
       <div id="smooth-wrapper">
         <div id="smooth-content" style={{ paddingTop: '120px' }}>
-          <MessageFromLeaders />
+          <MessageFromLeaders dictionary={dictionary.team_page} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

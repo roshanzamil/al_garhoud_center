@@ -22,11 +22,11 @@ export default async function AboutUsPage({
       <HeaderOne dictionary={dictionary} lang={lang} />
       <div id="smooth-wrapper">
         <div id="smooth-content" style={{ paddingTop: '120px' }}>
-          <AboutArea />
-          <AboutCounter />
+          <AboutArea dictionary={dictionary.about_us_page} />
+          <AboutCounter dictionary={dictionary.about_us_page} />
           <DividerArea className="divider-about-us" dividerClass="divider2" />
-          <OurWorkArea />
-          <SolutionsArea />
+          <OurWorkArea dictionary={dictionary.about_us_page} />
+          <SolutionsArea dictionary={dictionary.about_us_page} />
           <AboutCta dictionary={dictionary.about_cta} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>

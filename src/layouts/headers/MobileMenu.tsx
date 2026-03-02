@@ -1,3 +1,4 @@
+
 "use client";
 import menu_data from '@/data/menu-data';
 import Link from 'next/link'
@@ -17,14 +18,6 @@ export default function MobileMenu({ setIsOpen, isOpen, dictionary, lang }: Mobi
       setNavTitle("");
     } else {
       setNavTitle(menu);
-    }
-  };
-  const [navTitle2, setNavTitle2] = useState<string>("");
-   const openMobileMenu2 = (menu: string) => {
-    if (navTitle2 === menu) {
-      setNavTitle2("");
-    } else {
-      setNavTitle2(menu);
     }
   };
   
@@ -49,38 +42,31 @@ export default function MobileMenu({ setIsOpen, isOpen, dictionary, lang }: Mobi
             <ul>
               {adjusted_menu_data.map((item, i) => (
                 <li key={i} className={`${item.title === navTitle ? 'azzle-active' : ''} ${item.has_submenu ? 'menu-item-has-children azzle-item-has-children' : ''}`}>
-                  <Link href={item.path}>{dictionary[item.key]}{item.has_submenu && <span className="azzle-mean-expand" onClick={() => openMobileMenu(item.title)}></span>}</Link>
+                  <Link href={item.path}>{dictionary.navigation[item.key]}{item.has_submenu && <span className="azzle-mean-expand" onClick={(e) => { e.preventDefault(); openMobileMenu(item.title as string);}}></span>}</Link>
                   {item.has_submenu &&
                     <ul className={`sub-menu azzle-submenu ${item.title === navTitle ? 'azzle-open' : ''}`} style={{ display: navTitle === item.title ? "block" : "none", }}>
-                      {item.sub_menus?.map((sub_item, index) => (
-                        <li key={index} className={`${sub_item.title === navTitle2 ? 'azzle-active' : ''} ${sub_item.has_inner_submenu ? 'menu-item-has-children azzle-item-has-children' : ''}`}>
-                          {sub_item.path.startsWith("http") ? (
-                            <a href={sub_item.path} target="_blank" rel="noopener noreferrer" className="no-border">{sub_item.title}</a>
-                          ) : (
-                            <Link className="no-border" href={sub_item.path}>{sub_item.title}
-                              {sub_item.has_inner_submenu && <span className="azzle-mean-expand" onClick={() => openMobileMenu2(sub_item.title)}></span>}
-                            </Link>
-                          )}
-                          {sub_item.has_inner_submenu &&
-                            <ul className="sub-menu azzle-submenu" style={{ display: navTitle2 === sub_item.title ? "block" : "none", }}>
-                              {sub_item.sub_menus?.map((inner_item, idx) => (
-                                <li key={idx}>
-                                  <Link href={inner_item.path}>{inner_item.title}</Link>
-                                </li>
-                              ))}
-                            </ul>
-                          }
-                        </li>
-                      ))}
+                      {item.sub_menus?.map((sub_item, index) => {
+                        const service = dictionary.service_tabs.find((s: any) => s.key === sub_item.key);
+                        const title = service ? service.title : (sub_item as any).title;
+                        return (
+                          <li key={index}>
+                            {sub_item.path.startsWith("http") ? (
+                              <a href={sub_item.path} target="_blank" rel="noopener noreferrer" className="no-border">{title}</a>
+                            ) : (
+                              <Link className="no-border" href={sub_item.path}>{title}</Link>
+                            )}
+                          </li>
+                        )
+                      })}
                     </ul>
                   }
                 </li>
               ))}
-                <li><Link href={`/${lang}/contact-us`}>{dictionary.contact}</Link></li>
+                <li><Link href={`/${lang}/contact-us`}>{dictionary.navigation.contact}</Link></li>
             </ul>
           </div>
           <div className="azzle-mobile-menu-btn">
-            <Link className="azzle-default-btn sm-size" href={`/${lang}/contact-us`}>{dictionary.contact}</Link>
+            <Link className="azzle-default-btn sm-size" href={`/${lang}/contact-us`}>{dictionary.navigation.contact}</Link>
           </div>
         </div>
       </div>

@@ -6,15 +6,15 @@ import BlogArea from "./BlogArea";
 
  
 
-export default function Blog() {
+export default function Blog({ dictionary, lang }: { dictionary: any, lang: string }) {
   return (
     <Wrapper>
-      <HeaderOne />
+      <HeaderOne dictionary={dictionary} lang={lang} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <Breacrumb title="Our Blog" page="Our Blog" />
           <BlogArea />          
-          <FooterOne />
+          <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>
     </Wrapper>

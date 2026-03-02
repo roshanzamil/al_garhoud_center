@@ -25,7 +25,7 @@ export default function HeaderOne({ dictionary, lang }: { dictionary: any, lang:
             <div className="col">
               <div className="azzle-main-menu-item">
                 <nav className="main-menu menu-style1 custom-breakpoint menu-left">
-                  <Navmenu dictionary={dictionary.navigation} lang={lang} />                   
+                  <Navmenu dictionary={dictionary} lang={lang} />                   
                 </nav>
               </div>
             </div>
@@ -57,7 +57,7 @@ export default function HeaderOne({ dictionary, lang }: { dictionary: any, lang:
         </div>
 
       </header>
-      <MobileMenu setIsOpen={setIsOpen} isOpen={isOpen} dictionary={dictionary.navigation} lang={lang} />
+      <MobileMenu setIsOpen={setIsOpen} isOpen={isOpen} dictionary={dictionary} lang={lang} />
     </>
   )
 }

@@ -1,17 +1,17 @@
+
 "use client";
 
 import { FileDown } from "lucide-react";
-import downloads_data from "@/data/downloads-data";
 
-export default function DownloadsArea() {
+export default function DownloadsArea({ dictionary }: { dictionary: any }) {
   return (
     <section className="azzle-section-padding">
       <div className="container">
         <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
-          <h2>Downloads</h2>
+          <h2>{dictionary.title}</h2>
         </div>
         <div className="downloads-grid-container">
-          {downloads_data.map((item, i) => (
+          {dictionary.items.map((item: any, i: number) => (
             <div
               key={item.id}
               className="download-card"

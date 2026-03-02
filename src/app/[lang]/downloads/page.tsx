@@ -17,7 +17,7 @@ export default async function DownloadsPage({
       <HeaderOne dictionary={dictionary} lang={lang} />
       <div id="smooth-wrapper">
         <div id="smooth-content" style={{ paddingTop: '120px' }}>
-          <DownloadsArea />
+          <DownloadsArea dictionary={dictionary.downloads_page} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

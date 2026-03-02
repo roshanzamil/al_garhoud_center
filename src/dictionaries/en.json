@@ -6,7 +6,8 @@
     "leadership": "Leadership",
     "gallery": "Gallery",
     "downloads": "Downloads",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "milestones": "Milestones"
   },
   "hero": {
     "slide1_title": "Your Trusted Partner for All Government Services",
@@ -726,5 +727,116 @@
       "enquiry_button": "Enquire",
       "enquiry_no_service_alert": "Please select a service to enquire about."
     }
+  },
+  "about_us_page": {
+    "area_title": "A leading government service center in the heart of Dubai",
+    "counter": [
+      { "end": 50, "suffix": "K+", "label": "Applications Processed" },
+      { "end": 98, "suffix": "%", "label": "Client Satisfaction Rate" },
+      { "end": 15, "suffix": "+", "label": "Years of Trusted Service" },
+      { "end": 80, "suffix": "+", "label": "Dedicated Team Members" }
+    ],
+    "work_area_title": "The core values behind our work",
+    "work_area_items": [
+      { "title": "Efficiency", "desc": "We are committed to streamlined processes and swift turnarounds." },
+      { "title": "Excellence", "desc": "We set high standards for our work and our dedicated team ensures quality." },
+      { "title": "Client-Focus", "desc": "We believe in providing clear guidance and support to every client." },
+      { "title": "Integrity", "desc": "We uphold the highest ethical standards in all of our interactions." }
+    ],
+    "solutions_area": {
+      "title": "Delivering the best solutions for you",
+      "desc1": "Our mission is to empower residents and businesses with streamlined solutions that increase productivity, improve decision-making and drive growth.",
+      "desc2": "Since 2008 we have been passionate about helping our clients navigate government processes. With a team of experts, we unlock your full potential and help you thrive in this dynamic city.",
+      "cta": "Get in touch"
+    }
+  },
+  "team_page": {
+    "ceo_message_title": "CEO's Message",
+    "ceo_message": [
+      "At Al Garhoud Center, our purpose is simple yet significant: to make government and business services accessible, reliable and efficient for every individual and organization we serve.",
+      "As a government-recognized document clearing center, we operate at the intersection of compliance, convenience and confidence. From AMER, DET, Tawjeeh, DHA and Dubai Courts services to tax consultancy, business setup and accountancy solutions, our role extends far beyond processing documents. We act as a trusted bridge between our clients and government entities, ensuring every interaction is handled with accuracy, transparency and professionalism.",
+      "In a fast-evolving regulatory environment, clarity and compliance are not optional, they are essential. Our experienced team remains consistently aligned with the latest regulations and procedural updates, enabling us to guide our clients with confidence and precision. Whether supporting entrepreneurs taking their first steps, businesses scaling operations or individuals navigating essential government services, we are committed to delivering solutions that are timely, compliant and stress-free.",
+      "As we continue to grow, our focus remains unwavering - strengthening partnerships, enhancing service quality and contributing positively to the business ecosystem of the UAE."
+    ],
+    "ceo_name": "Yasser Abdelmawla Youssef Khedr",
+    "ceo_role": "CEO - Al Garhoud Center",
+    "gm_message_title": "GM's Message",
+    "gm_message": [
+      "With an established presence across the UAE, Oman, Bahrain, Saudi Arabia, and Egypt, we work alongside entrepreneurs, SMEs and corporates as a strategic partner in business formation, expansion and ongoing operations.",
+      "Our regional expertise and structured approach allow us to deliver consistent, compliant and scalable solutions aligned with our clients' growth objectives.",
+      "As we look ahead, we remain focused on innovation, service excellence and continuous improvement, ensuring measurable value for our clients and stakeholders. Strengthening long-term relationships built on trust, transparency and performance remains central to our business philosophy.",
+      "Thank you for your continued trust in Al Garhoud Center."
+    ],
+    "gm_name": "Sameer Ali",
+    "gm_role": "GM - Al Garhoud Center"
+  },
+  "contact_us_page": {
+    "title": "Get in touch with us directly",
+    "desc": "We are here to help you! Tell us how we can help & we'll be in touch with an expert within the next 24 hours.",
+    "email_label": "Send us an email:",
+    "phone_label": "Give us a call:",
+    "follow_label": "Follow us:",
+    "form": {
+      "name_label": "Enter your name",
+      "name_placeholder": "Adam Smith",
+      "email_label": "Email address",
+      "email_placeholder": "example@gmail.com",
+      "phone_label": "Phone number",
+      "phone_placeholder": "(123) 456 - 7890",
+      "company_label": "Company",
+      "company_placeholder": "EX Facebook",
+      "message_label": "Message",
+      "message_placeholder": "Write your message here...",
+      "cta": "Send your message"
+    }
+  },
+  "gallery_page": {
+    "title": "Our Gallery"
+  },
+  "downloads_page": {
+    "title": "Downloads",
+    "items": [
+      {
+        "id": 1,
+        "title": "Company Profile",
+        "description": "An overview of our mission, vision, and the full range of services we offer.",
+        "url": "/assets/docs/GARHOUD-CENTRE-BROUCHER.pdf"
+      }
+    ]
+  },
+  "milestones_page": {
+    "title": "Our Journey of Excellence",
+    "items": [
+      {
+        "year": "2008",
+        "title": "Foundation of Al Garhoud Center",
+        "description": "Al Garhoud Center was established with a clear mission to simplify government services for the residents and businesses of Dubai."
+      },
+      {
+        "year": "2012",
+        "title": "Integration of Amer Services",
+        "description": "Expanded our service portfolio by becoming an official Amer service center, streamlining visa and residency transactions for our clients."
+      },
+      {
+        "year": "2015",
+        "title": "Partnership with Dubai Health Authority (DHA)",
+        "description": "Began offering seamless medical fitness typing and application processing, becoming a trusted partner for DHA-related services."
+      },
+      {
+        "year": "2018",
+        "title": "Official DET Service Provider",
+        "description": "Became a key partner for the Department of Economy and Tourism (DET), assisting businesses with licenses and regulatory compliance."
+      },
+      {
+        "year": "2021",
+        "title": "Launch of Digital Platform",
+        "description": "Introduced a new digital platform to offer select services online, enhancing accessibility and convenience for our clients."
+      },
+      {
+        "year": "2024",
+        "title": "Surpassing 1 Million Applications",
+        "description": "Celebrated a major achievement by successfully processing over one million applications, a testament to our efficiency and client trust."
+      }
+    ]
   }
 }
