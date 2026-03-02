@@ -6,7 +6,7 @@ export default function QuoteHomeOne() {
         <div className="row">
           <div className="col-lg-5">
             <div className="azzle-content-thumb" data-aos="fade-right" data-aos-delay="500">
-              <img src="assets/images/home1/thumb2.png" alt="Thumb" />
+              <img src="assets/images/home1/thumb2.png" alt="Thumb" style={{ transform: 'scaleX(-1)' }} />
             </div>
           </div>
           <div className="col-lg-7 d-flex align-items-center">
