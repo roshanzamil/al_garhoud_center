@@ -25,7 +25,7 @@ export default async function SingleServicePage({
           <ServiceDetailsArea />
           <VideoHomeOne />
           <ServiceInfo />
-          <AboutCta />
+          <AboutCta dictionary={dictionary.about_cta} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

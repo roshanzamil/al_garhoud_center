@@ -23,15 +23,15 @@ export default async function ServicePage({
           <section className="azzle-section-padding pb-0">
             <div className="container">
               <div className="azzle-section-title center max-width-780" data-aos="fade-up" data-aos-delay="500">
-                <h2>A World of Services at Your Fingertips</h2>
+                <h2>{dictionary.service_page.title}</h2>
               </div>
             </div>
           </section>
           <Suspense fallback={<div>Loading...</div>}>
-            <ServiceTabs />
+            <ServiceTabs dictionary={dictionary.service_tabs} />
           </Suspense>
           <FaqHomeOne dictionary={dictionary.faq} lang={lang} />
-          <AboutCta />
+          <AboutCta dictionary={dictionary.about_cta} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>

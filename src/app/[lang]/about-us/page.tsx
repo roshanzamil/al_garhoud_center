@@ -27,7 +27,7 @@ export default async function AboutUsPage({
           <DividerArea className="divider-about-us" dividerClass="divider2" />
           <OurWorkArea />
           <SolutionsArea />
-          <AboutCta />
+          <AboutCta dictionary={dictionary.about_cta} />
           <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>
