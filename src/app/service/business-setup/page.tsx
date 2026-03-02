@@ -5,6 +5,7 @@ import FooterOne from "@/layouts/footers/FooterOne";
 import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
 import ServicePageHeader from "@/components/service/ServicePageHeader";
+import OtherServicesCarousel from "@/components/service/OtherServicesCarousel";
 
 const businessServices = [
   {
@@ -220,6 +221,7 @@ export default function BusinessSetup() {
               </div>
             </div>
           </section>
+          <OtherServicesCarousel />
           <FooterOne />
         </div>
       </div>

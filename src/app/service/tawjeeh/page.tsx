@@ -4,6 +4,7 @@ import HeaderOne from "@/layouts/headers/HeaderOne";
 import Wrapper from "@/layouts/Wrapper";
 import TawjeehArea from "@/components/service/tawjeeh/TawjeehArea";
 import ServicePageHeader from "@/components/service/ServicePageHeader";
+import OtherServicesCarousel from "@/components/service/OtherServicesCarousel";
 
 export default function Tawjeeh() {
   return (
@@ -18,6 +19,7 @@ export default function Tawjeeh() {
             subtitle="All Ministry of Labour and Taw-Jeeh services handled professionally."
           />
           <TawjeehArea />
+          <OtherServicesCarousel />
           <FooterOne />
         </div>
       </div>

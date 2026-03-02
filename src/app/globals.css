@@ -1649,4 +1649,81 @@ select:required:invalid {
 .azzle-footer-textarea a[href^="tel:"] {
   display: block;
 }
+
+.bg-light {
+  background-color: #f9fafb;
+}
+
+/* Other Services Carousel */
+.other-services-carousel-wrapper {
+  position: relative;
+  padding-top: 40px;
+}
+
+.other-services-carousel .slick-slide {
+  padding: 0 15px;
+  height: 100%;
+}
+
+.other-services-carousel .slick-list {
+  padding-block: 20px !important;
+}
+
+.other-services-carousel .slick-track {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.other-service-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.other-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-color: #bd8c2e;
+}
+
+.other-service-card-icon img {
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.other-service-card-title {
+  font-size: 1.1rem;
+  font-family: "Baloo Thambi 2", system-ui;
+  color: #333 !important;
+  font-weight: 600;
+  flex-grow: 1;
+  line-height: 1.3;
+}
+
+.other-services-carousel .slick-dots {
+  bottom: -30px;
+}
+
+.other-services-carousel .slick-dots li button:before {
+  font-size: 12px;
+  color: #bd8c2e;
+  opacity: 0.5;
+}
+
+.other-services-carousel .slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.other-services-carousel-wrapper .milestone-arrow {
+    top: 55%;
+}
     
