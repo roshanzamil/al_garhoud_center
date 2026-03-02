@@ -1,3 +1,4 @@
+
 "use client";
 import { useState } from "react";
 
@@ -77,7 +78,6 @@ export default function AccountingArea() {
       <div className="container">
         <div className="consultancy-container">
           <div className="consultancy-services">
-            <h2 className="consultancy-title">Accounting & Assurance Services</h2>
             <div className="consultancy-service-list">
                {accountingServices.map((category, index) => (
                 <div key={index} style={{ breakInside: 'avoid', pageBreakInside: 'avoid', marginBottom: '2.5rem' }}>

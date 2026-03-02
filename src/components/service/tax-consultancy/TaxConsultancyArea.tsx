@@ -1,3 +1,4 @@
+
 "use client";
 import { useState } from "react";
 
@@ -51,7 +52,6 @@ export default function TaxConsultancyArea() {
       <div className="container">
         <div className="consultancy-container">
           <div className="consultancy-services">
-            <h2 className="consultancy-title">Our Services</h2>
             <ul className="consultancy-service-list">
               {servicesList.map((service, index) => (
                 <li key={index}>{service}</li>
