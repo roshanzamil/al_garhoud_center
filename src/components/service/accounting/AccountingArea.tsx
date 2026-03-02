@@ -1,27 +1,53 @@
 "use client";
 import { useState } from "react";
 
-const servicesList = [
-  "UAE Tax Agent Services",
-  "VAT Registration Services in Dubai",
-  "VAT Compliance in UAE",
-  "VAT Return Filing Assistance",
-  "VAT Deregistration in UAE",
-  "Excise Tax Registration – UAE",
-  "Excise Compliance Services",
-  "Excise Advisory Services",
-  "Bookkeeping & Accounting Outsourcing",
-  "Accounting Review Services Dubai, UAE",
-  "MIS Reporting Services in Dubai",
-  "Bookkeeping Services in Saudi Arabia",
-  "Avail Expert VAT Services in UAE",
-  "International Taxation Consultants in Dubai, UAE",
-  "Tax Residency Certification Assistance",
-  "Economic Substance Regulations, UAE",
-  "Payroll Services in Dubai",
-  "Payroll Services in Qatar",
-  "Audit Firms in Sharjah",
+const accountingServices = [
+  {
+    title: "Bookkeeping & Accounting",
+    items: [
+      "Daily / Monthly / Quarterly Bookkeeping",
+      "Accounts Payable & Receivable Management",
+      "General Ledger Maintenance",
+      "Bank Reconciliation",
+      "Cash Flow Monitoring",
+      "Payroll Accounting",
+      "Fixed Asset Register Maintenance",
+      "Inventory Accounting",
+      "MIS Reporting",
+      "Financial Statement Preparation (Monthly / Annual)",
+    ],
+  },
+  {
+    title: "Audit & Assurance Services",
+    items: [
+      "External Statutory Audit",
+      "Internal Audit",
+      "Management Audit",
+      "Forensic Audit",
+      "Compliance Audit",
+      "Stock Audit",
+      "Liquidation Audit",
+      "IFRS Compliance Review",
+      "Due Diligence Review",
+      "Agreed-Upon Procedures (AUP)",
+    ],
+  },
+  {
+    title: "Financial Reporting & Advisory",
+    items: [
+      "IFRS Implementation",
+      "Financial Statement Preparation",
+      "Consolidated Financial Statements",
+      "Budgeting & Forecasting",
+      "Financial Modelling",
+      "Cash Flow Projections",
+      "Business Valuation",
+      "Feasibility Studies",
+      "Ratio Analysis & Performance Review",
+    ],
+  },
 ];
+
 
 const serviceOptions = [
   "Accounting Services",
@@ -51,12 +77,19 @@ export default function AccountingArea() {
       <div className="container">
         <div className="consultancy-container">
           <div className="consultancy-services">
-            <h2 className="consultancy-title">Our Services</h2>
-            <ul className="consultancy-service-list">
-              {servicesList.map((service, index) => (
-                <li key={index}>{service}</li>
+            <h2 className="consultancy-title">Accounting & Assurance Services</h2>
+            <div className="consultancy-service-list">
+               {accountingServices.map((category, index) => (
+                <div key={index} style={{ breakInside: 'avoid', pageBreakInside: 'avoid', marginBottom: '2.5rem' }}>
+                  <h4 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#bd8c2e', marginBottom: '1rem', fontFamily: '"Baloo Thambi 2", system-ui' }}>{category.title}</h4>
+                  <ul>
+                    {category.items.map((service, i) => (
+                      <li key={i} style={{marginBottom: '0.5rem'}}>{service}</li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
           <div className="consultancy-form">
             <div className="trial-booking-form">
