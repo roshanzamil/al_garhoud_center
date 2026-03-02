@@ -2,34 +2,31 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-// ✅ CTA slider items (data-driven)
-const ctaItems = [
-  "Simplify your visa process",
-  "Boost your business setup",
-  "Grow with expert guidance",
-  "Innovate with seamless services",
-  "Deliver on time, every time",
-  "Stay ahead of regulations",
-];
-
-export default function FooterOne() {
+export default function FooterOne({ dictionary, lang }: { dictionary: any, lang: string }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+    
+    // Clear existing content to prevent duplication on HMR
+    if (container.childNodes.length > dictionary.cta_items.length) {
+      const originalChildren = Array.from(container.childNodes).slice(0, dictionary.cta_items.length);
+      container.innerHTML = '';
+      originalChildren.forEach(child => container.appendChild(child));
+    }
 
     // Clone content for infinite scroll effect
-    const clone = container.innerHTML;
-    container.innerHTML += clone;
+    const clone = container.cloneNode(true);
+    container.appendChild(clone);
 
     let scrollAmount = 0;
     let frameId: number;
 
     const marqueeScroll = () => {
       if (!isPaused && container) {
-        scrollAmount += 2; // speed
+        scrollAmount += 1; // speed
         container.style.transform = `translateX(-${scrollAmount}px)`;
 
         if (scrollAmount >= container.scrollWidth / 2) {
@@ -41,13 +38,13 @@ export default function FooterOne() {
 
     frameId = requestAnimationFrame(marqueeScroll);
     return () => cancelAnimationFrame(frameId);
-  }, [isPaused]);
+  }, [isPaused, dictionary.cta_items]);
 
   return (
     <footer className="azzle-footer-section">
       {/* Shape */}
       <div className="azzle-footer-shape">
-        <img src="assets/images/home1/footer-shape.png" alt="shape" />
+        <img src="/assets/images/home1/footer-shape.png" alt="shape" />
       </div>
 
       {/* CTA Slider */}
@@ -65,9 +62,9 @@ export default function FooterOne() {
             willChange: "transform",
           }}
         >
-          {ctaItems.map((title, i) => (
+          {dictionary.cta_items.map((title: string, i: number) => (
             <div key={i} className="azzle-cta-slider-item flex items-center px-6">
-              <img src="assets/images/home1/star.svg" alt="Icon" />
+              <img src="/assets/images/home1/star.svg" alt="Icon" />
               <div className="azzle-cta-slider-title">{title}</div>
             </div>
           ))}
@@ -81,56 +78,54 @@ export default function FooterOne() {
             
             <div className="col-xl-4 col-lg-12 col-md-12">
               <div className="azzle-footer-textarea">
-                <Link href="/">
-                  <img src="assets/images/logo/logo-dark.svg" alt="Logo" style={{ width: '200px' }} />
+                <Link href={`/${lang}`}>
+                  <img src="/assets/images/logo/logo-dark.svg" alt="Logo" style={{ width: '200px' }} />
                 </Link>
-                <p>
-                  Al Garhoud Center is dedicated to providing exceptional government services with a commitment to efficiency, transparency and customer satisfaction, aligning with the vision of Dubai's leadership.
-                </p>
+                <p>{dictionary.description}</p>
                 <a href="mailto:info@algarhoudcenter.ae">
-                  <span>Email:</span> info@algarhoudcenter.ae
+                  <span>{dictionary.email_label}</span> info@algarhoudcenter.ae
                 </a>
                 <a href="tel:043991744">
-                  <span>Phone:</span> 04 399 1744
+                  <span>{dictionary.phone_label}</span> 04 399 1744
                 </a>
               </div>
             </div>
 
             <div className="col-xl-2 col-lg-4 col-md-4">
               <div className="azzle-footer-menu pl-30">
-                <h4>Pages</h4>
+                <h4>{dictionary.pages_title}</h4>
                 <ul>
-                  <li><Link href="/">Home</Link></li>
-                  <li><Link href="/about-us">About Us</Link></li>
-                  <li><Link href="/team">Leadership</Link></li>
-                  <li><Link href="/gallery">Gallery</Link></li>
-                  <li><Link href="/downloads">Downloads</Link></li>
-                  <li><Link href="/contact-us">Contact Us</Link></li>
+                  {dictionary.pages_links.map((link: any, i: number) => (
+                    <li key={i}><Link href={`/${lang}${link.path}`}>{link.title}</Link></li>
+                  ))}
                 </ul>
               </div>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-4">
               <div className="azzle-footer-menu pl-70">
-                <h4>Services</h4>
+                <h4>{dictionary.services_title}</h4>
                 <ul>
-                    <li><Link href="/service/dha">Dubai Health - DHA</Link></li>
-                    <li><Link href="/service/typing">Typing Services</Link></li>
-                    <li><Link href="/service/amer">Amer</Link></li>
-                    <li><a href="https://eservices.dubaided.gov.ae/pages/anon/gsthme.aspx?dedqs=PM671p6QBb0lV1okx2JABgxoLLKXOgPx" target="_blank" rel="noopener noreferrer">DET</a></li>
-                    <li><Link href="/service/tawjeeh">Taw-Jeeh Services</Link></li>
-                    <li><Link href="/service/notary">Notary Public</Link></li>
+                    {dictionary.services_links.map((link: any, i: number) => (
+                      <li key={i}>
+                        {link.path.startsWith('http') ? (
+                          <a href={link.path} target="_blank" rel="noopener noreferrer">{link.title}</a>
+                        ) : (
+                          <Link href={`/${lang}${link.path}`}>{link.title}</Link>
+                        )}
+                      </li>
+                    ))}
                 </ul>
               </div>
             </div>
 
             <div className="col-xl-3 col-lg-4 col-md-4">
               <div className="azzle-footer-menu mb-0">
-                <h4>Subscribe our newsletter</h4>
+                <h4>{dictionary.subscribe_title}</h4>
                 <div className="azzle-subscribe-field">
-                  <input type="email" placeholder="Enter your email" />
+                  <input type="email" placeholder={dictionary.subscribe_placeholder} />
                   <button className="sub-btn" type="submit">
-                    <img src="assets/images/home1/arrow-white.svg" alt="Icon" />
+                    <img src="/assets/images/home1/arrow-white.svg" alt="Icon" />
                   </button>
                 </div>
               </div>
@@ -141,7 +136,7 @@ export default function FooterOne() {
         {/* Bottom */}
         <div className="azzle-footer-bottom-text">
           <p>
-            © Copyright 2026, All Rights Reserved by <a href="https://maamritat.com/" target="_blank" rel="noopener noreferrer">Maamritat</a>
+            {dictionary.copyright} <a href="https://maamritat.com/" target="_blank" rel="noopener noreferrer">Maamritat</a>
           </p>
           
         </div>

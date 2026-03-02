@@ -17,5 +17,150 @@
     "get_started": "Get started",
     "learn_more": "Learn more"
   },
-  "header_phone": "04 399 1744"
+  "header_phone": "04 399 1744",
+  "features": {
+    "title": "Our Services",
+    "services": [
+      { "key": "dha", "title": "Dubai Health - DHA", "desc": "Medical fitness typing and all necessary approvals are handled seamlessly.", "link": "/service/dha", "logo": "/assets/images/service/DHA-logo.webp" },
+      { "key": "typing", "title": "Typing Services", "desc": "Accurate typing for visas, labor contracts, and various legal documents.", "link": "/service/typing", "logo": "/assets/images/service/typing-logo.webp" },
+      { "key": "amer", "title": "Amer", "desc": "Complete Amer services for visa renewal, cancellation, and modifications.", "link": "/service/amer", "logo": "/assets/images/service/amer-logo.webp" },
+      { "key": "det", "title": "DET", "desc": "License applications, renewals, and all modifications for your business.", "link": "https://eservices.dubaided.gov.ae/pages/anon/gsthme.aspx?dedqs=PM671p6QBb0lV1okx2JABgxoLLKXOgPx", "logo": "/assets/images/service/det-logo.webp" },
+      { "key": "tawjeeh", "title": "Taw-Jeeh Services", "desc": "All Ministry of Labour and Taw-Jeeh services handled professionally.", "link": "/service/tawjeeh", "logo": "/assets/images/service/t3-logo.webp" },
+      { "key": "notary", "title": "Notary Public", "desc": "Book legal appointments and get government certified true copies.", "link": "/service/notary", "logo": "/assets/images/service/dubai-courts-logo.webp" },
+      { "key": "salem", "title": "Salem", "desc": "Occupational health screening and all medical fitness services.", "link": "/service/salem", "logo": "/assets/images/service/salem.jpg" },
+      { "key": "business_setup", "title": "Business Setup", "desc": "Comprehensive assistance for setting up your new business in Dubai.", "link": "/service/business-setup", "logo": "/assets/images/service/business.jpg" },
+      { "key": "tax", "title": "Tax Consultancy", "desc": "Expert advice and professional services for VAT registration needs.", "link": "/service/tax-consultancy", "logo": "/assets/images/service/tax.jpg" },
+      { "key": "accounting", "title": "Accounting Services", "desc": "Professional bookkeeping and accounting for all business needs.", "link": "/service/accounting", "logo": "/assets/images/service/accounting.jpg" }
+    ],
+    "view_services": "View Services",
+    "clientele_title": "Our clientele includes established organizations throughout Dubai"
+  },
+  "about": {
+    "title": "Efficient, Swift and Client-Focused Solutions",
+    "desc": "At Al Garhoud Center, we prioritize your convenience. Our streamlined processes and dedicated team ensure your government transactions are handled quickly and professionally, saving you valuable time.",
+    "features": [
+      "Comprehensive range of government services",
+      "Expert guidance from our professional team",
+      "Reduced processing times for all applications"
+    ]
+  },
+  "mission_vision": {
+    "vision": {
+      "title": "Vision",
+      "desc": "To simplify government and business processes through expert guidance, smart systems and end-to-end solutions - empowering individuals and enterprises to operate, expand and succeed across the Middle East with confidence."
+    },
+    "mission": {
+      "title": "Mission",
+      "desc": "To be the region's most trusted and digitally driven gateway for government services and business solutions - setting new benchmarks in compliance, speed and customer experience."
+    },
+    "values": {
+      "title": "Values",
+      "items": [
+        "Trust First",
+        "Client-Centric Excellence",
+        "Compliance by Design"
+      ]
+    }
+  },
+  "quote": {
+    "text": "\"I believe that positive energy and optimism help us to take up any challenge in life and to succeed in even the most difficult tasks. I also believe that positive energy is contagious: we can transmit it to others.\"",
+    "author": "His Highness Sheikh Mohammed bin Rashid Al Maktoum"
+  },
+  "faq": {
+    "title": "Have Questions? We Have Answers.",
+    "desc": "Our team is ready to provide you with the information you need. Find answers to common questions about our services, processes and how we can help you navigate government procedures with ease.",
+    "cta": "Contact us on WhatsApp",
+    "questions": [
+      {
+        "id": 1,
+        "q": "What services does Al Garhoud Center provide?",
+        "a": "We offer a wide range of government services, including visa processing, Emirates ID typing, medical fitness applications, and various approvals from Amer, DET, and DHA. Our services also cover Taw-Jeeh for labor-related processes and Notary Public services for legal documentation."
+      },
+      {
+        "id": 2,
+        "q": "What are your operating hours?",
+        "a": "Our center is open from 7:30 AM to 8:00 PM, Saturday to Thursday, to provide you with flexible and convenient service options for all your needs."
+      },
+      {
+        "id": 3,
+        "q": "Do I need an appointment to visit the center?",
+        "a": "No appointment is necessary for most of our services. You can visit us during our operating hours and our team will be ready to assist you promptly."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Positive feedback from our valued clients",
+    "feedbacks": [
+      {
+        "text": "“The team at Al Garhoud Center revolutionized how I handle my visa renewals. Fast, professional and so efficient. A game-changer for any resident.”",
+        "author": "Ahmed Al-Sayed",
+        "role": "Business Owner",
+        "img": "/assets/images/home1/author1.png"
+      },
+      {
+        "text": "\"They answer immediately and provide clear guidance. My medical fitness test process was incredibly smooth. Our go-to center from now on!\"",
+        "author": "Johnathan Smith",
+        "role": "Expat Resident",
+        "img": "/assets/images/home1/author2.png"
+      },
+      {
+        "text": "\"Fast, accurate and professional. The Amer and Taw-Jeeh services here are must-haves for any company operating in Dubai.\"",
+        "author": "Rajesh Kumar",
+        "role": "PRO Manager",
+        "img": "/assets/images/home1/author3.png"
+      },
+      {
+        "text": "\"Security and trust are my top concerns. Al Garhoud Center handles all documents with the utmost confidentiality. A reassuring layer of professionalism.\"",
+        "author": "David Chen",
+        "role": "Investor",
+        "img": "/assets/images/home1/author4.png"
+      },
+      {
+        "text": "\"We were concerned about the complexity of our trade license renewal, but their DET services were well-documented and their support team was fantastic.\"",
+        "author": "Kevin Lynn",
+        "role": "Restaurant Owner",
+        "img": "/assets/images/home1/author5.png"
+      },
+      {
+        "text": "\"The return on investment in their services has exceeded our expectations. It's an investment in efficiency and peace of mind for our business.\"",
+        "author": "Henry Ochi",
+        "role": "Logistics Manager",
+        "img": "/assets/images/home1/author6.png"
+      }
+    ]
+  },
+  "footer": {
+    "cta_items": [
+      "Simplify your visa process",
+      "Boost your business setup",
+      "Grow with expert guidance",
+      "Innovate with seamless services",
+      "Deliver on time, every time",
+      "Stay ahead of regulations"
+    ],
+    "description": "Al Garhoud Center is dedicated to providing exceptional government services with a commitment to efficiency, transparency and customer satisfaction, aligning with the vision of Dubai's leadership.",
+    "email_label": "Email:",
+    "phone_label": "Phone:",
+    "pages_title": "Pages",
+    "services_title": "Services",
+    "subscribe_title": "Subscribe our newsletter",
+    "subscribe_placeholder": "Enter your email",
+    "copyright": "© Copyright 2026, All Rights Reserved by",
+    "services_links": [
+        { "title": "Dubai Health - DHA", "path": "/service/dha" },
+        { "title": "Typing Services", "path": "/service/typing" },
+        { "title": "Amer", "path": "/service/amer" },
+        { "title": "DET", "path": "https://eservices.dubaided.gov.ae/pages/anon/gsthme.aspx?dedqs=PM671p6QBb0lV1okx2JABgxoLLKXOgPx" },
+        { "title": "Taw-Jeeh Services", "path": "/service/tawjeeh" },
+        { "title": "Notary Public", "path": "/service/notary" }
+    ],
+    "pages_links": [
+        { "title": "Home", "path": "/" },
+        { "title": "About Us", "path": "/about-us" },
+        { "title": "Leadership", "path": "/team" },
+        { "title": "Gallery", "path": "/gallery" },
+        { "title": "Downloads", "path": "/downloads" },
+        { "title": "Contact Us", "path": "/contact-us" }
+    ]
+  }
 }

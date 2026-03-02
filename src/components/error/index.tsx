@@ -6,10 +6,7 @@ import { getDictionary } from "@/lib/get-dictionary";
 import { i18n } from "@/i18n-config";
 
 
-export default async function ErrorPage() {
-  const lang = i18n.defaultLocale;
-  const dictionary = await getDictionary(lang);
-
+export default function ErrorPage({ dictionary, lang }: { dictionary: any, lang: string }) {
   return (
     <Wrapper>
       <HeaderOne dictionary={dictionary} lang={lang} />
@@ -21,7 +18,7 @@ export default async function ErrorPage() {
                 <img data-aos="fade-up" data-aos-delay="500" src="/assets/images/blog/error404.png" alt="404" />
                 <h2 data-aos="fade-up" data-aos-delay="700">The page you are looking for cannot be found</h2>
                 <div className="mt-50">
-                  <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href="/" data-text="Go to homepage">
+                  <Link className="azzle-default-btn" data-aos="fade-up" data-aos-delay="900" href={`/${lang}`} data-text="Go to homepage">
                     <span className="button-wraper">Go to homepage</span>
                   </Link>
                 </div>
@@ -29,7 +26,7 @@ export default async function ErrorPage() {
             </div>
           </div>
 
-          <FooterOne />
+          <FooterOne dictionary={dictionary.footer} lang={lang} />
         </div>
       </div>
     </Wrapper>

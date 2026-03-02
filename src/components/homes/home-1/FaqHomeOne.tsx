@@ -6,37 +6,17 @@ import Link from "next/link";
 
 interface FaqItem {
   id: number;
-  question: string;
-  answer: string;
+  q: string;
+  a: string;
 }
-
-const faq_data: FaqItem[] = [
-  {
-    id: 1,
-    question: "What services does Al Garhoud Center provide?",
-    answer:
-      "We offer a wide range of government services, including visa processing, Emirates ID typing, medical fitness applications, and various approvals from Amer, DET, and DHA. Our services also cover Taw-Jeeh for labor-related processes and Notary Public services for legal documentation.",
-  },
-  {
-    id: 2,
-    question: "What are your operating hours?",
-    answer:
-      "Our center is open from 7:30 AM to 8:00 PM, Saturday to Thursday, to provide you with flexible and convenient service options for all your needs.",
-  },
-  {
-    id: 3,
-    question: "Do I need an appointment to visit the center?",
-    answer:
-      "No appointment is necessary for most of our services. You can visit us during our operating hours and our team will be ready to assist you promptly.",
-  },
-];
-
 
 interface StyleProps {
   style_2?: boolean;
+  dictionary: any;
+  lang: string;
 }
 
-export default function FaqHomeOne({ style_2 = false }: StyleProps) {
+export default function FaqHomeOne({ style_2 = false, dictionary, lang }: StyleProps) {
   const [activeId, setActiveId] = useState<number>(1); 
 
   const toggleFaq = (index: number) => {
@@ -47,9 +27,7 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
     }
   };
 
- 
-
-
+  const faq_data: FaqItem[] = dictionary.questions;
 
   return (
     <section className={`${style_2 ? 'azzle-section-padding6' : 'azzle-section-padding pt-0'}`}>
@@ -61,9 +39,9 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              <h2>Have Questions? We Have Answers.</h2>
+              <h2>{dictionary.title}</h2>
               <p>
-                Our team is ready to provide you with the information you need. Find answers to common questions about our services, processes and how we can help you navigate government procedures with ease.
+                {dictionary.desc}
               </p>
               <div className="mt-50">
                 <a
@@ -73,9 +51,9 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
                   href="https://wa.me/9710557093431"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-text="Contact us on WhatsApp"
+                  data-text={dictionary.cta}
                 >
-                  <span className="button-wraper">Contact us on WhatsApp</span>
+                  <span className="button-wraper">{dictionary.cta}</span>
                 </a>
               </div>
             </div>
@@ -100,10 +78,10 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
                     onClick={() => toggleFaq(faq.id)}
                     style={{ cursor: "pointer" }}
                   >
-                    <h3>{faq.question}</h3>
+                    <h3>{faq.q}</h3>
                     <div className="azzle-active-icon">
                       <img
-                        src="assets/images/home1/+.svg"
+                        src="/assets/images/home1/+.svg"
                         alt="toggle"
                         style={{
                           transform:
@@ -115,7 +93,7 @@ export default function FaqHomeOne({ style_2 = false }: StyleProps) {
                   </div>
                   {activeId === faq.id && (
                     <div className="azzle-faq-body">
-                      <p>{faq.answer}</p>
+                      <p>{faq.a}</p>
                     </div>
                   )}
                 </div>
