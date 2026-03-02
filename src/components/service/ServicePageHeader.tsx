@@ -11,7 +11,7 @@ interface ServicePageHeaderProps {
 
 export default function ServicePageHeader({ logoSrc, logoAlt, title, subtitle }: ServicePageHeaderProps) {
   return (
-    <section className="azzle-section-padding pb-0" data-aos="fade-up">
+    <section className="pb-0" data-aos="fade-up">
       <div className="container">
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
           <div style={{ 

@@ -48,7 +48,7 @@ export default function TaxConsultancyArea() {
   };
 
   return (
-    <section className="azzle-section-padding">
+    <section className="azzle-section-padding" style={{ paddingTop: '60px' }}>
       <div className="container">
         <div className="consultancy-container">
           <div className="consultancy-services">

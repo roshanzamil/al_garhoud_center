@@ -159,7 +159,7 @@ export default function BusinessSetup() {
             title="Business Setup"
             subtitle="Comprehensive assistance for setting up your new business in Dubai."
           />
-          <section className="azzle-section-padding">
+          <section className="azzle-section-padding" style={{ paddingTop: '60px' }}>
             <div className="container">
               <div className="consultancy-container">
                 <div className="consultancy-services">

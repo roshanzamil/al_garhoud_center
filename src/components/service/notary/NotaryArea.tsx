@@ -1,3 +1,4 @@
+
 "use client";
 import { useState, useRef } from "react";
 
@@ -100,7 +101,7 @@ export default function NotaryArea() {
   };
 
   return (
-    <section className="azzle-section-padding">
+    <section className="azzle-section-padding" style={{ paddingTop: '60px' }}>
       <div className="container">
         <div className="trial-pricing-container">
           <div className="trial-pricing-main">

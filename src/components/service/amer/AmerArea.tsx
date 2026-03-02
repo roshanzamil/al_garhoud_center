@@ -74,7 +74,7 @@ export default function AmerArea() {
   };
 
   return (
-    <section className="azzle-section-padding">
+    <section className="azzle-section-padding" style={{ paddingTop: '60px' }}>
       <div className="container">
         <div className="cost-calculator-container" data-aos="fade-up" data-aos-delay="200">
           <div className="cost-calculator-main">
